@@ -2,10 +2,11 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
+|Door Hinge|1|$12|https://amzn.to/3IZHDux|
 |Wood Stove|1|$150|https://portland.craigslist.org/clc/spo/d/mulino-canvas-wall-tent-stove/7827117943.html|
 |Quick Release Bolt|6|$30|[Amazon](https://www.amazon.com/dp/B0CSMGRBN6?tag=maslowcnc01-20)|
 |Cedar Shiplap|75|$0|https://www.lowes.com/pd/RELIABILT-5-375-in-x-12-ft-Unfinished-Cedar-Tongue-and-Groove-Wall-Plank-1-Pack-Covers-5-38-sq-ft/1000456695?user=shopping&feed=yes&gad_source=1&gad_campaignid=21218170251&gclid=CjwKCAjwvO7CBhAqEiwA9q2YJdk_r7n3FB7d_4rSmPHAxLzIKqJX_qTlfnD14cEg7dvBOpAPxnaE2hoCqocQAvD_BwE|
 |name|1|$0|www.example.com|
-|Total: |83|$180| |
+|Total: |84|$192| |
 
- 3xCOG MSRP: $540.00
+ 3xCOG MSRP: $576.00
