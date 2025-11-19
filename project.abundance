@@ -8053,13 +8053,7 @@
                   "atomType": "Extrude",
                   "x": 0.8538359788359788,
                   "y": 0.08356545961002786,
-                  "uniqueID": "d6943e89-45cf-4a81-8c3e-c3c98acdbc3b",
-                  "ioValues": [
-                    {
-                      "name": "height",
-                      "ioValue": 12
-                    }
-                  ]
+                  "uniqueID": "d6943e89-45cf-4a81-8c3e-c3c98acdbc3b"
                 },
                 {
                   "atomType": "Input",
@@ -8580,13 +8574,7 @@
                   "atomType": "Extrude",
                   "x": 0.9067460317460317,
                   "y": 0.1615598885793872,
-                  "uniqueID": "6032b63e-7b47-43bd-8905-c6ee71379fea",
-                  "ioValues": [
-                    {
-                      "name": "height",
-                      "ioValue": 12
-                    }
-                  ]
+                  "uniqueID": "6032b63e-7b47-43bd-8905-c6ee71379fea"
                 },
                 {
                   "atomType": "Input",
