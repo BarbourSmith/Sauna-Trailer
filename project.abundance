@@ -8385,8 +8385,8 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.7433862433862434,
-              "y": 0.28690807799442897,
+              "x": 0.744047619047619,
+              "y": 0.30919220055710306,
               "uniqueID": "29c400ee-92f1-473c-9d3b-db8e46981a73",
               "name": "Linear-Pattern",
               "ioValues": [
@@ -8397,8 +8397,8 @@
                 },
                 {
                   "name": "distX",
-                  "ioValue": 440,
-                  "currentEquation": "440"
+                  "ioValue": 400,
+                  "currentEquation": "400"
                 },
                 {
                   "name": "distY",
@@ -8461,7 +8461,7 @@
                     },
                     {
                       "name": "distX",
-                      "ioValue": 440
+                      "ioValue": 400
                     },
                     {
                       "name": "distY",
