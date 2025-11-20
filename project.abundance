@@ -23085,6 +23085,232 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.5185185185185185,
+      "y": 0.7075208913649026,
+      "uniqueID": "id-15322",
+      "name": "Cross-Section",
+      "ioValues": [
+        {
+          "name": "Offset",
+          "ioValue": 0
+        },
+        {
+          "name": "Angle X",
+          "ioValue": -90,
+          "currentEquation": "-90"
+        },
+        {
+          "name": "Angle Z",
+          "ioValue": 0
+        },
+        {
+          "name": "Angle Y",
+          "ioValue": 0
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-15311"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-15312",
+          "name": "Geometry",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.23076923076923078,
+          "uniqueID": "id-15313",
+          "name": "Offset",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3076923076923077,
+          "uniqueID": "id-15314",
+          "name": "Angle X",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.38461538461538464,
+          "uniqueID": "id-15315",
+          "name": "Angle Z",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.46153846153846156,
+          "uniqueID": "id-15316",
+          "name": "Angle Y",
+          "type": "number"
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.1765873015873016,
+          "y": 0.3565459610027855,
+          "uniqueID": "id-15317",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 4000
+            },
+            {
+              "name": "y length",
+              "ioValue": 4000
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.28240740740740744,
+          "y": 0.48467966573816157,
+          "uniqueID": "id-15318",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 4000
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.34523809523809523,
+          "y": 0.6713091922005571,
+          "uniqueID": "id-15319",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.40939153439153436,
+          "y": 0.83008356545961,
+          "uniqueID": "id-15320",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": -90
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.5238095238095238,
+          "y": 0.24233983286908078,
+          "uniqueID": "id-15321"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-15312",
+          "ap2ID": "id-15321"
+        },
+        {
+          "ap2Name": "zDist",
+          "ap1ID": "id-15313",
+          "ap2ID": "id-15319"
+        },
+        {
+          "ap2Name": "x-axis degrees",
+          "ap1ID": "id-15314",
+          "ap2ID": "id-15320"
+        },
+        {
+          "ap2Name": "z-axis degrees",
+          "ap1ID": "id-15315",
+          "ap2ID": "id-15320"
+        },
+        {
+          "ap2Name": "y-axis degrees",
+          "ap1ID": "id-15316",
+          "ap2ID": "id-15320"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-15317",
+          "ap2ID": "id-15318"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-15318",
+          "ap2ID": "id-15319"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-15319",
+          "ap2ID": "id-15320"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-15320",
+          "ap2ID": "id-15321"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-15321",
+          "ap2ID": "id-15311"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-11-20T15:47:14.779Z",
+        "privateRepo": false,
+        "repoName": "Cross-Section",
+        "dateCreated": "2025-02-04T20:50:02Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": 1738702202919,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Cross-Section",
+        "topics": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739289",
+        "ranking": 3.3,
+        "searchField": "cross-section barboursmith takes a cross section of the input ",
+        "owner": "BarbourSmith",
+        "description": "Takes a cross section of the input",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1
     }
   ],
   "allConnectors": [
@@ -23097,6 +23323,11 @@
       "ap2Name": "number or geometry",
       "ap1ID": 1738956922193,
       "ap2ID": 1738956155478
+    },
+    {
+      "ap2Name": "Geometry",
+      "ap1ID": 1738956922193,
+      "ap2ID": "id-15322"
     },
     {
       "ap2Name": "Shape 1",
