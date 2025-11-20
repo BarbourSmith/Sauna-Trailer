@@ -30,8 +30,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.1316137566137566,
-      "y": 0.24512534818941506,
+      "x": 0.49007936507936506,
+      "y": 0.22284122562674097,
       "uniqueID": 1740179206026,
       "name": "Person For Scale",
       "topLevel": false,
@@ -19846,6 +19846,34 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.49007936507936506,
+      "y": 0.7520891364902507,
+      "uniqueID": "id-2694",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 10
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5900793650793651,
+      "y": 0.7520891364902507,
+      "uniqueID": "id-2698",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -19868,6 +19896,11 @@
       "ap2Name": "Shape 2",
       "ap1ID": 1738956170299,
       "ap2ID": 1738956922193
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2694",
+      "ap2ID": "id-2698"
     }
   ],
   "unitsKey": "MM",
