@@ -2369,8 +2369,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.26587301587301587,
-      "y": 0.7548746518105849,
+      "x": 0.27380952380952384,
+      "y": 0.7576601671309192,
       "uniqueID": 1738956170299,
       "name": "Sauna",
       "ioValues": [
@@ -2445,12 +2445,13 @@
             },
             {
               "name": "yDist",
-              "ioValue": -310,
-              "currentEquation": "-310"
+              "ioValue": -278,
+              "currentEquation": "-278"
             },
             {
               "name": "zDist",
-              "ioValue": 131.6
+              "ioValue": 80,
+              "currentEquation": "80"
             }
           ]
         },
