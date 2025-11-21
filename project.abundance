@@ -8228,7 +8228,11 @@
                   "ioValue": null
                 },
                 {
-                  "name": "Shape 4",
+                  "name": "Shape 5",
+                  "ioValue": null
+                },
+                {
+                  "name": "Shape 6",
                   "ioValue": null
                 }
               ]
@@ -9612,14 +9616,15 @@
             },
             {
               "atomType": "Molecule",
-              "x": 0.27843915343915343,
-              "y": 0.7715877437325905,
+              "x": 0.28703703703703703,
+              "y": 0.7604456824512534,
               "uniqueID": "11ace71c-57e9-40bd-916e-b3bf1d94d444",
               "name": "Ring",
               "ioValues": [
                 {
                   "name": "Wood Thickness",
-                  "ioValue": 100
+                  "ioValue": 10,
+                  "currentEquation": "10"
                 }
               ],
               "topLevel": false,
@@ -9654,7 +9659,13 @@
                   "atomType": "Extrude",
                   "x": 0.22552910052910055,
                   "y": 0.5710306406685237,
-                  "uniqueID": "c0e9bd27-944e-4c85-a3b6-83726eb030ec"
+                  "uniqueID": "c0e9bd27-944e-4c85-a3b6-83726eb030ec",
+                  "ioValues": [
+                    {
+                      "name": "height",
+                      "ioValue": 10
+                    }
+                  ]
                 },
                 {
                   "atomType": "Input",
@@ -9796,48 +9807,6 @@
                   ]
                 },
                 {
-                  "atomType": "Gcode",
-                  "x": 0.8392857142857143,
-                  "y": 0.5933147632311978,
-                  "uniqueID": "a4c3674e-6955-4c90-b1cd-5a3a37d1904e",
-                  "ioValues": [
-                    {
-                      "name": "Tool Size",
-                      "ioValue": 6.35
-                    },
-                    {
-                      "name": "Passes",
-                      "ioValue": 1
-                    },
-                    {
-                      "name": "Speed",
-                      "ioValue": 1500
-                    },
-                    {
-                      "name": "Cut Through",
-                      "ioValue": 1.5
-                    },
-                    {
-                      "name": "Part Name",
-                      "ioValue": "Ring 4"
-                    }
-                  ],
-                  "partName": "Ring",
-                  "sortDirection": "Left"
-                },
-                {
-                  "atomType": "Circle",
-                  "x": 0.9173280423280423,
-                  "y": 0.7548746518105849,
-                  "uniqueID": "a845b38c-ca04-4700-9174-2bacb7f48cbc",
-                  "ioValues": [
-                    {
-                      "name": "diameter",
-                      "ioValue": 10
-                    }
-                  ]
-                },
-                {
                   "atomType": "Move",
                   "x": 0.7354497354497355,
                   "y": 0.5403899721448467,
@@ -9913,10 +9882,16 @@
                 },
                 {
                   "atomType": "Molecule",
-                  "x": 0.4537037037037038,
-                  "y": 0.6518105849582172,
+                  "x": 0.4543650793650794,
+                  "y": 0.649025069637883,
                   "uniqueID": "4c901fda-c35e-4c8c-ac7c-44bc0bda7220",
                   "name": "Split Apart",
+                  "ioValues": [
+                    {
+                      "name": "Wood Thickness",
+                      "ioValue": 10
+                    }
+                  ],
                   "topLevel": false,
                   "allAtoms": [
                     {
@@ -9928,7 +9903,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.15384615384615385,
+                      "y": 0.8941504178272981,
                       "uniqueID": "18a3d009-7ca1-4b92-b7e9-450c6448dbe9",
                       "name": "Wood Thickness"
                     },
@@ -9979,6 +9954,10 @@
                         {
                           "name": "yDist",
                           "ioValue": 0
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 10
                         }
                       ]
                     },
@@ -10008,6 +9987,12 @@
                       "y": 0.7988826815642459,
                       "uniqueID": "318c6844-4901-4e20-93d4-37a71ea19421",
                       "name": "1*T",
+                      "ioValues": [
+                        {
+                          "name": "T",
+                          "ioValue": 10
+                        }
+                      ],
                       "currentEquation": "1*T"
                     },
                     {
@@ -10479,11 +10464,57 @@
                       "ioValues": [
                         {
                           "name": "Shape 1",
-                          "ioValue": null
+                          "ioValue": {
+                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0--30",
+                            "dimension": "3D",
+                            "tags": [],
+                            "plane": {
+                              "origin": [
+                                0,
+                                0,
+                                0
+                              ],
+                              "xDir": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "normal": [
+                                0,
+                                0,
+                                1
+                              ]
+                            },
+                            "color": "#aad7f2",
+                            "bom": []
+                          }
                         },
                         {
                           "name": "Shape 2",
-                          "ioValue": null
+                          "ioValue": {
+                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0-30",
+                            "dimension": "3D",
+                            "tags": [],
+                            "plane": {
+                              "origin": [
+                                0,
+                                0,
+                                0
+                              ],
+                              "xDir": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "normal": [
+                                0,
+                                0,
+                                1
+                              ]
+                            },
+                            "color": "#aad7f2",
+                            "bom": []
+                          }
                         }
                       ],
                       "unionType": "Fusion"
@@ -10855,6 +10886,26 @@
                 }
               ],
               "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Move",
+              "x": 0.3941798941798942,
+              "y": 0.42061281337047357,
+              "uniqueID": "id-34986",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
             }
           ],
           "allConnectors": [
@@ -10869,7 +10920,7 @@
               "ap2ID": 1738958970950
             },
             {
-              "ap2Name": "Shape 4",
+              "ap2Name": "Shape 6",
               "ap1ID": "ae28888f-9b3f-4738-9f3c-4a0b41a46849",
               "ap2ID": "e2c1aa82-000c-4b36-8370-e22c59cc1978"
             },
@@ -10887,6 +10938,16 @@
               "ap2Name": "geometry",
               "ap1ID": "102e2039-afdd-406a-a76e-2f88d808f586",
               "ap2ID": "679f4872-6900-4340-a954-142f5c8aa8f0"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "11ace71c-57e9-40bd-916e-b3bf1d94d444",
+              "ap2ID": "id-34986"
+            },
+            {
+              "ap2Name": "Shape 5",
+              "ap1ID": "id-34986",
+              "ap2ID": "e2c1aa82-000c-4b36-8370-e22c59cc1978"
             }
           ],
           "fileTypeVersion": 1
