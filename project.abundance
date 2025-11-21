@@ -2551,6 +2551,37 @@
             }
           ],
           "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Add-BOM-Tag",
+          "x": 0.8531746031746031,
+          "y": 0.37325905292479106,
+          "uniqueID": "id-30928",
+          "name": "Add BOM Tag",
+          "ioValues": [
+            {
+              "name": "Item Name",
+              "ioValue": "Harbor Frieght Trailer"
+            },
+            {
+              "name": "Number Needed",
+              "ioValue": 1
+            },
+            {
+              "name": "Cost (USD)",
+              "ioValue": 0
+            },
+            {
+              "name": "Source Link",
+              "ioValue": ""
+            }
+          ],
+          "BOMitem": {
+            "BOMitemName": "Harbor Frieght Trailer",
+            "numberNeeded": 1,
+            "costUSD": 699,
+            "source": "https://www.harborfreight.com/1720-lb-capacity-4-ft-x-8-ft-heavy-duty-folding-trailer-58703.html"
+          }
         }
       ],
       "allConnectors": [
@@ -2565,9 +2596,9 @@
           "ap2ID": 1738957269163
         },
         {
-          "ap2Name": "number or geometry",
+          "ap2Name": "geometry",
           "ap1ID": "98bcc7d3-42e2-4ddd-ac6e-0c56bc8045ea",
-          "ap2ID": 1738956162676
+          "ap2ID": "id-30928"
         },
         {
           "ap2Name": "Shape 2",
@@ -2588,6 +2619,11 @@
           "ap2Name": "geometry",
           "ap1ID": 1743271396009,
           "ap2ID": 1743273256894
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-30928",
+          "ap2ID": 1738956162676
         }
       ],
       "fileTypeVersion": 1
