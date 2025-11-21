@@ -4,6 +4,7 @@
  |----|----------|-----|-----|
 |Lath|2|$0.00|Home Depot|
 |Door Hinge|1|$12.00|https://amzn.to/3IZHDux|
+|End Cap|1|$12.00|https://amzn.to/3KdKJM2|
 |Wood Stove|1|$150.00|https://portland.craigslist.org/clc/spo/d/mulino-canvas-wall-tent-stove/7827117943.html|
 |Quick Release Bolt|6|$30.00|[Amazon](https://www.amazon.com/dp/B0CSMGRBN6?tag=maslowcnc01-20)|
 |Cedar Shiplap|74|$0.00|https://www.lowes.com/pd/RELIABILT-5-375-in-x-12-ft-Unfinished-Cedar-Tongue-and-Groove-Wall-Plank-1-Pack-Covers-5-38-sq-ft/1000456695?user=shopping&feed=yes&gad_source=1&gad_campaignid=21218170251&gclid=CjwKCAjwvO7CBhAqEiwA9q2YJdk_r7n3FB7d_4rSmPHAxLzIKqJX_qTlfnD14cEg7dvBOpAPxnaE2hoCqocQAvD_BwE|
@@ -11,4 +12,4 @@
 |Floor Tile|3|$0.75|www.example.com|
 |5x14mm wood screw|10|$0.10|www.example.com|
 |LED Light Strip|2|$0.00|www.example.com|
-|Total: |100|$192.85| |
+|Total: |101|$204.85| |
