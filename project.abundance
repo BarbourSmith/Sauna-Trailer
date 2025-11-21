@@ -30,8 +30,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5224867724867724,
-      "y": 0.7465181058495821,
+      "x": 0.585978835978836,
+      "y": 0.5988857938718662,
       "uniqueID": "id-15322",
       "name": "Cross-Section",
       "ioValues": [
@@ -10648,7 +10648,7 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.32671957671957674,
+          "x": 0.32407407407407407,
           "y": 0.8022284122562675,
           "uniqueID": 1739773891659,
           "name": "Split Apart",
@@ -10700,8 +10700,8 @@
             },
             {
               "atomType": "Molecule",
-              "x": 0.34391534391534395,
-              "y": 0.36768802228412256,
+              "x": 0.34854497354497355,
+              "y": 0.33983286908078,
               "uniqueID": 1739774127244,
               "name": "Vertical",
               "ioValues": [
@@ -11155,130 +11155,7 @@
                       "ioValue": 6
                     }
                   ],
-                  "placements": [
-                    [
-                      {
-                        "id": 3,
-                        "rotate": 270,
-                        "translate": {
-                          "x": 76.2626166106917,
-                          "y": 3.475432769097438
-                        }
-                      },
-                      {
-                        "id": 4,
-                        "rotate": 120,
-                        "translate": {
-                          "x": -18551.535450394338,
-                          "y": 33358.5105787448
-                        }
-                      },
-                      {
-                        "id": 6,
-                        "rotate": 60,
-                        "translate": {
-                          "x": 19065.8102204021,
-                          "y": 32371.910667057768
-                        }
-                      },
-                      {
-                        "id": 0,
-                        "rotate": 210,
-                        "translate": {
-                          "x": 699.0569828997964,
-                          "y": 472.9790573915082
-                        }
-                      },
-                      {
-                        "id": 12,
-                        "rotate": 60,
-                        "translate": {
-                          "x": 24633.728347832868,
-                          "y": 42662.84387169342
-                        }
-                      },
-                      {
-                        "id": 13,
-                        "rotate": 60,
-                        "translate": {
-                          "x": 25316.272579829332,
-                          "y": 43621.76988183917
-                        }
-                      },
-                      {
-                        "id": 5,
-                        "rotate": 330,
-                        "translate": {
-                          "x": 44891.20843074799,
-                          "y": -27604.27693744293
-                        }
-                      },
-                      {
-                        "id": 7,
-                        "rotate": 30,
-                        "translate": {
-                          "x": -15735.968605247046,
-                          "y": -7938.3785349042755
-                        }
-                      },
-                      {
-                        "id": 14,
-                        "rotate": 150,
-                        "translate": {
-                          "x": -18535.08365210513,
-                          "y": 12033.920776321065
-                        }
-                      },
-                      {
-                        "id": 10,
-                        "rotate": 60,
-                        "translate": {
-                          "x": -10776.485389860454,
-                          "y": -17616.392012371987
-                        }
-                      },
-                      {
-                        "id": 2,
-                        "rotate": 60,
-                        "translate": {
-                          "x": -51379.81919419943,
-                          "y": 30316.804690432153
-                        }
-                      },
-                      {
-                        "id": 9,
-                        "rotate": 210,
-                        "translate": {
-                          "x": 30090.643985775783,
-                          "y": -50832.63999349943
-                        }
-                      },
-                      {
-                        "id": 11,
-                        "rotate": 150,
-                        "translate": {
-                          "x": -15660.331403906634,
-                          "y": 11029.478608296806
-                        }
-                      },
-                      {
-                        "id": 8,
-                        "rotate": 30,
-                        "translate": {
-                          "x": -29717.945161875723,
-                          "y": 53337.73078599932
-                        }
-                      },
-                      {
-                        "id": 1,
-                        "rotate": 300,
-                        "translate": {
-                          "x": 51793.868940999324,
-                          "y": 31144.380008775723
-                        }
-                      }
-                    ]
-                  ]
+                  "placements": []
                 },
                 {
                   "atomType": "Tag",
@@ -29200,6 +29077,233 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.458994708994709,
+      "y": 0.8495821727019498,
+      "uniqueID": "id-30951",
+      "name": "Cross-Section",
+      "ioValues": [
+        {
+          "name": "Offset",
+          "ioValue": 1000,
+          "currentEquation": "1000"
+        },
+        {
+          "name": "Angle X",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "Angle Z",
+          "ioValue": 0
+        },
+        {
+          "name": "Angle Y",
+          "ioValue": 0
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-30940"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-30941",
+          "name": "Geometry",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.23076923076923078,
+          "uniqueID": "id-30942",
+          "name": "Offset",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3076923076923077,
+          "uniqueID": "id-30943",
+          "name": "Angle X",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.38461538461538464,
+          "uniqueID": "id-30944",
+          "name": "Angle Z",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.46153846153846156,
+          "uniqueID": "id-30945",
+          "name": "Angle Y",
+          "type": "number"
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.1765873015873016,
+          "y": 0.3565459610027855,
+          "uniqueID": "id-30946",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 4000
+            },
+            {
+              "name": "y length",
+              "ioValue": 4000
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.28240740740740744,
+          "y": 0.48467966573816157,
+          "uniqueID": "id-30947",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 4000
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.34523809523809523,
+          "y": 0.6713091922005571,
+          "uniqueID": "id-30948",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 1000
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.40939153439153436,
+          "y": 0.83008356545961,
+          "uniqueID": "id-30949",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.5238095238095238,
+          "y": 0.24233983286908078,
+          "uniqueID": "id-30950"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-30941",
+          "ap2ID": "id-30950"
+        },
+        {
+          "ap2Name": "zDist",
+          "ap1ID": "id-30942",
+          "ap2ID": "id-30948"
+        },
+        {
+          "ap2Name": "x-axis degrees",
+          "ap1ID": "id-30943",
+          "ap2ID": "id-30949"
+        },
+        {
+          "ap2Name": "z-axis degrees",
+          "ap1ID": "id-30944",
+          "ap2ID": "id-30949"
+        },
+        {
+          "ap2Name": "y-axis degrees",
+          "ap1ID": "id-30945",
+          "ap2ID": "id-30949"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-30946",
+          "ap2ID": "id-30947"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-30947",
+          "ap2ID": "id-30948"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-30948",
+          "ap2ID": "id-30949"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-30949",
+          "ap2ID": "id-30950"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-30950",
+          "ap2ID": "id-30940"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-11-21T15:47:14.695Z",
+        "privateRepo": false,
+        "repoName": "Cross-Section",
+        "dateCreated": "2025-02-04T20:50:02Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": 1738702202919,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Cross-Section",
+        "topics": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739289",
+        "ranking": 3.3,
+        "searchField": "cross-section barboursmith takes a cross section of the input ",
+        "owner": "BarbourSmith",
+        "description": "Takes a cross section of the input",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Cross-Section/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1
     }
   ],
   "allConnectors": [
@@ -29217,6 +29321,11 @@
       "ap2Name": "Geometry",
       "ap1ID": 1738956922193,
       "ap2ID": "id-15322"
+    },
+    {
+      "ap2Name": "Geometry",
+      "ap1ID": 1738956922193,
+      "ap2ID": "id-30951"
     },
     {
       "ap2Name": "Shape 1",
