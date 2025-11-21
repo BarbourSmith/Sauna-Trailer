@@ -1124,7 +1124,7 @@
           "x": 0.373015873015873,
           "y": 0.298050139275766,
           "uniqueID": 1738957269163,
-          "selectedColorIndex": 1
+          "selectedColor": "Red"
         },
         {
           "atomType": "Move",
@@ -1412,7 +1412,7 @@
               "x": 0.41203703703703703,
               "y": 0.7715877437325905,
               "uniqueID": "0894ec00-02d1-4967-b2e6-7e2405032cff",
-              "selectedColorIndex": 20
+              "selectedColor": "Black"
             },
             {
               "atomType": "Assembly",
@@ -1451,7 +1451,7 @@
               "x": 0.44841269841269843,
               "y": 0.2116991643454039,
               "uniqueID": "3d656867-a6a3-48ee-81c9-2e5cb61b5011",
-              "selectedColorIndex": 1
+              "selectedColor": "Red"
             }
           ],
           "allConnectors": [
@@ -1593,7 +1593,7 @@
               "x": 0.4027777777777778,
               "y": 0.2256267409470752,
               "uniqueID": "b8137269-915b-4ee8-8cd8-e84c0bae7a70",
-              "selectedColorIndex": 17
+              "selectedColor": "Tan"
             },
             {
               "atomType": "Add-BOM-Tag",
@@ -3196,7 +3196,7 @@
               "x": 0.6772486772486772,
               "y": 0.22284122562674097,
               "uniqueID": 1741650496273,
-              "selectedColorIndex": 22
+              "selectedColor": "Glass"
             }
           ],
           "allConnectors": [
@@ -4288,7 +4288,7 @@
               "x": 0.8816137566137565,
               "y": 0.31197771587743733,
               "uniqueID": 1738960682231,
-              "selectedColorIndex": 9
+              "selectedColor": "Brown"
             },
             {
               "atomType": "Constant",
@@ -5105,7 +5105,7 @@
                   "x": 0.7658730158730159,
                   "y": 0.777158774373259,
                   "uniqueID": "8c297f5e-7377-452c-acdc-88e77113ae04",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "GitHubMolecule",
@@ -5963,7 +5963,7 @@
                   "x": 0.843915343915344,
                   "y": 0.7298050139275767,
                   "uniqueID": "91609e11-32b2-48b5-99ce-b3991c28f8bb",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "GitHubMolecule",
@@ -6780,7 +6780,7 @@
                   "x": 0.7863756613756614,
                   "y": 0.7103064066852367,
                   "uniqueID": "8e678839-2a66-4e3d-b0bb-20c56fd4f29a",
-                  "selectedColorIndex": 22
+                  "selectedColor": "Glass"
                 },
                 {
                   "atomType": "Move",
@@ -7514,7 +7514,7 @@
                   "x": 0.7791005291005292,
                   "y": 0.4512534818941504,
                   "uniqueID": "5ab6af25-6001-43ce-90d4-6753e28e41aa",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "GitHubMolecule",
@@ -8262,7 +8262,7 @@
               "x": 0.45701058201058203,
               "y": 0.18105849582172703,
               "uniqueID": "679f4872-6900-4340-a954-142f5c8aa8f0",
-              "selectedColorIndex": 22
+              "selectedColor": "Glass"
             },
             {
               "atomType": "Move",
@@ -8381,7 +8381,7 @@
                       "x": 0.48412698412698413,
                       "y": 0.2877094972067039,
                       "uniqueID": "2ea50bbd-0c66-4128-ba2c-dc02fd88214d",
-                      "selectedColorIndex": 1
+                      "selectedColor": "Red"
                     },
                     {
                       "atomType": "Circle",
@@ -8702,7 +8702,7 @@
                   "x": 0.830026455026455,
                   "y": 0.36211699164345407,
                   "uniqueID": "f5267e3c-f1a7-4d07-aa65-2b05ac701a99",
-                  "selectedColorIndex": 2
+                  "selectedColor": "Orange"
                 },
                 {
                   "atomType": "Fusion",
@@ -10035,7 +10035,7 @@
                       "x": 0.9193121693121693,
                       "y": 0.7737430167597765,
                       "uniqueID": "9abb71f7-1650-4416-9290-eb2756c550a7",
-                      "selectedColorIndex": 20
+                      "selectedColor": "Black"
                     },
                     {
                       "atomType": "GitHubMolecule",
@@ -11473,7 +11473,7 @@
                   "x": 0.40145502645502645,
                   "y": 0.42896935933147634,
                   "uniqueID": "id-34977",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "Molecule",
@@ -11528,7 +11528,7 @@
                       "x": 0.7943121693121694,
                       "y": 0.4720670391061452,
                       "uniqueID": "228f11c5-c0cc-4719-9826-1018082cc7de",
-                      "selectedColorIndex": 0
+                      "selectedColor": "Default"
                     },
                     {
                       "atomType": "Tag",
@@ -12035,7 +12035,7 @@
                           "x": 0.6653439153439153,
                           "y": 0.23333333333333334,
                           "uniqueID": "083e1b88-86c2-43e0-a0ad-c843e3f091eb",
-                          "selectedColorIndex": 22
+                          "selectedColor": "Glass"
                         },
                         {
                           "atomType": "Add-BOM-Tag",
@@ -14497,7 +14497,7 @@
                   "x": 0.3994708994708995,
                   "y": 0.6295264623955432,
                   "uniqueID": "id-15379",
-                  "selectedColorIndex": 9
+                  "selectedColor": "Brown"
                 },
                 {
                   "atomType": "Add-BOM-Tag",
@@ -14617,7 +14617,7 @@
                   "x": 0.4431216931216931,
                   "y": 0.30919220055710306,
                   "uniqueID": "id-26307",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "Move",
@@ -14656,7 +14656,7 @@
                   "x": 0.5376984126984127,
                   "y": 0.6991643454038997,
                   "uniqueID": "id-26326",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "Assembly",
@@ -15351,7 +15351,7 @@
                       "x": 0.41730279898218825,
                       "y": 0.4527027027027027,
                       "uniqueID": "id-21748",
-                      "selectedColorIndex": 17
+                      "selectedColor": "Tan"
                     },
                     {
                       "atomType": "Add-BOM-Tag",
@@ -15832,7 +15832,7 @@
                       "x": 0.7353689567430025,
                       "y": 0.6587837837837838,
                       "uniqueID": "id-21775",
-                      "selectedColorIndex": 21
+                      "selectedColor": "White"
                     },
                     {
                       "atomType": "Add-BOM-Tag",
@@ -16943,7 +16943,7 @@
                               "x": 0.6819338422391857,
                               "y": 0.706081081081081,
                               "uniqueID": "id-21818",
-                              "selectedColorIndex": 18
+                              "selectedColor": "Mauve "
                             }
                           ],
                           "allConnectors": [
@@ -18289,7 +18289,7 @@
                           "x": 0.7251908396946565,
                           "y": 0.7263513513513513,
                           "uniqueID": "id-21885",
-                          "selectedColorIndex": 23
+                          "selectedColor": "Keep Out"
                         },
                         {
                           "atomType": "Assembly",
@@ -18473,7 +18473,7 @@
                               "x": 0.7156084656084657,
                               "y": 0.49860724233983283,
                               "uniqueID": "id-21896",
-                              "selectedColorIndex": 18
+                              "selectedColor": "Mauve "
                             },
                             {
                               "atomType": "Circle",
@@ -18809,7 +18809,7 @@
                               "x": 0.6819338422391857,
                               "y": 0.706081081081081,
                               "uniqueID": "id-21908",
-                              "selectedColorIndex": 18
+                              "selectedColor": "Mauve "
                             }
                           ],
                           "allConnectors": [
@@ -24545,7 +24545,7 @@
                   "x": 0.5833333333333334,
                   "y": 0.3816155988857939,
                   "uniqueID": "id-15065",
-                  "selectedColorIndex": 20
+                  "selectedColor": "Black"
                 },
                 {
                   "atomType": "Rectangle",
@@ -24618,7 +24618,7 @@
                   "x": 0.4166666666666667,
                   "y": 0.83008356545961,
                   "uniqueID": "id-15298",
-                  "selectedColorIndex": 23
+                  "selectedColor": "Keep Out"
                 },
                 {
                   "atomType": "Assembly",
@@ -26631,7 +26631,7 @@
                       "x": 0.4715608465608465,
                       "y": 0.13370473537604458,
                       "uniqueID": "id-8495",
-                      "selectedColorIndex": 20
+                      "selectedColor": "Black"
                     },
                     {
                       "atomType": "Move",
@@ -26770,7 +26770,7 @@
                           "x": 0.9166666666666667,
                           "y": 0.49860724233983283,
                           "uniqueID": "id-8506",
-                          "selectedColorIndex": 19
+                          "selectedColor": "Grey"
                         },
                         {
                           "atomType": "Rectangle",
@@ -27520,7 +27520,7 @@
                           "x": 0.7294973544973544,
                           "y": 0.7186629526462396,
                           "uniqueID": "id-8543",
-                          "selectedColorIndex": 23
+                          "selectedColor": "Keep Out"
                         },
                         {
                           "atomType": "GitHubMolecule",
@@ -28476,7 +28476,7 @@
                               "x": 0.5191798941798942,
                               "y": 0.7988826815642459,
                               "uniqueID": "id-8587",
-                              "selectedColorIndex": 22
+                              "selectedColor": "Glass"
                             },
                             {
                               "atomType": "Assembly",
