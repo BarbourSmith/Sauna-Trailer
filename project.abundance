@@ -2907,7 +2907,8 @@
           "ioValues": [
             {
               "name": "xDist",
-              "ioValue": -1290
+              "ioValue": -1260,
+              "currentEquation": "-1260"
             },
             {
               "name": "yDist",
@@ -8265,6 +8266,26 @@
               "selectedColorIndex": 22
             },
             {
+              "atomType": "Move",
+              "x": 0.3941798941798942,
+              "y": 0.42061281337047357,
+              "uniqueID": "id-34986",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
               "atomType": "Molecule",
               "x": 0.3697089947089947,
               "y": 0.8128491620111732,
@@ -9623,8 +9644,7 @@
               "ioValues": [
                 {
                   "name": "Wood Thickness",
-                  "ioValue": 10,
-                  "currentEquation": "10"
+                  "ioValue": 10
                 }
               ],
               "topLevel": false,
@@ -9903,7 +9923,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.8941504178272981,
+                      "y": 0.15384615384615385,
                       "uniqueID": "18a3d009-7ca1-4b92-b7e9-450c6448dbe9",
                       "name": "Wood Thickness"
                     },
@@ -10464,57 +10484,11 @@
                       "ioValues": [
                         {
                           "name": "Shape 1",
-                          "ioValue": {
-                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0--30",
-                            "dimension": "3D",
-                            "tags": [],
-                            "plane": {
-                              "origin": [
-                                0,
-                                0,
-                                0
-                              ],
-                              "xDir": [
-                                1,
-                                0,
-                                0
-                              ],
-                              "normal": [
-                                0,
-                                0,
-                                1
-                              ]
-                            },
-                            "color": "#aad7f2",
-                            "bom": []
-                          }
+                          "ioValue": null
                         },
                         {
                           "name": "Shape 2",
-                          "ioValue": {
-                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0-30",
-                            "dimension": "3D",
-                            "tags": [],
-                            "plane": {
-                              "origin": [
-                                0,
-                                0,
-                                0
-                              ],
-                              "xDir": [
-                                1,
-                                0,
-                                0
-                              ],
-                              "normal": [
-                                0,
-                                0,
-                                1
-                              ]
-                            },
-                            "color": "#aad7f2",
-                            "bom": []
-                          }
+                          "ioValue": null
                         }
                       ],
                       "unionType": "Fusion"
@@ -10886,26 +10860,6 @@
                 }
               ],
               "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Move",
-              "x": 0.3941798941798942,
-              "y": 0.42061281337047357,
-              "uniqueID": "id-34986",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
             }
           ],
           "allConnectors": [
@@ -10930,6 +10884,11 @@
               "ap2ID": "e2c1aa82-000c-4b36-8370-e22c59cc1978"
             },
             {
+              "ap2Name": "Shape 5",
+              "ap1ID": "id-34986",
+              "ap2ID": "e2c1aa82-000c-4b36-8370-e22c59cc1978"
+            },
+            {
               "ap2Name": "geometry",
               "ap1ID": "f4fe253c-dfae-4c38-b8f4-97ee627b2734",
               "ap2ID": "ae28888f-9b3f-4738-9f3c-4a0b41a46849"
@@ -10943,11 +10902,6 @@
               "ap2Name": "geometry",
               "ap1ID": "11ace71c-57e9-40bd-916e-b3bf1d94d444",
               "ap2ID": "id-34986"
-            },
-            {
-              "ap2Name": "Shape 5",
-              "ap1ID": "id-34986",
-              "ap2ID": "e2c1aa82-000c-4b36-8370-e22c59cc1978"
             }
           ],
           "fileTypeVersion": 1
@@ -10975,7 +10929,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.38440111420612816,
+              "y": 0.15384615384615385,
               "uniqueID": 1739773901139,
               "name": "Geometry",
               "type": "number"
@@ -10983,7 +10937,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.6991643454038997,
+              "y": 0.23076923076923078,
               "uniqueID": 1739773929058,
               "name": "Wood Thickness",
               "type": "number"
@@ -11514,6 +11468,13 @@
                       "ioValue": 0
                     }
                   ]
+                },
+                {
+                  "atomType": "Color",
+                  "x": 0.40145502645502645,
+                  "y": 0.42896935933147634,
+                  "uniqueID": "id-34977",
+                  "selectedColorIndex": 20
                 },
                 {
                   "atomType": "Molecule",
@@ -12225,13 +12186,6 @@
                     }
                   ],
                   "fileTypeVersion": 1
-                },
-                {
-                  "atomType": "Color",
-                  "x": 0.40145502645502645,
-                  "y": 0.42896935933147634,
-                  "uniqueID": "id-34977",
-                  "selectedColorIndex": 20
                 }
               ],
               "allConnectors": [
@@ -12386,6 +12340,16 @@
                   "ap2ID": 1739774145131
                 },
                 {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-34977",
+                  "ap2ID": "c0a048f0-1202-4809-9c12-4a0d7263fb1e"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-34977",
+                  "ap2ID": "e4ce1677-43a7-4b4d-9500-a98b852f9817"
+                },
+                {
                   "ap2Name": "Shape 3",
                   "ap1ID": "934982d2-d76e-422b-b514-41c4d0cef8c8",
                   "ap2ID": "63a309af-b4b9-455c-bfd2-28b71c53145e"
@@ -12449,16 +12413,6 @@
                   "ap2Name": "geometry",
                   "ap1ID": "4c815208-1bec-4ea8-85cd-ee13cef9c217",
                   "ap2ID": "id-34977"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-34977",
-                  "ap2ID": "c0a048f0-1202-4809-9c12-4a0d7263fb1e"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-34977",
-                  "ap2ID": "e4ce1677-43a7-4b4d-9500-a98b852f9817"
                 }
               ],
               "fileTypeVersion": 1
