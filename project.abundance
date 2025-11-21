@@ -17504,6 +17504,10 @@
                 {
                   "name": "Shape 5",
                   "ioValue": null
+                },
+                {
+                  "name": "Shape 6",
+                  "ioValue": null
                 }
               ]
             },
@@ -21622,8 +21626,8 @@
             },
             {
               "atomType": "Molecule",
-              "x": 0.17261904761904762,
-              "y": 0.8217270194986073,
+              "x": 0.05952380952380952,
+              "y": 0.7938718662952646,
               "uniqueID": "id-26215",
               "name": "Reinforcement Pole",
               "topLevel": false,
@@ -22324,6 +22328,28 @@
                 }
               ],
               "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Move",
+              "x": 0.2156084656084656,
+              "y": 0.8133704735376045,
+              "uniqueID": "id-26334",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": 1202,
+                  "currentEquation": "1202"
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": -64,
+                  "currentEquation": "-64"
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
             }
           ],
           "allConnectors": [
@@ -22411,6 +22437,16 @@
               "ap2Name": "geometry",
               "ap1ID": "id-21910",
               "ap2ID": "id-22445"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-26215",
+              "ap2ID": "id-26334"
+            },
+            {
+              "ap2Name": "Shape 6",
+              "ap1ID": "id-26334",
+              "ap2ID": "id-15363"
             }
           ],
           "fileTypeVersion": 1
