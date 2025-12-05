@@ -29,6 +29,15 @@
       ]
     },
     {
+      "atomType": "ExtractTag",
+      "x": 0.6177248677248677,
+      "y": 0.31197771587743733,
+      "uniqueID": "id-39018",
+      "name": "Extract Tag",
+      "tag": "Sauna",
+      "tagIndex": 0
+    },
+    {
       "atomType": "GitHubMolecule",
       "x": 0.585978835978836,
       "y": 0.5988857938718662,
@@ -71,7 +80,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.23076923076923078,
+          "y": 0.24615384615384617,
           "uniqueID": "id-15313",
           "name": "Offset",
           "type": "number"
@@ -79,7 +88,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.3076923076923077,
+          "y": 0.3384615384615385,
           "uniqueID": "id-15314",
           "name": "Angle X",
           "type": "number"
@@ -87,7 +96,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.38461538461538464,
+          "y": 0.4307692307692308,
           "uniqueID": "id-15315",
           "name": "Angle Z",
           "type": "number"
@@ -95,7 +104,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.46153846153846156,
+          "y": 0.5230769230769231,
           "uniqueID": "id-15316",
           "name": "Angle Y",
           "type": "number"
@@ -296,7 +305,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.23076923076923078,
+          "y": 0.24615384615384617,
           "uniqueID": "id-30942",
           "name": "Offset",
           "type": "number"
@@ -304,7 +313,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.3076923076923077,
+          "y": 0.3384615384615385,
           "uniqueID": "id-30943",
           "name": "Angle X",
           "type": "number"
@@ -312,7 +321,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.38461538461538464,
+          "y": 0.4307692307692308,
           "uniqueID": "id-30944",
           "name": "Angle Z",
           "type": "number"
@@ -320,7 +329,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.46153846153846156,
+          "y": 0.5230769230769231,
           "uniqueID": "id-30945",
           "name": "Angle Y",
           "type": "number"
@@ -1195,7 +1204,8 @@
           "ioValues": [
             {
               "name": "Item Name",
-              "ioValue": "Harbor Frieght Trailer"
+              "ioValue": "Harbor Frieght Trailer",
+              "currentEquation": "New Item"
             },
             {
               "name": "Number Needed",
@@ -1213,9 +1223,19 @@
           "BOMitem": {
             "BOMitemName": "Harbor Frieght Trailer",
             "numberNeeded": 1,
-            "costUSD": 699,
-            "source": "https://www.harborfreight.com/1720-lb-capacity-4-ft-x-8-ft-heavy-duty-folding-trailer-58703.html"
+            "costUSD": 0,
+            "source": ""
           }
+        },
+        {
+          "atomType": "Tag",
+          "x": 0.5767195767195767,
+          "y": 0.6768802228412256,
+          "uniqueID": "id-39014",
+          "name": "Sauna",
+          "tags": [
+            "Sauna"
+          ]
         },
         {
           "atomType": "Molecule",
@@ -1604,7 +1624,8 @@
               "ioValues": [
                 {
                   "name": "Item Name",
-                  "ioValue": "New Item"
+                  "ioValue": "New Item",
+                  "currentEquation": "New Item"
                 },
                 {
                   "name": "Number Needed",
@@ -1620,10 +1641,10 @@
                 }
               ],
               "BOMitem": {
-                "BOMitemName": "name",
+                "BOMitemName": "New Item",
                 "numberNeeded": 1,
                 "costUSD": 0,
-                "source": "www.example.com"
+                "source": ""
               }
             },
             {
@@ -2807,16 +2828,6 @@
             }
           ],
           "fileTypeVersion": 1
-        },
-        {
-          "atomType": "Tag",
-          "x": 0.5767195767195767,
-          "y": 0.6768802228412256,
-          "uniqueID": "id-39014",
-          "name": "Sauna",
-          "tags": [
-            "Sauna"
-          ]
         }
       ],
       "allConnectors": [
@@ -2846,6 +2857,11 @@
           "ap2ID": 1738956162676
         },
         {
+          "ap2Name": "Shape 5",
+          "ap1ID": "id-39014",
+          "ap2ID": "98bcc7d3-42e2-4ddd-ac6e-0c56bc8045ea"
+        },
+        {
           "ap2Name": "geometry",
           "ap1ID": 1738956287129,
           "ap2ID": "b2397f60-5aee-465e-9747-066ce6f42340"
@@ -2859,11 +2875,6 @@
           "ap2Name": "geometry",
           "ap1ID": 1743271396009,
           "ap2ID": 1743273256894
-        },
-        {
-          "ap2Name": "Shape 5",
-          "ap1ID": "id-39014",
-          "ap2ID": "98bcc7d3-42e2-4ddd-ac6e-0c56bc8045ea"
         }
       ],
       "fileTypeVersion": 1
@@ -3117,6 +3128,16 @@
           ]
         },
         {
+          "atomType": "Tag",
+          "x": 0.8988095238095238,
+          "y": 0.7715877437325905,
+          "uniqueID": "id-39011",
+          "name": "Sauna",
+          "tags": [
+            "Sauna"
+          ]
+        },
+        {
           "atomType": "Molecule",
           "x": 0.031746031746031744,
           "y": 0.7318435754189945,
@@ -3268,7 +3289,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.23076923076923078,
+              "y": 0.24615384615384617,
               "uniqueID": "0e9a8249-c82f-41ca-9dd5-f8a377f04dba",
               "name": "New Envlope",
               "type": "geometry"
@@ -3444,7 +3465,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.23076923076923078,
+              "y": 0.24615384615384617,
               "uniqueID": "97dc5429-588b-45a3-be87-783ac7f561a4",
               "name": "Wood Thickness",
               "type": "number"
@@ -3728,7 +3749,8 @@
                   "ioValues": [
                     {
                       "name": "Item Name",
-                      "ioValue": "New Item"
+                      "ioValue": "New Item",
+                      "currentEquation": "New Item"
                     },
                     {
                       "name": "Number Needed",
@@ -3744,10 +3766,10 @@
                     }
                   ],
                   "BOMitem": {
-                    "BOMitemName": "Cedar Shiplap",
+                    "BOMitemName": "New Item",
                     "numberNeeded": 1,
                     "costUSD": 0,
-                    "source": "https://www.lowes.com/pd/RELIABILT-5-375-in-x-12-ft-Unfinished-Cedar-Tongue-and-Groove-Wall-Plank-1-Pack-Covers-5-38-sq-ft/1000456695?user=shopping&feed=yes&gad_source=1&gad_campaignid=21218170251&gclid=CjwKCAjwvO7CBhAqEiwA9q2YJdk_r7n3FB7d_4rSmPHAxLzIKqJX_qTlfnD14cEg7dvBOpAPxnaE2hoCqocQAvD_BwE"
+                    "source": ""
                   }
                 }
               ],
@@ -3874,7 +3896,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": "b0b2fe36-3c4a-4e33-b202-d0cb8bfe5fe9",
                   "name": "Dist",
                   "type": "number"
@@ -3882,7 +3904,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.3076923076923077,
+                  "y": 0.3384615384615385,
                   "uniqueID": "3969a2d1-99e3-4d5e-a5df-2f3f2d155080",
                   "name": "Geometry",
                   "type": "number"
@@ -4480,7 +4502,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "f76ef0a5-ea0f-4063-97cc-533d531ee3b7",
                       "name": "Thickness",
                       "type": "number"
@@ -4731,7 +4753,8 @@
                 },
                 {
                   "name": "Part Name",
-                  "ioValue": "Frame with Feedrate"
+                  "ioValue": "Frame with Feedrate",
+                  "currentEquation": "Door"
                 }
               ],
               "partName": "Frame with Feedrate",
@@ -4842,7 +4865,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.23076923076923078,
+              "y": 0.24615384615384617,
               "uniqueID": "40e57fe4-962e-4678-986a-6a10e3af53f4",
               "name": "Thickness",
               "type": "number"
@@ -5076,7 +5099,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": "20db04db-c089-4acb-84ad-986fd7ef200f",
                   "name": "Height",
                   "type": "geometry"
@@ -5161,7 +5184,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "4a693887-4a43-42e5-ae68-0df0e56afe1f",
                       "name": "Height",
                       "type": "number"
@@ -5169,7 +5192,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "a8d3df64-5169-4103-8e83-31d46b50e13e",
                       "name": "Radius",
                       "type": "number"
@@ -5940,7 +5963,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": "ac470349-6bab-44a2-b79e-733a9846dcef",
                   "name": "Height",
                   "type": "geometry"
@@ -6019,7 +6042,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "2fe2a338-e484-4ba9-8da0-4f75462cdda0",
                       "name": "Height",
                       "type": "number"
@@ -6027,7 +6050,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "a7965cab-f051-4c4e-acdf-48a7fc5d60f4",
                       "name": "Radius",
                       "type": "number"
@@ -6820,7 +6843,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": "70787af7-39e7-47ea-90f4-c315845672db",
                   "name": "Height",
                   "type": "geometry"
@@ -6892,7 +6915,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "d2e7e875-5f9a-4506-9fdc-7670b2602bfc",
                       "name": "Height",
                       "type": "number"
@@ -6900,7 +6923,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "976a9549-282a-4a04-a5e1-acd416823e7d",
                       "name": "Radius",
                       "type": "number"
@@ -7502,7 +7525,8 @@
                   "ioValues": [
                     {
                       "name": "Item Name",
-                      "ioValue": "Door Hinge"
+                      "ioValue": "Door Hinge",
+                      "currentEquation": "New Item"
                     },
                     {
                       "name": "Number Needed",
@@ -7519,9 +7543,9 @@
                   ],
                   "BOMitem": {
                     "BOMitemName": "Door Hinge",
-                    "numberNeeded": 0.5,
-                    "costUSD": 6,
-                    "source": "https://amzn.to/3IZHDux"
+                    "numberNeeded": 1,
+                    "costUSD": 0,
+                    "source": ""
                   }
                 },
                 {
@@ -7572,7 +7596,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "e74f68de-99bc-4278-b0b4-a5f1b03c981e",
                       "name": "Height",
                       "type": "number"
@@ -7580,7 +7604,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "a29fc3dc-0687-49ef-99ff-9264391df9e3",
                       "name": "Radius",
                       "type": "number"
@@ -8447,7 +8471,8 @@
                       "ioValues": [
                         {
                           "name": "Item Name",
-                          "ioValue": "New Item"
+                          "ioValue": "New Item",
+                          "currentEquation": "New Item"
                         },
                         {
                           "name": "Number Needed",
@@ -8463,10 +8488,10 @@
                         }
                       ],
                       "BOMitem": {
-                        "BOMitemName": "Quick Release Bolt",
+                        "BOMitemName": "New Item",
                         "numberNeeded": 1,
-                        "costUSD": 5,
-                        "source": "https://www.amazon.com/dp/B0CSMGRBN6"
+                        "costUSD": 0,
+                        "source": ""
                       }
                     }
                   ],
@@ -8543,14 +8568,14 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "53bf4571-9d58-42e6-b78a-9cde0543b7f1",
                       "name": "Number"
                     },
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "7a67ba6d-066d-4612-bee1-49409e2741d5",
                       "name": "Angle"
                     },
@@ -9944,7 +9969,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "1a1ee5d2-887e-4a4a-bec8-1c6a147829ef",
                       "name": "Geometry",
                       "type": "number"
@@ -10099,7 +10124,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "517e9a28-4b41-4f98-9605-b4b80b225c77",
                           "name": "Height",
                           "type": "number"
@@ -10107,7 +10132,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "aa4766e8-437e-4138-95e3-5772a3f5f9a6",
                           "name": "Thickness",
                           "type": "number"
@@ -10193,14 +10218,14 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "21fe3bd3-2d28-41c1-bd4d-0d10ab243ed2",
                           "name": "Number"
                         },
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "7a20c652-6e18-47bf-93cc-75b7aaea507c",
                           "name": "Angle"
                         },
@@ -10577,7 +10602,8 @@
                         },
                         {
                           "name": "Part Name",
-                          "ioValue": "Hole Guide"
+                          "ioValue": "Hole Guide",
+                          "currentEquation": "Hole Guide"
                         }
                       ],
                       "partName": "Hole Guide",
@@ -10591,7 +10617,8 @@
                       "ioValues": [
                         {
                           "name": "File Type",
-                          "ioValue": "SVG"
+                          "ioValue": "SVG",
+                          "currentEquation": "STL"
                         },
                         {
                           "name": "Resolution (dpi)",
@@ -10599,7 +10626,8 @@
                         },
                         {
                           "name": "Part Name",
-                          "ioValue": "Hole Guide"
+                          "ioValue": "Hole Guide",
+                          "currentEquation": "Hole Guide"
                         }
                       ],
                       "type": "SVG",
@@ -10654,7 +10682,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "0745867f-5311-4089-99db-0eaf7a3bdc59",
                           "name": "Height",
                           "type": "number"
@@ -10662,7 +10690,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "48a09743-0c4c-4797-aabf-ecceaeb974d8",
                           "name": "Thickness",
                           "type": "number"
@@ -10951,7 +10979,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.23076923076923078,
+              "y": 0.24615384615384617,
               "uniqueID": 1739773929058,
               "name": "Wood Thickness",
               "type": "number"
@@ -11002,7 +11030,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": 1739774126801,
                   "name": "Wood Thickness"
                 },
@@ -11616,7 +11644,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "41f62f3b-d12a-4e84-92b4-58ef5d09fed7",
                           "name": "Height",
                           "type": "number"
@@ -11624,7 +11652,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "056b8fad-420b-4df6-99cb-827b0aec2a66",
                           "name": "Thickness",
                           "type": "number"
@@ -11709,14 +11737,14 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "95bbd162-2229-4ac1-b55e-493ad2b02427",
                           "name": "Number"
                         },
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "f3135280-7055-4f04-a0bd-9b3a0169d35f",
                           "name": "Angle"
                         },
@@ -12061,7 +12089,8 @@
                           "ioValues": [
                             {
                               "name": "Item Name",
-                              "ioValue": "New Item"
+                              "ioValue": "New Item",
+                              "currentEquation": "New Item"
                             },
                             {
                               "name": "Number Needed",
@@ -12913,7 +12942,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "eae7a8b0-2e47-4180-9982-a7832fa42435",
                       "name": "Input Geometry",
                       "type": "number"
@@ -13629,14 +13658,14 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": 1739990461433,
                       "name": "Wood Thickness"
                     },
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": 1739990461660,
                       "name": "Wood Thickness"
                     },
@@ -13797,7 +13826,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": 1739990534935,
                           "name": "Dist",
                           "type": "number"
@@ -13805,7 +13834,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": 1739990535431,
                           "name": "Geometry",
                           "type": "number"
@@ -13926,7 +13955,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": 1739990583486,
                           "name": "Dist",
                           "type": "number"
@@ -13934,7 +13963,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": 1739990582983,
                           "name": "Geometry",
                           "type": "number"
@@ -14523,7 +14552,8 @@
                   "ioValues": [
                     {
                       "name": "Item Name",
-                      "ioValue": "Floor Tile"
+                      "ioValue": "Floor Tile",
+                      "currentEquation": "New Item"
                     },
                     {
                       "name": "Number Needed",
@@ -14541,8 +14571,8 @@
                   "BOMitem": {
                     "BOMitemName": "Floor Tile",
                     "numberNeeded": 1,
-                    "costUSD": 0.25,
-                    "source": "www.example.com"
+                    "costUSD": 0,
+                    "source": ""
                   }
                 }
               ],
@@ -14605,7 +14635,8 @@
                   "ioValues": [
                     {
                       "name": "Item Name",
-                      "ioValue": "End Cap"
+                      "ioValue": "End Cap",
+                      "currentEquation": "New Item"
                     },
                     {
                       "name": "Number Needed",
@@ -14623,8 +14654,8 @@
                   "BOMitem": {
                     "BOMitemName": "End Cap",
                     "numberNeeded": 1,
-                    "costUSD": 12,
-                    "source": "https://amzn.to/3KdKJM2"
+                    "costUSD": 0,
+                    "source": ""
                   }
                 },
                 {
@@ -14730,7 +14761,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "id-26226",
                       "name": "Height",
                       "type": "number"
@@ -14738,7 +14769,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "id-26227",
                       "name": "Radius",
                       "type": "number"
@@ -15377,7 +15408,8 @@
                       "ioValues": [
                         {
                           "name": "Item Name",
-                          "ioValue": "Lath"
+                          "ioValue": "Lath",
+                          "currentEquation": "New Item"
                         },
                         {
                           "name": "Number Needed",
@@ -15396,7 +15428,7 @@
                         "BOMitemName": "Lath",
                         "numberNeeded": 1,
                         "costUSD": 0,
-                        "source": "Home Depot"
+                        "source": ""
                       }
                     }
                   ],
@@ -15684,7 +15716,8 @@
                       "ioValues": [
                         {
                           "name": "File Type",
-                          "ioValue": "STL"
+                          "ioValue": "STL",
+                          "currentEquation": "STL"
                         },
                         {
                           "name": "Resolution (dpi)",
@@ -15692,7 +15725,8 @@
                         },
                         {
                           "name": "Part Name",
-                          "ioValue": "One End"
+                          "ioValue": "One End",
+                          "currentEquation": "One End"
                         }
                       ],
                       "type": null,
@@ -15858,7 +15892,8 @@
                       "ioValues": [
                         {
                           "name": "Item Name",
-                          "ioValue": "LED Light Strip"
+                          "ioValue": "LED Light Strip",
+                          "currentEquation": "New Item"
                         },
                         {
                           "name": "Number Needed",
@@ -15877,7 +15912,7 @@
                         "BOMitemName": "LED Light Strip",
                         "numberNeeded": 1,
                         "costUSD": 0,
-                        "source": "www.example.com"
+                        "source": ""
                       }
                     },
                     {
@@ -15920,7 +15955,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "id-21780",
                           "name": "Height",
                           "type": "number"
@@ -15928,7 +15963,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "id-21781",
                           "name": "Radius",
                           "type": "number"
@@ -16931,7 +16966,8 @@
                               "ioValues": [
                                 {
                                   "name": "Item Name",
-                                  "ioValue": "5x14mm wood screw"
+                                  "ioValue": "5x14mm wood screw",
+                                  "currentEquation": "New Item"
                                 },
                                 {
                                   "name": "Number Needed",
@@ -16949,8 +16985,8 @@
                               "BOMitem": {
                                 "BOMitemName": "5x14mm wood screw",
                                 "numberNeeded": 1,
-                                "costUSD": 0.01,
-                                "source": "www.example.com"
+                                "costUSD": 0,
+                                "source": ""
                               }
                             },
                             {
@@ -17535,7 +17571,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-21846",
                               "name": "ID",
                               "type": "number"
@@ -17903,7 +17939,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-21867",
                               "name": "Radius",
                               "type": "number"
@@ -18014,7 +18050,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-21872",
                               "name": "Offset",
                               "type": "number"
@@ -18022,7 +18058,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-21873",
                               "name": "Angle X",
                               "type": "number"
@@ -18030,7 +18066,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.38461538461538464,
+                              "y": 0.4307692307692308,
                               "uniqueID": "id-21874",
                               "name": "Angle Z",
                               "type": "number"
@@ -18038,7 +18074,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.46153846153846156,
+                              "y": 0.5230769230769231,
                               "uniqueID": "id-21875",
                               "name": "Angle Y",
                               "type": "number"
@@ -18461,7 +18497,8 @@
                               "ioValues": [
                                 {
                                   "name": "Item Name",
-                                  "ioValue": "New Item"
+                                  "ioValue": "New Item",
+                                  "currentEquation": "New Item"
                                 },
                                 {
                                   "name": "Number Needed",
@@ -18797,7 +18834,8 @@
                               "ioValues": [
                                 {
                                   "name": "Item Name",
-                                  "ioValue": "5x14mm wood screw"
+                                  "ioValue": "5x14mm wood screw",
+                                  "currentEquation": "New Item"
                                 },
                                 {
                                   "name": "Number Needed",
@@ -18815,8 +18853,8 @@
                               "BOMitem": {
                                 "BOMitemName": "5x14mm wood screw",
                                 "numberNeeded": 1,
-                                "costUSD": 0.01,
-                                "source": "www.example.com"
+                                "costUSD": 0,
+                                "source": ""
                               }
                             },
                             {
@@ -19525,7 +19563,8 @@
                 },
                 {
                   "name": "Part Name",
-                  "ioValue": "Trailer_Bench"
+                  "ioValue": "Trailer_Bench",
+                  "currentEquation": "Trailer_Bench"
                 }
               ],
               "partName": "Trailer_Bench",
@@ -19766,7 +19805,8 @@
                     },
                     {
                       "name": "Part Name",
-                      "ioValue": "Vertical Parts"
+                      "ioValue": "Vertical Parts",
+                      "currentEquation": "Vertical Parts"
                     }
                   ],
                   "partName": "Vertical Parts",
@@ -19831,7 +19871,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "id-30195",
                       "name": "Geometry",
                       "type": "geometry"
@@ -19865,7 +19905,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "id-30197",
                       "name": "distX",
                       "type": "number"
@@ -19873,7 +19913,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.38461538461538464,
+                      "y": 0.4307692307692308,
                       "uniqueID": "id-30198",
                       "name": "distY",
                       "type": "number"
@@ -19881,7 +19921,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.46153846153846156,
+                      "y": 0.5230769230769231,
                       "uniqueID": "id-30199",
                       "name": "distZ",
                       "type": "number"
@@ -21333,7 +21373,7 @@
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
-                  "y": 0.23076923076923078,
+                  "y": 0.24615384615384617,
                   "uniqueID": "id-30253",
                   "name": "Wood Thickness",
                   "type": "number"
@@ -21517,7 +21557,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "id-30265",
                       "name": "Geometry",
                       "type": "geometry"
@@ -21551,7 +21591,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "id-30267",
                       "name": "distX",
                       "type": "number"
@@ -21559,7 +21599,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.38461538461538464,
+                      "y": 0.4307692307692308,
                       "uniqueID": "id-30268",
                       "name": "distY",
                       "type": "number"
@@ -21567,7 +21607,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.46153846153846156,
+                      "y": 0.5230769230769231,
                       "uniqueID": "id-30269",
                       "name": "distZ",
                       "type": "number"
@@ -21730,7 +21770,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "id-30276",
                       "name": "Tab Length",
                       "type": "number"
@@ -21855,7 +21895,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "id-30288",
                           "name": "Y",
                           "type": "number"
@@ -21863,7 +21903,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "id-30289",
                           "name": "Tab Length",
                           "type": "number"
@@ -21899,7 +21939,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.38461538461538464,
+                          "y": 0.4307692307692308,
                           "uniqueID": "id-30292",
                           "name": "Wood Thickness",
                           "type": "number"
@@ -22246,7 +22286,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "id-30303",
                           "name": "X Length",
                           "type": "number"
@@ -22254,7 +22294,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "id-30304",
                           "name": "Y Length",
                           "type": "number"
@@ -22438,7 +22478,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-30323",
                               "name": "Geometry",
                               "type": "geometry"
@@ -22454,7 +22494,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-30325",
                               "name": "distX",
                               "type": "number"
@@ -22462,7 +22502,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.38461538461538464,
+                              "y": 0.4307692307692308,
                               "uniqueID": "id-30326",
                               "name": "distY",
                               "type": "number"
@@ -22470,7 +22510,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.46153846153846156,
+                              "y": 0.5230769230769231,
                               "uniqueID": "id-30327",
                               "name": "distZ",
                               "type": "number"
@@ -22649,7 +22689,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-30335",
                               "name": "Geometry",
                               "type": "geometry"
@@ -22665,7 +22705,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-30337",
                               "name": "distX",
                               "type": "number"
@@ -22673,7 +22713,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.38461538461538464,
+                              "y": 0.4307692307692308,
                               "uniqueID": "id-30338",
                               "name": "distY",
                               "type": "number"
@@ -22681,7 +22721,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.46153846153846156,
+                              "y": 0.5230769230769231,
                               "uniqueID": "id-30339",
                               "name": "distZ",
                               "type": "number"
@@ -22860,7 +22900,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-30347",
                               "name": "Geometry",
                               "type": "geometry"
@@ -22876,7 +22916,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-30349",
                               "name": "distX",
                               "type": "number"
@@ -22884,7 +22924,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.38461538461538464,
+                              "y": 0.4307692307692308,
                               "uniqueID": "id-30350",
                               "name": "distY",
                               "type": "number"
@@ -22892,7 +22932,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.46153846153846156,
+                              "y": 0.5230769230769231,
                               "uniqueID": "id-30351",
                               "name": "distZ",
                               "type": "number"
@@ -24693,7 +24733,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.23076923076923078,
+                      "y": 0.24615384615384617,
                       "uniqueID": "id-15224",
                       "name": "Height",
                       "type": "number"
@@ -24701,7 +24741,7 @@
                     {
                       "atomType": "Input",
                       "x": 0.025384615384615384,
-                      "y": 0.3076923076923077,
+                      "y": 0.3384615384615385,
                       "uniqueID": "id-15225",
                       "name": "Radius",
                       "type": "number"
@@ -25247,7 +25287,8 @@
                         },
                         {
                           "name": "Part Name",
-                          "ioValue": "StoveCutoutTemplate"
+                          "ioValue": "StoveCutoutTemplate",
+                          "currentEquation": "StoveCutoutTemplate"
                         }
                       ],
                       "partName": "StoveCutoutTemplate",
@@ -25316,7 +25357,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "id-15034",
                           "name": "Height",
                           "type": "number"
@@ -25324,7 +25365,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "id-15035",
                           "name": "Radius",
                           "type": "number"
@@ -25849,7 +25890,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.23076923076923078,
+                          "y": 0.24615384615384617,
                           "uniqueID": "id-15051",
                           "name": "Height",
                           "type": "number"
@@ -25857,7 +25898,7 @@
                         {
                           "atomType": "Input",
                           "x": 0.025384615384615384,
-                          "y": 0.3076923076923077,
+                          "y": 0.3384615384615385,
                           "uniqueID": "id-15052",
                           "name": "Radius",
                           "type": "number"
@@ -26519,7 +26560,8 @@
                       "ioValues": [
                         {
                           "name": "Item Name",
-                          "ioValue": "New Item"
+                          "ioValue": "New Item",
+                          "currentEquation": "New Item"
                         },
                         {
                           "name": "Number Needed",
@@ -26535,10 +26577,10 @@
                         }
                       ],
                       "BOMitem": {
-                        "BOMitemName": "Wood Stove",
+                        "BOMitemName": "New Item",
                         "numberNeeded": 1,
-                        "costUSD": 150,
-                        "source": "https://portland.craigslist.org/clc/spo/d/mulino-canvas-wall-tent-stove/7827117943.html"
+                        "costUSD": 0,
+                        "source": ""
                       }
                     },
                     {
@@ -27132,7 +27174,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-8526",
                               "name": "Length (Y)",
                               "type": "number"
@@ -27140,7 +27182,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-8527",
                               "name": "Geometry",
                               "type": "number"
@@ -27578,7 +27620,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.23076923076923078,
+                              "y": 0.24615384615384617,
                               "uniqueID": "id-8547",
                               "name": "Height",
                               "type": "number"
@@ -27586,7 +27628,7 @@
                             {
                               "atomType": "Input",
                               "x": 0.025384615384615384,
-                              "y": 0.3076923076923077,
+                              "y": 0.3384615384615385,
                               "uniqueID": "id-8548",
                               "name": "Radius",
                               "type": "number"
@@ -28578,7 +28620,7 @@
                                 {
                                   "atomType": "Input",
                                   "x": 0.025384615384615384,
-                                  "y": 0.23076923076923078,
+                                  "y": 0.24615384615384617,
                                   "uniqueID": "id-8594",
                                   "name": "Dist",
                                   "type": "number"
@@ -28586,7 +28628,7 @@
                                 {
                                   "atomType": "Input",
                                   "x": 0.025384615384615384,
-                                  "y": 0.3076923076923077,
+                                  "y": 0.3384615384615385,
                                   "uniqueID": "id-8595",
                                   "name": "Geometry",
                                   "type": "number"
@@ -29004,16 +29046,6 @@
             }
           ],
           "fileTypeVersion": 1
-        },
-        {
-          "atomType": "Tag",
-          "x": 0.8988095238095238,
-          "y": 0.7715877437325905,
-          "uniqueID": "id-39011",
-          "name": "Sauna",
-          "tags": [
-            "Sauna"
-          ]
         }
       ],
       "allConnectors": [
@@ -29088,6 +29120,11 @@
           "ap2ID": "2ede00f0-ba12-4a6b-8ffb-f770367f92cc"
         },
         {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-39011",
+          "ap2ID": 1738956170776
+        },
+        {
           "ap2Name": "geometry",
           "ap1ID": 1741650496517,
           "ap2ID": 1741650501346
@@ -29141,23 +29178,9 @@
           "ap2Name": "geometry",
           "ap1ID": "b0cbca05-02be-4a68-9de1-ee823ee333ce",
           "ap2ID": 1738960642869
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-39011",
-          "ap2ID": 1738956170776
         }
       ],
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "ExtractTag",
-      "x": 0.6177248677248677,
-      "y": 0.31197771587743733,
-      "uniqueID": "id-39018",
-      "name": "Extract Tag",
-      "tag": "Sauna",
-      "tagIndex": 0
     }
   ],
   "allConnectors": [
