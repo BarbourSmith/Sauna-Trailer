@@ -8,6 +8,7 @@
 |5x14mm wood screw|10|$0.00||
 |LED Light Strip|2|$0.00||
 |Lath|2|$0.00||
+|36 Inch Aluminum Sheet|2|$0.00||
 |Door Hinge|2|$0.00||
 |End Cap|1|$0.00||
-|Total: |103|$0.00| |
+|Total: |105|$0.00| |

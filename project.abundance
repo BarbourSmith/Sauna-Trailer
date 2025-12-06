@@ -27619,8 +27619,8 @@
                 },
                 {
                   "atomType": "Color",
-                  "x": 0.5330687830687831,
-                  "y": 0.17827298050139276,
+                  "x": 0.5291005291005292,
+                  "y": 0.18105849582172703,
                   "uniqueID": "id-15065",
                   "selectedColor": "Black"
                 },
@@ -27654,8 +27654,8 @@
                 },
                 {
                   "atomType": "Move",
-                  "x": 0.3531746031746032,
-                  "y": 0.42896935933147634,
+                  "x": 0.35383597883597884,
+                  "y": 0.4233983286908078,
                   "uniqueID": "id-15207",
                   "ioValues": [
                     {
@@ -27699,8 +27699,8 @@
                 },
                 {
                   "atomType": "Assembly",
-                  "x": 0.7632275132275133,
-                  "y": 0.4317548746518106,
+                  "x": 0.8578042328042328,
+                  "y": 0.34540389972144847,
                   "uniqueID": "id-15301",
                   "ioValues": [
                     {
@@ -27709,6 +27709,14 @@
                     },
                     {
                       "name": "Shape 2",
+                      "ioValue": null
+                    },
+                    {
+                      "name": "Shape 3",
+                      "ioValue": null
+                    },
+                    {
+                      "name": "Shape 4",
                       "ioValue": null
                     }
                   ]
@@ -30046,8 +30054,8 @@
                   "ioValues": [
                     {
                       "name": "height",
-                      "ioValue": 3,
-                      "currentEquation": "3"
+                      "ioValue": 0.5,
+                      "currentEquation": ".5"
                     }
                   ]
                 },
@@ -30060,15 +30068,15 @@
                 },
                 {
                   "atomType": "Add-BOM-Tag",
-                  "x": 0.5833333333333334,
-                  "y": 0.7325905292479109,
+                  "x": 0.5694444444444444,
+                  "y": 0.6545961002785515,
                   "uniqueID": "id-47969",
                   "name": "Add BOM Tag",
                   "ioValues": [
                     {
                       "name": "Item Name",
-                      "ioValue": "New Item",
-                      "currentEquation": "New Item"
+                      "ioValue": "36 Inch Aluminum Sheet",
+                      "currentEquation": "36 Inch Aluminum Sheet"
                     },
                     {
                       "name": "Number Needed",
@@ -30084,11 +30092,53 @@
                     }
                   ],
                   "BOMitem": {
-                    "BOMitemName": "New Item",
+                    "BOMitemName": "36 Inch Aluminum Sheet",
                     "numberNeeded": 1,
                     "costUSD": 0,
                     "source": ""
                   }
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.6448412698412699,
+                  "y": 0.5376044568245125,
+                  "uniqueID": "id-47977",
+                  "ioValues": [
+                    {
+                      "name": "xDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": 12.5,
+                      "currentEquation": "12.5"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.6362433862433862,
+                  "y": 0.7437325905292479,
+                  "uniqueID": "id-47983",
+                  "ioValues": [
+                    {
+                      "name": "xDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": -20,
+                      "currentEquation": "-20"
+                    }
+                  ]
                 }
               ],
               "allConnectors": [
@@ -30166,6 +30216,26 @@
                   "ap2Name": "geometry",
                   "ap1ID": "id-47966",
                   "ap2ID": "id-47969"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-47969",
+                  "ap2ID": "id-47977"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-47969",
+                  "ap2ID": "id-47983"
+                },
+                {
+                  "ap2Name": "Shape 3",
+                  "ap1ID": "id-47977",
+                  "ap2ID": "id-15301"
+                },
+                {
+                  "ap2Name": "Shape 4",
+                  "ap1ID": "id-47983",
+                  "ap2ID": "id-15301"
                 }
               ],
               "fileTypeVersion": 1
