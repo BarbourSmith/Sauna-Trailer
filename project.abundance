@@ -2953,7 +2953,8 @@
           "ioValues": [
             {
               "name": "xDist",
-              "ioValue": 1100
+              "ioValue": 1060,
+              "currentEquation": "1060"
             },
             {
               "name": "yDist",
@@ -30135,8 +30136,8 @@
                     },
                     {
                       "name": "zDist",
-                      "ioValue": -20,
-                      "currentEquation": "-20"
+                      "ioValue": -30,
+                      "currentEquation": "-30"
                     }
                   ]
                 }
