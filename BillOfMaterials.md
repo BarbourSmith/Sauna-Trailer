@@ -2,4 +2,13 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Total: |0|$0.00| |
+|Harbor Frieght Trailer|1|$0.00||
+|New Item|82|$0.00||
+|Floor Tile|3|$0.00||
+|5x14mm wood screw|10|$0.00||
+|LED Light Strip|2|$0.00||
+|Lath|2|$0.00||
+|36 Inch Aluminum Sheet|2|$0.00||
+|Door Hinge|2|$0.00||
+|End Cap|1|$0.00||
+|Total: |105|$0.00| |
