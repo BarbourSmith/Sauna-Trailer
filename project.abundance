@@ -26807,6 +26807,10 @@
                 {
                   "name": "Shape 3",
                   "ioValue": null
+                },
+                {
+                  "name": "Shape 4",
+                  "ioValue": null
                 }
               ]
             },
@@ -32880,7 +32884,8 @@
               "ioValues": [
                 {
                   "name": "xDist",
-                  "ioValue": 0
+                  "ioValue": 300,
+                  "currentEquation": "300"
                 },
                 {
                   "name": "yDist",
@@ -33025,6 +33030,11 @@
               "ap2Name": "Shape 1",
               "ap1ID": "id-8596",
               "ap2ID": "f2d41bd1-b4c6-4599-baf1-104f6230c599"
+            },
+            {
+              "ap2Name": "Shape 4",
+              "ap1ID": "id-56976",
+              "ap2ID": "id-8958"
             }
           ],
           "fileTypeVersion": 1
