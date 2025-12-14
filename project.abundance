@@ -26361,8 +26361,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.5641915336571826,
-          "y": 0.884020618556701,
+          "x": 0.5654761904761905,
+          "y": 0.8579387186629527,
           "uniqueID": "b0cbca05-02be-4a68-9de1-ee823ee333ce",
           "name": "Sauna Stove",
           "topLevel": false,
@@ -26812,8 +26812,8 @@
             },
             {
               "atomType": "Rotate",
-              "x": 0.7404580152671755,
-              "y": 0.8491228070175438,
+              "x": 0.6961722488038278,
+              "y": 0.9025522041763342,
               "uniqueID": "id-52480",
               "ioValues": [
                 {
@@ -26822,7 +26822,8 @@
                 },
                 {
                   "name": "y-axis degrees",
-                  "ioValue": 0
+                  "ioValue": 90,
+                  "currentEquation": "90"
                 },
                 {
                   "name": "z-axis degrees",
@@ -27129,8 +27130,8 @@
                 },
                 {
                   "atomType": "Extrude",
-                  "x": 0.3247744621790423,
-                  "y": 0.538659793814433,
+                  "x": 0.3253588516746411,
+                  "y": 0.7053364269141531,
                   "uniqueID": "id-52473",
                   "ioValues": [
                     {
@@ -27149,15 +27150,14 @@
                 },
                 {
                   "atomType": "GitHubMolecule",
-                  "x": 0.11103400416377517,
-                  "y": 0.5592783505154639,
+                  "x": 0.11722488038277512,
+                  "y": 0.5336426914153132,
                   "uniqueID": "id-52457",
                   "name": "Concentric_Circles",
                   "ioValues": [
                     {
                       "name": "OD",
-                      "ioValue": 383,
-                      "currentEquation": "233+50+100"
+                      "ioValue": 383
                     },
                     {
                       "name": "ID",
@@ -27272,37 +27272,6 @@
                   },
                   "unitsKey": "Unitless",
                   "fileTypeVersion": 1
-                },
-                {
-                  "atomType": "Gcode",
-                  "x": 0.7258848022206801,
-                  "y": 0.27319587628865977,
-                  "uniqueID": "id-56974",
-                  "ioValues": [
-                    {
-                      "name": "Tool Size",
-                      "ioValue": 6.35
-                    },
-                    {
-                      "name": "Passes",
-                      "ioValue": 1
-                    },
-                    {
-                      "name": "Speed",
-                      "ioValue": 1500
-                    },
-                    {
-                      "name": "Cut Through",
-                      "ioValue": 1
-                    },
-                    {
-                      "name": "Part Name",
-                      "ioValue": "Chimney Pass through ",
-                      "currentEquation": "Chimney Pass through "
-                    }
-                  ],
-                  "partName": "Chimney Pass through ",
-                  "sortDirection": "Left"
                 }
               ],
               "allConnectors": [
@@ -27315,11 +27284,6 @@
                   "ap2Name": "number or geometry",
                   "ap1ID": "id-52477",
                   "ap2ID": "id-52444"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-52477",
-                  "ap2ID": "id-56974"
                 },
                 {
                   "ap2Name": "geometry",
@@ -27841,8 +27805,8 @@
             },
             {
               "atomType": "Molecule",
-              "x": 0.48369188063844554,
-              "y": 0.7731958762886598,
+              "x": 0.48611111111111116,
+              "y": 0.7604456824512534,
               "uniqueID": "id-15020",
               "name": "Cutout",
               "topLevel": false,
@@ -27855,8 +27819,8 @@
                 },
                 {
                   "atomType": "Color",
-                  "x": 0.5329632199861207,
-                  "y": 0.17525773195876287,
+                  "x": 0.5291005291005292,
+                  "y": 0.18105849582172703,
                   "uniqueID": "id-15065",
                   "selectedColor": "Black"
                 },
@@ -27878,8 +27842,8 @@
                 },
                 {
                   "atomType": "Extrude",
-                  "x": 0.2685634975711312,
-                  "y": 0.3324742268041237,
+                  "x": 0.26256613756613756,
+                  "y": 0.33147632311977715,
                   "uniqueID": "id-15203",
                   "ioValues": [
                     {
@@ -30371,6 +30335,38 @@
                   },
                   "unitsKey": "MM",
                   "fileTypeVersion": 1
+                },
+                {
+                  "atomType": "Gcode",
+                  "x": 0.6051353226925745,
+                  "y": 0.327319587628866,
+                  "uniqueID": "id-56968",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 1,
+                      "currentEquation": "1"
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Stove Cutout",
+                      "currentEquation": "Stove Cutout"
+                    }
+                  ],
+                  "partName": "Cutout",
+                  "sortDirection": "Left"
                 }
               ],
               "allConnectors": [
@@ -30378,6 +30374,11 @@
                   "ap2Name": "Shape 2",
                   "ap1ID": "id-15065",
                   "ap2ID": "id-15301"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-15065",
+                  "ap2ID": "id-56968"
                 },
                 {
                   "ap2Name": "geometry",
@@ -32873,9 +32874,9 @@
             },
             {
               "atomType": "Move",
-              "x": 0.839000693962526,
-              "y": 0.7654639175257731,
-              "uniqueID": "id-56968",
+              "x": 0.8068181818181819,
+              "y": 0.8167053364269142,
+              "uniqueID": "id-56976",
               "ioValues": [
                 {
                   "name": "xDist",
@@ -32883,11 +32884,13 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": 0
+                  "ioValue": 0,
+                  "currentEquation": "0"
                 },
                 {
                   "name": "zDist",
-                  "ioValue": 0
+                  "ioValue": 1425,
+                  "currentEquation": "1425"
                 }
               ]
             }
@@ -32996,7 +32999,7 @@
             {
               "ap2Name": "geometry",
               "ap1ID": "id-52480",
-              "ap2ID": "id-56968"
+              "ap2ID": "id-56976"
             },
             {
               "ap2Name": "geometry",
