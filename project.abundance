@@ -31096,8 +31096,8 @@
                     },
                     {
                       "atomType": "Molecule",
-                      "x": 0.25396825396825395,
-                      "y": 0.7827298050139275,
+                      "x": 0.24801587301587302,
+                      "y": 0.7994428969359332,
                       "uniqueID": "id-75956",
                       "name": "Bolt Holes",
                       "ioValues": [
@@ -31117,13 +31117,13 @@
                         {
                           "atomType": "Circle",
                           "x": 0.1316137566137566,
-                          "y": 0.38440111420612816,
+                          "y": 0.38718662952646243,
                           "uniqueID": "id-75960",
                           "ioValues": [
                             {
                               "name": "diameter",
-                              "ioValue": 3.3,
-                              "currentEquation": "3.3"
+                              "ioValue": 3,
+                              "currentEquation": "3"
                             }
                           ]
                         },
