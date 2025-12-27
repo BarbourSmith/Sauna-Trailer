@@ -31670,95 +31670,6 @@
                         }
                       ],
                       "fileTypeVersion": 1
-                    },
-                    {
-                      "atomType": "Gcode",
-                      "x": 0.7976190476190476,
-                      "y": 0.67966573816156,
-                      "uniqueID": "id-86232",
-                      "ioValues": [
-                        {
-                          "name": "Tool Size",
-                          "ioValue": 3.125,
-                          "currentEquation": "3.125"
-                        },
-                        {
-                          "name": "Passes",
-                          "ioValue": 3,
-                          "currentEquation": "3"
-                        },
-                        {
-                          "name": "Speed",
-                          "ioValue": 1500
-                        },
-                        {
-                          "name": "Cut Through",
-                          "ioValue": 0,
-                          "currentEquation": "0"
-                        },
-                        {
-                          "name": "Part Name",
-                          "ioValue": "Front Metal",
-                          "currentEquation": "Front Metal"
-                        }
-                      ],
-                      "partName": "Front Metal",
-                      "sortDirection": "Left"
-                    },
-                    {
-                      "atomType": "Rectangle",
-                      "x": 0.6044973544973545,
-                      "y": 0.8272980501392758,
-                      "uniqueID": "id-86240",
-                      "ioValues": [
-                        {
-                          "name": "x length",
-                          "ioValue": 10
-                        },
-                        {
-                          "name": "y length",
-                          "ioValue": 10
-                        }
-                      ]
-                    },
-                    {
-                      "atomType": "Extrude",
-                      "x": 0.7103174603174602,
-                      "y": 0.8328690807799443,
-                      "uniqueID": "id-86244",
-                      "ioValues": [
-                        {
-                          "name": "height",
-                          "ioValue": 0.5,
-                          "currentEquation": ".5"
-                        }
-                      ]
-                    },
-                    {
-                      "atomType": "Export",
-                      "x": 0.890909090909091,
-                      "y": 0.9247910863509751,
-                      "uniqueID": "id-86248",
-                      "ioValues": [
-                        {
-                          "name": "File Type",
-                          "ioValue": "STL",
-                          "currentEquation": "STL"
-                        },
-                        {
-                          "name": "Resolution (dpi)",
-                          "ioValue": 96
-                        },
-                        {
-                          "name": "Part Name",
-                          "ioValue": "Front Metal",
-                          "currentEquation": "Front Metal"
-                        }
-                      ],
-                      "type": null,
-                      "resolution": 96,
-                      "importIndex": 0,
-                      "partName": "Front Metal"
                     }
                   ],
                   "allConnectors": [
@@ -31821,21 +31732,6 @@
                       "ap2Name": "geometry2",
                       "ap1ID": "id-75956",
                       "ap2ID": "id-81070"
-                    },
-                    {
-                      "ap2Name": "geometry",
-                      "ap1ID": "id-86240",
-                      "ap2ID": "id-86244"
-                    },
-                    {
-                      "ap2Name": "geometry",
-                      "ap1ID": "id-86244",
-                      "ap2ID": "id-86232"
-                    },
-                    {
-                      "ap2Name": "geometry",
-                      "ap1ID": "id-86244",
-                      "ap2ID": "id-86248"
                     }
                   ],
                   "fileTypeVersion": 1
