@@ -31728,10 +31728,36 @@
                       "ioValues": [
                         {
                           "name": "height",
-                          "ioValue": 1,
-                          "currentEquation": "1"
+                          "ioValue": 0.5,
+                          "currentEquation": ".5"
                         }
                       ]
+                    },
+                    {
+                      "atomType": "Export",
+                      "x": 0.890909090909091,
+                      "y": 0.9247910863509751,
+                      "uniqueID": "id-86248",
+                      "ioValues": [
+                        {
+                          "name": "File Type",
+                          "ioValue": "STL",
+                          "currentEquation": "STL"
+                        },
+                        {
+                          "name": "Resolution (dpi)",
+                          "ioValue": 96
+                        },
+                        {
+                          "name": "Part Name",
+                          "ioValue": "Front Metal",
+                          "currentEquation": "Front Metal"
+                        }
+                      ],
+                      "type": null,
+                      "resolution": 96,
+                      "importIndex": 0,
+                      "partName": "Front Metal"
                     }
                   ],
                   "allConnectors": [
@@ -31804,6 +31830,11 @@
                       "ap2Name": "geometry",
                       "ap1ID": "id-86244",
                       "ap2ID": "id-86232"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-86244",
+                      "ap2ID": "id-86248"
                     }
                   ],
                   "fileTypeVersion": 1
