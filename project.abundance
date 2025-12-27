@@ -31670,6 +31670,32 @@
                         }
                       ],
                       "fileTypeVersion": 1
+                    },
+                    {
+                      "atomType": "Export",
+                      "x": 0.6541005291005291,
+                      "y": 0.7548746518105849,
+                      "uniqueID": "id-86253",
+                      "ioValues": [
+                        {
+                          "name": "File Type",
+                          "ioValue": "STL",
+                          "currentEquation": "STL"
+                        },
+                        {
+                          "name": "Resolution (dpi)",
+                          "ioValue": 96
+                        },
+                        {
+                          "name": "Part Name",
+                          "ioValue": "Front Metal",
+                          "currentEquation": "Front Metal"
+                        }
+                      ],
+                      "type": null,
+                      "resolution": 96,
+                      "importIndex": 0,
+                      "partName": "Front Metal"
                     }
                   ],
                   "allConnectors": [
@@ -31717,6 +31743,11 @@
                       "ap2Name": "geometry",
                       "ap1ID": "id-81070",
                       "ap2ID": "id-75778"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-81070",
+                      "ap2ID": "id-86253"
                     },
                     {
                       "ap2Name": "geometry1",
