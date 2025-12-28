@@ -4562,8 +4562,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.03439153439153439,
-          "y": 0.37047353760445684,
+          "x": 0.032407407407407406,
+          "y": 0.3899721448467966,
           "uniqueID": 1738956981399,
           "name": "Envlope",
           "topLevel": false,
@@ -4576,8 +4576,8 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.03439153439153439,
-              "y": 0.19553072625698326,
+              "x": 0.03835978835978836,
+              "y": 0.1977715877437326,
               "uniqueID": 1738956990942,
               "ioValues": [
                 {
@@ -4968,6 +4968,12 @@
               "y": 0.17039106145251398,
               "uniqueID": 1746922984330,
               "name": "Corrugated Envlope",
+              "ioValues": [
+                {
+                  "name": "Wood Thickness",
+                  "ioValue": 2438.4
+                }
+              ],
               "topLevel": false,
               "allAtoms": [
                 {
@@ -4998,6 +5004,16 @@
                   "y": 0.34818941504178275,
                   "uniqueID": "0ea23283-efb4-42db-95d2-12ba04b47c02",
                   "name": "Corrugated-Roofing-Circle",
+                  "ioValues": [
+                    {
+                      "name": "Number of Bumps",
+                      "ioValue": 79
+                    },
+                    {
+                      "name": "Thickness",
+                      "ioValue": 2438.4
+                    }
+                  ],
                   "topLevel": false,
                   "allAtoms": [
                     {
