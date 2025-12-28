@@ -4449,6 +4449,12 @@
               "y": 0.17039106145251398,
               "uniqueID": 1746922984330,
               "name": "Corrugated Envlope",
+              "ioValues": [
+                {
+                  "name": "Wood Thickness",
+                  "ioValue": 2438.4
+                }
+              ],
               "topLevel": false,
               "allAtoms": [
                 {
@@ -4479,6 +4485,16 @@
                   "y": 0.34818941504178275,
                   "uniqueID": "0ea23283-efb4-42db-95d2-12ba04b47c02",
                   "name": "Corrugated-Roofing-Circle",
+                  "ioValues": [
+                    {
+                      "name": "Number of Bumps",
+                      "ioValue": 79
+                    },
+                    {
+                      "name": "Thickness",
+                      "ioValue": 2438.4
+                    }
+                  ],
                   "topLevel": false,
                   "allAtoms": [
                     {
