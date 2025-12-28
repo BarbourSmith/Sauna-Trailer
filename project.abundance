@@ -3086,7 +3086,7 @@
               "ioValue": null
             },
             {
-              "name": "Shape 8",
+              "name": "Shape 9",
               "ioValue": null
             }
           ]
@@ -3139,26 +3139,6 @@
           "name": "Sauna",
           "tags": [
             "Sauna"
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.7447089947089947,
-          "y": 0.5988857938718662,
-          "uniqueID": "id-61561",
-          "ioValues": [
-            {
-              "name": "xDist",
-              "ioValue": 1380
-            },
-            {
-              "name": "yDist",
-              "ioValue": -290
-            },
-            {
-              "name": "zDist",
-              "ioValue": 1745
-            }
           ]
         },
         {
@@ -4062,504 +4042,6 @@
           "fileTypeVersion": 1
         },
         {
-          "atomType": "GitHubMolecule",
-          "x": 0.759920634920635,
-          "y": 0.9331476323119776,
-          "uniqueID": "id-61500",
-          "name": "Chimney_Mounting_Ring",
-          "topLevel": false,
-          "allAtoms": [
-            {
-              "atomType": "Output",
-              "x": 0.98,
-              "y": 0.5,
-              "uniqueID": "id-61482"
-            },
-            {
-              "atomType": "Rectangle",
-              "x": 0.08862433862433863,
-              "y": 0.3175487465181059,
-              "uniqueID": "id-61483",
-              "ioValues": [
-                {
-                  "name": "x length",
-                  "ioValue": 20
-                },
-                {
-                  "name": "y length",
-                  "ioValue": 365
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.27645502645502645,
-              "y": 0.2646239554317549,
-              "uniqueID": "id-61484",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": 10
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.4351851851851851,
-              "y": 0.3147632311977716,
-              "uniqueID": "id-61485",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 55
-                }
-              ]
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.2506613756613757,
-              "y": 0.6295264623955432,
-              "uniqueID": "id-61493",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 55
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.40476190476190477,
-              "y": 0.6935933147632313,
-              "uniqueID": "id-61494",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": 197.5,
-                  "currentEquation": "235/-2 + 315"
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Fusion",
-              "x": 0.7215608465608465,
-              "y": 0.28690807799442897,
-              "uniqueID": "id-61495",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "move-extrude-cut-circle-117.5-circle-110-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-55-197.5-0-0",
-                    "dimension": "3D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "extrude-move-rectangle-20-365-10-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-55",
-                    "dimension": "3D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": {
-                    "geometry": "move-extrude-rectangle-200-10-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-55-100-117.5-0",
-                    "dimension": "3D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 4",
-                  "ioValue": {
-                    "geometry": "move-extrude-rectangle-200-10-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-55-100--117.5-0",
-                    "dimension": "3D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
-                }
-              ],
-              "unionType": "Fusion"
-            },
-            {
-              "atomType": "Rectangle",
-              "x": 0.43187830687830686,
-              "y": 0.8913649025069639,
-              "uniqueID": "id-61496",
-              "ioValues": [
-                {
-                  "name": "x length",
-                  "ioValue": 200
-                },
-                {
-                  "name": "y length",
-                  "ioValue": 10
-                }
-              ]
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.5621693121693122,
-              "y": 0.7688022284122563,
-              "uniqueID": "id-61497",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 55
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.6527777777777778,
-              "y": 0.584958217270195,
-              "uniqueID": "id-61498",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": 100
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 117.5,
-                  "currentEquation": "235/2"
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.6726190476190476,
-              "y": 0.8133704735376045,
-              "uniqueID": "id-61499",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": 100
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": -117.5,
-                  "currentEquation": "235/-2"
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "GitHubMolecule",
-              "x": 0.0992063492063492,
-              "y": 0.8523676880222841,
-              "uniqueID": "id-61486",
-              "name": "Concentric_Circles",
-              "ioValues": [
-                {
-                  "name": "OD",
-                  "ioValue": 235
-                },
-                {
-                  "name": "ID",
-                  "ioValue": 220
-                }
-              ],
-              "topLevel": false,
-              "allAtoms": [
-                {
-                  "atomType": "Output",
-                  "x": 0.98,
-                  "y": 0.5,
-                  "uniqueID": "id-61487"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.15384615384615385,
-                  "uniqueID": "id-61488",
-                  "name": "OD",
-                  "type": "number"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.24615384615384617,
-                  "uniqueID": "id-61489",
-                  "name": "ID",
-                  "type": "number"
-                },
-                {
-                  "atomType": "Circle",
-                  "x": 0.460559796437659,
-                  "y": 0.42567567567567566,
-                  "uniqueID": "id-61490",
-                  "ioValues": [
-                    {
-                      "name": "diameter",
-                      "ioValue": 235
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Circle",
-                  "x": 0.44529262086514,
-                  "y": 0.7263513513513513,
-                  "uniqueID": "id-61491",
-                  "ioValues": [
-                    {
-                      "name": "diameter",
-                      "ioValue": 220
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Difference",
-                  "x": 0.6615776081424937,
-                  "y": 0.5506756756756757,
-                  "uniqueID": "id-61492"
-                }
-              ],
-              "allConnectors": [
-                {
-                  "ap2Name": "diameter",
-                  "ap1ID": "id-61488",
-                  "ap2ID": "id-61490"
-                },
-                {
-                  "ap2Name": "diameter",
-                  "ap1ID": "id-61489",
-                  "ap2ID": "id-61491"
-                },
-                {
-                  "ap2Name": "geometry1",
-                  "ap1ID": "id-61490",
-                  "ap2ID": "id-61492"
-                },
-                {
-                  "ap2Name": "geometry2",
-                  "ap1ID": "id-61491",
-                  "ap2ID": "id-61492"
-                },
-                {
-                  "ap2Name": "number or geometry",
-                  "ap1ID": "id-61492",
-                  "ap2ID": "id-61487"
-                }
-              ],
-              "parentRepo": {
-                "lastFoundGit": "2025-12-25T18:23:39.338Z",
-                "privateRepo": false,
-                "repoName": "Concentric_Circles",
-                "dateCreated": "2025-11-08T04:08:14Z",
-                "likes": 0,
-                "readMe": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/README.md?sanitize=true",
-                "yyyy": 2025,
-                "topMoleculeID": "id-1170",
-                "githubMoleculesUsed": [],
-                "html_url": "https://github.com/BarbourSmith/Concentric_Circles",
-                "topics": [],
-                "parentRepo": null,
-                "forks": 0,
-                "dateModified": "739563",
-                "ranking": 3.3,
-                "searchField": "concentric_circles barboursmith creates two concentric circles. the result is 2d ",
-                "owner": "BarbourSmith",
-                "description": "Creates two concentric circles. The result is 2D",
-                "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/project.svg?sanitize=true",
-                "isLocal": false
-              },
-              "unitsKey": "Unitless",
-              "fileTypeVersion": 1
-            }
-          ],
-          "allConnectors": [
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61483",
-              "ap2ID": "id-61484"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61484",
-              "ap2ID": "id-61485"
-            },
-            {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-61485",
-              "ap2ID": "id-61495"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61493",
-              "ap2ID": "id-61494"
-            },
-            {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-61494",
-              "ap2ID": "id-61495"
-            },
-            {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-61495",
-              "ap2ID": "id-61482"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61496",
-              "ap2ID": "id-61497"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61497",
-              "ap2ID": "id-61498"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61497",
-              "ap2ID": "id-61499"
-            },
-            {
-              "ap2Name": "Shape 3",
-              "ap1ID": "id-61498",
-              "ap2ID": "id-61495"
-            },
-            {
-              "ap2Name": "Shape 4",
-              "ap1ID": "id-61499",
-              "ap2ID": "id-61495"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-61486",
-              "ap2ID": "id-61493"
-            }
-          ],
-          "parentRepo": {
-            "privateRepo": false,
-            "repoName": "Chimney_Mounting_Ring",
-            "dateCreated": "2025-12-26T00:27:34Z",
-            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Chimney_Mounting_Ring/master/README.md?sanitize=true",
-            "yyyy": 2025,
-            "topMoleculeID": "id-1",
-            "githubMoleculesUsed": [
-              {
-                "owner": "BarbourSmith",
-                "repoName": "Concentric_Circles"
-              }
-            ],
-            "html_url": "https://github.com/BarbourSmith/Chimney_Mounting_Ring",
-            "topics": [],
-            "parentRepo": null,
-            "forks": 0,
-            "dateModified": "739611",
-            "ranking": 0,
-            "searchField": "chimney_mounting_ring barboursmith the mounting clamp which attaches the chimney for the humm chimney set ",
-            "owner": "BarbourSmith",
-            "description": "The mounting clamp which attaches the chimney for the Humm chimney set",
-            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Chimney_Mounting_Ring/master/project.abundance?sanitize=true",
-            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Chimney_Mounting_Ring/master/project.svg?sanitize=true",
-            "isLocal": false
-          },
-          "unitsKey": "MM",
-          "fileTypeVersion": 1
-        },
-        {
           "atomType": "Molecule",
           "x": 0.032407407407407406,
           "y": 0.3899721448467966,
@@ -5192,14 +4674,15 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.6362433862433862,
-          "y": 0.9164345403899721,
+          "x": 0.6382275132275131,
+          "y": 0.9220055710306407,
           "uniqueID": "id-91364",
           "name": "Sauna Chimney Mounting Board",
           "ioValues": [
             {
               "name": "Wood_Thickness",
-              "ioValue": 10
+              "ioValue": 10,
+              "currentEquation": "10"
             }
           ],
           "topLevel": false,
@@ -5209,14 +4692,6 @@
               "x": 0.98,
               "y": 0.5,
               "uniqueID": "id-91366"
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
-              "uniqueID": "id-91368",
-              "name": "input",
-              "type": "geometry"
             },
             {
               "atomType": "Circle",
@@ -5233,7 +4708,7 @@
             {
               "atomType": "Input",
               "x": 0.025384615384615384,
-              "y": 0.24615384615384617,
+              "y": 0.34261838440111425,
               "uniqueID": "id-91374",
               "name": "Wood_Thickness"
             },
@@ -5331,7 +4806,7 @@
               "ioValues": [
                 {
                   "name": "xDist",
-                  "ioValue": 0,
+                  "ioValue": 10,
                   "currentEquation": "0"
                 },
                 {
@@ -5859,7 +5334,7 @@
             },
             {
               "atomType": "Move",
-              "x": 0.7817460317460317,
+              "x": 0.7797619047619048,
               "y": 0.8022284122562675,
               "uniqueID": "id-96720",
               "ioValues": [
@@ -5880,8 +5355,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.39351851851851855,
-              "y": 0.9025069637883008,
+              "x": 0.39021164021164023,
+              "y": 0.9331476323119776,
               "uniqueID": "id-96726",
               "ioValues": [
                 {
@@ -5895,7 +5370,8 @@
                 },
                 {
                   "name": "zDist",
-                  "ioValue": 1600
+                  "ioValue": 1745,
+                  "currentEquation": "1745"
                 }
               ]
             },
@@ -5918,6 +5394,11 @@
               "ap2ID": "id-91377"
             },
             {
+              "ap2Name": "xDist",
+              "ap1ID": "id-91374",
+              "ap2ID": "id-91408"
+            },
+            {
               "ap2Name": "geometry",
               "ap1ID": "id-91377",
               "ap2ID": "id-91381"
@@ -5938,14 +5419,14 @@
               "ap2ID": "id-96716"
             },
             {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-91397",
-              "ap2ID": "id-91366"
-            },
-            {
               "ap2Name": "geometry",
               "ap1ID": "id-91397",
               "ap2ID": "id-96720"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-91397",
+              "ap2ID": "id-91366"
             },
             {
               "ap2Name": "Shape 2",
@@ -37839,6 +37320,26 @@
             }
           ],
           "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Move",
+          "x": 0.7691798941798942,
+          "y": 0.8635097493036212,
+          "uniqueID": "id-96736",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 1380
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
         }
       ],
       "allConnectors": [
@@ -37918,16 +37419,6 @@
           "ap2ID": 1738956170776
         },
         {
-          "ap2Name": "Shape 8",
-          "ap1ID": "id-61561",
-          "ap2ID": "2ede00f0-ba12-4a6b-8ffb-f770367f92cc"
-        },
-        {
-          "ap2Name": "input",
-          "ap1ID": "id-61561",
-          "ap2ID": "id-91364"
-        },
-        {
           "ap2Name": "geometry",
           "ap1ID": 1741650496517,
           "ap2ID": 1741650501346
@@ -37943,11 +37434,6 @@
           "ap2ID": "da9e0d72-7116-4568-8734-1721e6a0e1e1"
         },
         {
-          "ap2Name": "geometry",
-          "ap1ID": "id-61500",
-          "ap2ID": "id-61561"
-        },
-        {
           "ap2Name": "Old Envlope",
           "ap1ID": 1738956981399,
           "ap2ID": "7f54861d-e0f1-4946-b14c-080851e157de"
@@ -37956,6 +37442,11 @@
           "ap2Name": "Envlope",
           "ap1ID": 1738956981399,
           "ap2ID": "912e598d-23d3-429e-9e08-ab5f4ac3b768"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-91364",
+          "ap2ID": "id-96736"
         },
         {
           "ap2Name": "geometry",
@@ -37986,6 +37477,11 @@
           "ap2Name": "geometry",
           "ap1ID": "b0cbca05-02be-4a68-9de1-ee823ee333ce",
           "ap2ID": 1738960642869
+        },
+        {
+          "ap2Name": "Shape 9",
+          "ap1ID": "id-96736",
+          "ap2ID": "2ede00f0-ba12-4a6b-8ffb-f770367f92cc"
         }
       ],
       "fileTypeVersion": 1
