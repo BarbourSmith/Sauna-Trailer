@@ -5351,8 +5351,8 @@
                 },
                 {
                   "atomType": "CutLayout",
-                  "x": 0.25,
-                  "y": 0.8523676880222841,
+                  "x": 0.2533068783068783,
+                  "y": 0.8356545961002785,
                   "uniqueID": "id-107459",
                   "name": "Cut Layout",
                   "ioValues": [
@@ -5373,7 +5373,7 @@
                     [
                       {
                         "id": 0,
-                        "rotate": 15,
+                        "rotate": 105,
                         "translate": {
                           "x": 0,
                           "y": 0
@@ -5384,8 +5384,8 @@
                 },
                 {
                   "atomType": "GitHubMolecule",
-                  "x": 0.40608465608465605,
-                  "y": 0.8133704735376045,
+                  "x": 0.40145502645502645,
+                  "y": 0.807799442896936,
                   "uniqueID": "id-107476",
                   "name": "Center_XY",
                   "topLevel": false,
@@ -5511,8 +5511,8 @@
                 },
                 {
                   "atomType": "Gcode",
-                  "x": 0.5906084656084656,
-                  "y": 0.6406685236768802,
+                  "x": 0.5912698412698413,
+                  "y": 0.6239554317548747,
                   "uniqueID": "id-107496",
                   "ioValues": [
                     {
@@ -5534,8 +5534,8 @@
                     },
                     {
                       "name": "Part Name",
-                      "ioValue": "Circle Part",
-                      "currentEquation": "Circle Part"
+                      "ioValue": "Chimney Clamp Circle Part Rotated",
+                      "currentEquation": "Chimney Clamp Circle Part Rotated"
                     }
                   ],
                   "partName": "Cut Layout",
