@@ -2881,8 +2881,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.26785714285714285,
-      "y": 0.796657381615599,
+      "x": 0.2744708994708995,
+      "y": 0.7938718662952646,
       "uniqueID": 1738956170299,
       "name": "Sauna",
       "ioValues": [
@@ -4797,8 +4797,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.6408730158730158,
-          "y": 0.9275766016713092,
+          "x": 0.6448412698412699,
+          "y": 0.9192200557103064,
           "uniqueID": "id-91364",
           "name": "Sauna Chimney Mounting Board",
           "ioValues": [
@@ -5165,6 +5165,421 @@
               "tags": [
                 "Chimney Wood"
               ]
+            },
+            {
+              "atomType": "Difference",
+              "x": 0.5436507936507936,
+              "y": 0.6183844011142061,
+              "uniqueID": "id-102188"
+            },
+            {
+              "atomType": "Intersection",
+              "x": 0.6203703703703703,
+              "y": 0.6155988857938719,
+              "uniqueID": "id-102192"
+            },
+            {
+              "atomType": "Equation",
+              "x": 0.1554232804232804,
+              "y": 0.5654596100278552,
+              "uniqueID": "id-102196",
+              "name": "T*-3",
+              "ioValues": [
+                {
+                  "name": "T",
+                  "ioValue": 12
+                }
+              ],
+              "currentEquation": "T*-3"
+            },
+            {
+              "atomType": "Move",
+              "x": 0.6911375661375662,
+              "y": 0.5376044568245125,
+              "uniqueID": "id-102201",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": -36
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.9120370370370371,
+              "y": 0.6768802228412256,
+              "uniqueID": "id-102044",
+              "name": "Cut Layout",
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-102046"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-102048",
+                  "name": "input",
+                  "type": "geometry"
+                },
+                {
+                  "atomType": "CutLayout",
+                  "x": 0.3048941798941799,
+                  "y": 0.4233983286908078,
+                  "uniqueID": "id-102054",
+                  "name": "Cut Layout",
+                  "ioValues": [
+                    {
+                      "name": "Sheet Width",
+                      "ioValue": 1000
+                    },
+                    {
+                      "name": "Sheet Height",
+                      "ioValue": 1219
+                    },
+                    {
+                      "name": "Part Padding",
+                      "ioValue": 10
+                    }
+                  ],
+                  "placements": [
+                    [
+                      {
+                        "id": 0,
+                        "rotate": 0,
+                        "translate": {
+                          "x": 570,
+                          "y": 780
+                        }
+                      },
+                      {
+                        "id": 1,
+                        "rotate": 0,
+                        "translate": {
+                          "x": 580,
+                          "y": 440
+                        }
+                      },
+                      {
+                        "id": 2,
+                        "rotate": 0,
+                        "translate": {
+                          "x": 440,
+                          "y": 550
+                        }
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "atomType": "Gcode",
+                  "x": 0.44378306878306883,
+                  "y": 0.22841225626740946,
+                  "uniqueID": "id-102162",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 2
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Chimney Clamps",
+                      "currentEquation": "Chimney Clamps"
+                    }
+                  ],
+                  "partName": "Cut Layout",
+                  "sortDirection": "Left"
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.8908730158730158,
+                  "y": 0.21727019498607245,
+                  "uniqueID": "id-102170",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 330.2,
+                      "currentEquation": "13*25.4"
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 711.1999999999999,
+                      "currentEquation": "28*25.4"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "ExtractTag",
+                  "x": 0.18849206349206352,
+                  "y": 0.2479108635097493,
+                  "uniqueID": "id-102174",
+                  "name": "Extract Tag",
+                  "tag": "Chimney Wood",
+                  "tagIndex": 0
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-107456",
+                  "name": "input_1",
+                  "type": "geometry"
+                },
+                {
+                  "atomType": "CutLayout",
+                  "x": 0.25,
+                  "y": 0.8523676880222841,
+                  "uniqueID": "id-107459",
+                  "name": "Cut Layout",
+                  "ioValues": [
+                    {
+                      "name": "Sheet Width",
+                      "ioValue": 2438
+                    },
+                    {
+                      "name": "Sheet Height",
+                      "ioValue": 1219
+                    },
+                    {
+                      "name": "Part Padding",
+                      "ioValue": 10
+                    }
+                  ],
+                  "placements": [
+                    [
+                      {
+                        "id": 0,
+                        "rotate": 15,
+                        "translate": {
+                          "x": 0,
+                          "y": 0
+                        }
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.40608465608465605,
+                  "y": 0.8133704735376045,
+                  "uniqueID": "id-107476",
+                  "name": "Center_XY",
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 0.98,
+                      "y": 0.5,
+                      "uniqueID": "id-107470"
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.42791005291005285,
+                      "y": 0.2785515320334262,
+                      "uniqueID": "id-107471",
+                      "codeVersion": 1,
+                      "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and recenters it in the XY plane based on its bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // Nothing to do if no input provided\n  return null\n}\n\n// Get bounding box of A\nlet boundsA = await GetBounds(A);\n// boundsA.min and boundsA.max are arrays [x,y,z]\nlet min = boundsA.min\nlet max = boundsA.max\n\n// Compute the center of the bounding box in X and Y\nlet centerX = (min[0] + max[0]) / 2.0\nlet centerY = (min[1] + max[1]) / 2.0\n\n// Translation to move the bounding box center to the origin (0,0) in XY,\n// leaving Z unchanged.\nlet translationX = -centerX\nlet translationY = -centerY\nlet translationZ = 0\n\n// Move the shape. Move takes the input ID and translations (x,y,z)\nlet movedOutput = await Move(A, translationX, translationY, translationZ)\n\n// Return the moved shape. Move typically returns a replicad object suitable for return.\nreturn movedOutput"
+                    },
+                    {
+                      "atomType": "Rectangle",
+                      "x": 0.1798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-107472",
+                      "ioValues": [
+                        {
+                          "name": "x length",
+                          "ioValue": 10
+                        },
+                        {
+                          "name": "y length",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Extrude",
+                      "x": 0.2798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-107473",
+                      "ioValues": [
+                        {
+                          "name": "height",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.46891534391534395,
+                      "y": 0.6211699164345404,
+                      "uniqueID": "id-107474",
+                      "ioValues": [
+                        {
+                          "name": "xDist",
+                          "ioValue": 50
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 30
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.025384615384615384,
+                      "y": 0.15384615384615385,
+                      "uniqueID": "id-107475",
+                      "name": "Geometry",
+                      "type": "geometry"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-107471",
+                      "ap2ID": "id-107470"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-107472",
+                      "ap2ID": "id-107473"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-107473",
+                      "ap2ID": "id-107474"
+                    },
+                    {
+                      "ap2Name": "A",
+                      "ap1ID": "id-107475",
+                      "ap2ID": "id-107471"
+                    }
+                  ],
+                  "parentRepo": {
+                    "lastFoundGit": "2025-12-28T02:23:39.275Z",
+                    "privateRepo": false,
+                    "repoName": "Center_XY",
+                    "dateCreated": "2025-12-04T19:44:27Z",
+                    "likes": 0,
+                    "readMe": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/README.md?sanitize=true",
+                    "yyyy": 2025,
+                    "topMoleculeID": "id-64",
+                    "githubMoleculesUsed": [],
+                    "html_url": "https://github.com/BarbourSmith/Center_XY",
+                    "topics": [],
+                    "parentRepo": null,
+                    "forks": 0,
+                    "dateModified": "739589",
+                    "ranking": 0.3,
+                    "searchField": "center_xy barboursmith this takes an input shape and moves it to be centered on the xy plane ",
+                    "owner": "BarbourSmith",
+                    "description": "This takes an input shape and moves it to be centered on the XY plane",
+                    "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.abundance?sanitize=true",
+                    "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.svg?sanitize=true",
+                    "isLocal": false
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1
+                },
+                {
+                  "atomType": "Gcode",
+                  "x": 0.5906084656084656,
+                  "y": 0.6406685236768802,
+                  "uniqueID": "id-107496",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 2,
+                      "currentEquation": "2"
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Circle Part",
+                      "currentEquation": "Circle Part"
+                    }
+                  ],
+                  "partName": "Cut Layout",
+                  "sortDirection": "Left"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-102048",
+                  "ap2ID": "id-102174"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-102054",
+                  "ap2ID": "id-102162"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-102170",
+                  "ap2ID": "id-102046"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-102174",
+                  "ap2ID": "id-102054"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-107456",
+                  "ap2ID": "id-107459"
+                },
+                {
+                  "ap2Name": "Geometry",
+                  "ap1ID": "id-107459",
+                  "ap2ID": "id-107476"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-107476",
+                  "ap2ID": "id-107496"
+                }
+              ],
+              "fileTypeVersion": 1
             },
             {
               "atomType": "GitHubMolecule",
@@ -5663,209 +6078,6 @@
               },
               "unitsKey": "MM",
               "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Molecule",
-              "x": 0.9120370370370371,
-              "y": 0.6768802228412256,
-              "uniqueID": "id-102044",
-              "name": "Cut Layout",
-              "topLevel": false,
-              "allAtoms": [
-                {
-                  "atomType": "Output",
-                  "x": 0.98,
-                  "y": 0.5,
-                  "uniqueID": "id-102046"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.2479108635097493,
-                  "uniqueID": "id-102048",
-                  "name": "input",
-                  "type": "geometry"
-                },
-                {
-                  "atomType": "CutLayout",
-                  "x": 0.3048941798941799,
-                  "y": 0.4233983286908078,
-                  "uniqueID": "id-102054",
-                  "name": "Cut Layout",
-                  "ioValues": [
-                    {
-                      "name": "Sheet Width",
-                      "ioValue": 1000,
-                      "currentEquation": "1000"
-                    },
-                    {
-                      "name": "Sheet Height",
-                      "ioValue": 1219
-                    },
-                    {
-                      "name": "Part Padding",
-                      "ioValue": 10
-                    }
-                  ],
-                  "placements": [
-                    [
-                      {
-                        "id": 0,
-                        "rotate": 0,
-                        "translate": {
-                          "x": 570,
-                          "y": 780
-                        }
-                      },
-                      {
-                        "id": 1,
-                        "rotate": 0,
-                        "translate": {
-                          "x": 580,
-                          "y": 440
-                        }
-                      },
-                      {
-                        "id": 2,
-                        "rotate": 0,
-                        "translate": {
-                          "x": 440,
-                          "y": 550
-                        }
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "atomType": "Gcode",
-                  "x": 0.5046296296296297,
-                  "y": 0.45403899721448465,
-                  "uniqueID": "id-102162",
-                  "ioValues": [
-                    {
-                      "name": "Tool Size",
-                      "ioValue": 6.35
-                    },
-                    {
-                      "name": "Passes",
-                      "ioValue": 1
-                    },
-                    {
-                      "name": "Speed",
-                      "ioValue": 1500
-                    },
-                    {
-                      "name": "Cut Through",
-                      "ioValue": 2,
-                      "currentEquation": "2"
-                    },
-                    {
-                      "name": "Part Name",
-                      "ioValue": "Chimney Clamps",
-                      "currentEquation": "Chimney Clamps"
-                    }
-                  ],
-                  "partName": "Cut Layout",
-                  "sortDirection": "Left"
-                },
-                {
-                  "atomType": "Rectangle",
-                  "x": 0.8908730158730158,
-                  "y": 0.21727019498607245,
-                  "uniqueID": "id-102170",
-                  "ioValues": [
-                    {
-                      "name": "x length",
-                      "ioValue": 330.2,
-                      "currentEquation": "13*25.4"
-                    },
-                    {
-                      "name": "y length",
-                      "ioValue": 711.1999999999999,
-                      "currentEquation": "28*25.4"
-                    }
-                  ]
-                },
-                {
-                  "atomType": "ExtractTag",
-                  "x": 0.09854497354497355,
-                  "y": 0.6880222841225626,
-                  "uniqueID": "id-102174",
-                  "name": "Extract Tag",
-                  "tag": "Chimney Wood",
-                  "tagIndex": 0
-                }
-              ],
-              "allConnectors": [
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-102048",
-                  "ap2ID": "id-102174"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-102054",
-                  "ap2ID": "id-102162"
-                },
-                {
-                  "ap2Name": "number or geometry",
-                  "ap1ID": "id-102170",
-                  "ap2ID": "id-102046"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-102174",
-                  "ap2ID": "id-102054"
-                }
-              ],
-              "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Difference",
-              "x": 0.5436507936507936,
-              "y": 0.6183844011142061,
-              "uniqueID": "id-102188"
-            },
-            {
-              "atomType": "Intersection",
-              "x": 0.6203703703703703,
-              "y": 0.6155988857938719,
-              "uniqueID": "id-102192"
-            },
-            {
-              "atomType": "Equation",
-              "x": 0.1554232804232804,
-              "y": 0.5654596100278552,
-              "uniqueID": "id-102196",
-              "name": "T*-3",
-              "ioValues": [
-                {
-                  "name": "T",
-                  "ioValue": 12
-                }
-              ],
-              "currentEquation": "T*-3"
-            },
-            {
-              "atomType": "Move",
-              "x": 0.6911375661375662,
-              "y": 0.5376044568245125,
-              "uniqueID": "id-102201",
-              "ioValues": [
-                {
-                  "name": "xDist",
-                  "ioValue": -36,
-                  "currentEquation": "0"
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
             }
           ],
           "allConnectors": [
@@ -6040,11 +6252,6 @@
               "ap2ID": "id-91397"
             },
             {
-              "ap2Name": "geometry",
-              "ap1ID": "id-91512",
-              "ap2ID": "id-91408"
-            },
-            {
               "ap2Name": "geometry1",
               "ap1ID": "id-102188",
               "ap2ID": "id-102192"
@@ -6063,6 +6270,16 @@
               "ap2Name": "Shape 7",
               "ap1ID": "id-102201",
               "ap2ID": "id-91397"
+            },
+            {
+              "ap2Name": "input_1",
+              "ap1ID": "id-102201",
+              "ap2ID": "id-102044"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-91512",
+              "ap2ID": "id-91408"
             }
           ],
           "fileTypeVersion": 1
@@ -27840,138 +28057,23 @@
               "ioValues": [
                 {
                   "name": "Shape 4",
-                  "ioValue": {
-                    "geometry": "move-rotate-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-200-0-45-0-0-0-970",
-                    "dimension": "3D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
+                  "ioValue": null
                 },
                 {
                   "name": "Shape 5",
-                  "ioValue": {
-                    "geometry": "move-rotate-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-430-0-90-0-110-0-1100",
-                    "dimension": "3D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
+                  "ioValue": null
                 },
                 {
                   "name": "Shape 6",
-                  "ioValue": {
-                    "geometry": "move-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-400-500-0-1100",
-                    "dimension": "3D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
+                  "ioValue": null
                 },
                 {
                   "name": "Shape 7",
-                  "ioValue": {
-                    "geometry": "extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-990",
-                    "dimension": "3D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
+                  "ioValue": null
                 },
                 {
                   "name": "Shape 8",
-                  "ioValue": {
-                    "geometry": "move-fuse-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6-move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6-500-0-1500",
-                    "tags": [],
-                    "bom": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "dimension": "3D"
-                  }
+                  "ioValue": null
                 }
               ],
               "unionType": "Fusion"
@@ -28347,57 +28449,11 @@
                   "ioValues": [
                     {
                       "name": "Shape 1",
-                      "ioValue": {
-                        "geometry": "move-circle-76.19999999999999-0-0-0",
-                        "dimension": "2D",
-                        "tags": [],
-                        "plane": {
-                          "origin": [
-                            0,
-                            0,
-                            63.5
-                          ],
-                          "xDir": [
-                            1,
-                            0,
-                            0
-                          ],
-                          "normal": [
-                            0,
-                            0,
-                            1
-                          ]
-                        },
-                        "color": "#aad7f2",
-                        "bom": []
-                      }
+                      "ioValue": null
                     },
                     {
                       "name": "Shape 2",
-                      "ioValue": {
-                        "geometry": "circle-101.6",
-                        "dimension": "2D",
-                        "tags": [],
-                        "plane": {
-                          "origin": [
-                            0,
-                            0,
-                            0
-                          ],
-                          "xDir": [
-                            1,
-                            0,
-                            0
-                          ],
-                          "normal": [
-                            0,
-                            0,
-                            1
-                          ]
-                        },
-                        "color": "#aad7f2",
-                        "bom": []
-                      }
+                      "ioValue": null
                     },
                     {
                       "name": "Shape 3",
@@ -28435,57 +28491,11 @@
                   "ioValues": [
                     {
                       "name": "Shape 1",
-                      "ioValue": {
-                        "geometry": "move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6",
-                        "dimension": "3D",
-                        "tags": [],
-                        "plane": {
-                          "origin": [
-                            0,
-                            0,
-                            0
-                          ],
-                          "xDir": [
-                            1,
-                            0,
-                            0
-                          ],
-                          "normal": [
-                            0,
-                            0,
-                            1
-                          ]
-                        },
-                        "color": "#aad7f2",
-                        "bom": []
-                      }
+                      "ioValue": null
                     },
                     {
                       "name": "Shape 2",
-                      "ioValue": {
-                        "geometry": "extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6",
-                        "dimension": "3D",
-                        "tags": [],
-                        "plane": {
-                          "origin": [
-                            0,
-                            0,
-                            0
-                          ],
-                          "xDir": [
-                            1,
-                            0,
-                            0
-                          ],
-                          "normal": [
-                            0,
-                            0,
-                            1
-                          ]
-                        },
-                        "color": "#aad7f2",
-                        "bom": []
-                      }
+                      "ioValue": null
                     }
                   ],
                   "unionType": "Fusion"
@@ -28579,6 +28589,37 @@
                   ]
                 },
                 {
+                  "atomType": "Gcode",
+                  "x": 0.5171957671957672,
+                  "y": 0.32869080779944293,
+                  "uniqueID": "id-102180",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 2
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Chimney Pass through Larger",
+                      "currentEquation": "Chimney Pass through Larger"
+                    }
+                  ],
+                  "partName": "Chimney Pass through ",
+                  "sortDirection": "Left"
+                },
+                {
                   "atomType": "GitHubMolecule",
                   "x": 0.11904761904761904,
                   "y": 0.5431754874651811,
@@ -28592,8 +28633,7 @@
                     },
                     {
                       "name": "ID",
-                      "ioValue": 235,
-                      "currentEquation": "235"
+                      "ioValue": 235
                     }
                   ],
                   "topLevel": false,
@@ -28703,38 +28743,6 @@
                   },
                   "unitsKey": "Unitless",
                   "fileTypeVersion": 1
-                },
-                {
-                  "atomType": "Gcode",
-                  "x": 0.5171957671957672,
-                  "y": 0.32869080779944293,
-                  "uniqueID": "id-102180",
-                  "ioValues": [
-                    {
-                      "name": "Tool Size",
-                      "ioValue": 6.35
-                    },
-                    {
-                      "name": "Passes",
-                      "ioValue": 1
-                    },
-                    {
-                      "name": "Speed",
-                      "ioValue": 1500
-                    },
-                    {
-                      "name": "Cut Through",
-                      "ioValue": 2,
-                      "currentEquation": "2"
-                    },
-                    {
-                      "name": "Part Name",
-                      "ioValue": "Chimney Pass through Larger",
-                      "currentEquation": "Chimney Pass through Larger"
-                    }
-                  ],
-                  "partName": "Chimney Pass through ",
-                  "sortDirection": "Left"
                 }
               ],
               "allConnectors": [
