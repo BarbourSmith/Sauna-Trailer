@@ -5692,14 +5692,15 @@
                 },
                 {
                   "atomType": "CutLayout",
-                  "x": 0.15806878306878305,
-                  "y": 0.40111420612813375,
+                  "x": 0.16203703703703703,
+                  "y": 0.3983286908077995,
                   "uniqueID": "id-102054",
                   "name": "Cut Layout",
                   "ioValues": [
                     {
                       "name": "Sheet Width",
-                      "ioValue": 2438
+                      "ioValue": 1000,
+                      "currentEquation": "1000"
                     },
                     {
                       "name": "Sheet Height",
@@ -5725,8 +5726,8 @@
                 },
                 {
                   "atomType": "CutLayout",
-                  "x": 0.12235449735449735,
-                  "y": 0.777158774373259,
+                  "x": 0.18518518518518517,
+                  "y": 0.7576601671309192,
                   "uniqueID": "id-102060",
                   "name": "Cut Layout",
                   "ioValues": [
@@ -5755,6 +5756,341 @@
                       }
                     ]
                   ]
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.371031746031746,
+                  "y": 0.4345403899721449,
+                  "uniqueID": "id-102077",
+                  "name": "Center_XY",
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 0.98,
+                      "y": 0.5,
+                      "uniqueID": "id-102071"
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.42791005291005285,
+                      "y": 0.2785515320334262,
+                      "uniqueID": "id-102072",
+                      "codeVersion": 1,
+                      "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and recenters it in the XY plane based on its bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // Nothing to do if no input provided\n  return null\n}\n\n// Get bounding box of A\nlet boundsA = await GetBounds(A);\n// boundsA.min and boundsA.max are arrays [x,y,z]\nlet min = boundsA.min\nlet max = boundsA.max\n\n// Compute the center of the bounding box in X and Y\nlet centerX = (min[0] + max[0]) / 2.0\nlet centerY = (min[1] + max[1]) / 2.0\n\n// Translation to move the bounding box center to the origin (0,0) in XY,\n// leaving Z unchanged.\nlet translationX = -centerX\nlet translationY = -centerY\nlet translationZ = 0\n\n// Move the shape. Move takes the input ID and translations (x,y,z)\nlet movedOutput = await Move(A, translationX, translationY, translationZ)\n\n// Return the moved shape. Move typically returns a replicad object suitable for return.\nreturn movedOutput"
+                    },
+                    {
+                      "atomType": "Rectangle",
+                      "x": 0.1798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-102073",
+                      "ioValues": [
+                        {
+                          "name": "x length",
+                          "ioValue": 10
+                        },
+                        {
+                          "name": "y length",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Extrude",
+                      "x": 0.2798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-102074",
+                      "ioValues": [
+                        {
+                          "name": "height",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.46891534391534395,
+                      "y": 0.6211699164345404,
+                      "uniqueID": "id-102075",
+                      "ioValues": [
+                        {
+                          "name": "xDist",
+                          "ioValue": 50
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 30
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.025384615384615384,
+                      "y": 0.15384615384615385,
+                      "uniqueID": "id-102076",
+                      "name": "Geometry",
+                      "type": "geometry"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-102072",
+                      "ap2ID": "id-102071"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-102073",
+                      "ap2ID": "id-102074"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-102074",
+                      "ap2ID": "id-102075"
+                    },
+                    {
+                      "ap2Name": "A",
+                      "ap1ID": "id-102076",
+                      "ap2ID": "id-102072"
+                    }
+                  ],
+                  "parentRepo": {
+                    "lastFoundGit": "2025-12-27T18:23:39.540Z",
+                    "privateRepo": false,
+                    "repoName": "Center_XY",
+                    "dateCreated": "2025-12-04T19:44:27Z",
+                    "likes": 0,
+                    "readMe": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/README.md?sanitize=true",
+                    "yyyy": 2025,
+                    "topMoleculeID": "id-64",
+                    "githubMoleculesUsed": [],
+                    "html_url": "https://github.com/BarbourSmith/Center_XY",
+                    "topics": [],
+                    "parentRepo": null,
+                    "forks": 0,
+                    "dateModified": "739589",
+                    "ranking": 0.3,
+                    "searchField": "center_xy barboursmith this takes an input shape and moves it to be centered on the xy plane ",
+                    "owner": "BarbourSmith",
+                    "description": "This takes an input shape and moves it to be centered on the XY plane",
+                    "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.abundance?sanitize=true",
+                    "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.svg?sanitize=true",
+                    "isLocal": false
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.3187830687830688,
+                  "y": 0.8217270194986073,
+                  "uniqueID": "id-102134",
+                  "name": "Center_XY",
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 0.98,
+                      "y": 0.5,
+                      "uniqueID": "id-102128"
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.42791005291005285,
+                      "y": 0.2785515320334262,
+                      "uniqueID": "id-102129",
+                      "codeVersion": 1,
+                      "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and recenters it in the XY plane based on its bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // Nothing to do if no input provided\n  return null\n}\n\n// Get bounding box of A\nlet boundsA = await GetBounds(A);\n// boundsA.min and boundsA.max are arrays [x,y,z]\nlet min = boundsA.min\nlet max = boundsA.max\n\n// Compute the center of the bounding box in X and Y\nlet centerX = (min[0] + max[0]) / 2.0\nlet centerY = (min[1] + max[1]) / 2.0\n\n// Translation to move the bounding box center to the origin (0,0) in XY,\n// leaving Z unchanged.\nlet translationX = -centerX\nlet translationY = -centerY\nlet translationZ = 0\n\n// Move the shape. Move takes the input ID and translations (x,y,z)\nlet movedOutput = await Move(A, translationX, translationY, translationZ)\n\n// Return the moved shape. Move typically returns a replicad object suitable for return.\nreturn movedOutput"
+                    },
+                    {
+                      "atomType": "Rectangle",
+                      "x": 0.1798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-102130",
+                      "ioValues": [
+                        {
+                          "name": "x length",
+                          "ioValue": 10
+                        },
+                        {
+                          "name": "y length",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Extrude",
+                      "x": 0.2798941798941799,
+                      "y": 0.6044568245125348,
+                      "uniqueID": "id-102131",
+                      "ioValues": [
+                        {
+                          "name": "height",
+                          "ioValue": 10
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.46891534391534395,
+                      "y": 0.6211699164345404,
+                      "uniqueID": "id-102132",
+                      "ioValues": [
+                        {
+                          "name": "xDist",
+                          "ioValue": 50
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 30
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.025384615384615384,
+                      "y": 0.15384615384615385,
+                      "uniqueID": "id-102133",
+                      "name": "Geometry",
+                      "type": "geometry"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-102129",
+                      "ap2ID": "id-102128"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-102130",
+                      "ap2ID": "id-102131"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-102131",
+                      "ap2ID": "id-102132"
+                    },
+                    {
+                      "ap2Name": "A",
+                      "ap1ID": "id-102133",
+                      "ap2ID": "id-102129"
+                    }
+                  ],
+                  "parentRepo": {
+                    "lastFoundGit": "2025-12-27T18:23:39.540Z",
+                    "privateRepo": false,
+                    "repoName": "Center_XY",
+                    "dateCreated": "2025-12-04T19:44:27Z",
+                    "likes": 0,
+                    "readMe": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/README.md?sanitize=true",
+                    "yyyy": 2025,
+                    "topMoleculeID": "id-64",
+                    "githubMoleculesUsed": [],
+                    "html_url": "https://github.com/BarbourSmith/Center_XY",
+                    "topics": [],
+                    "parentRepo": null,
+                    "forks": 0,
+                    "dateModified": "739589",
+                    "ranking": 0.3,
+                    "searchField": "center_xy barboursmith this takes an input shape and moves it to be centered on the xy plane ",
+                    "owner": "BarbourSmith",
+                    "description": "This takes an input shape and moves it to be centered on the XY plane",
+                    "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.abundance?sanitize=true",
+                    "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.svg?sanitize=true",
+                    "isLocal": false
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1
+                },
+                {
+                  "atomType": "Gcode",
+                  "x": 0.6706349206349206,
+                  "y": 0.6406685236768802,
+                  "uniqueID": "id-102154",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Cut Layout",
+                      "currentEquation": "Cut Layout"
+                    }
+                  ],
+                  "partName": "Cut Layout",
+                  "sortDirection": "Left"
+                },
+                {
+                  "atomType": "Gcode",
+                  "x": 0.4914021164021164,
+                  "y": 0.2590529247910863,
+                  "uniqueID": "id-102162",
+                  "ioValues": [
+                    {
+                      "name": "Tool Size",
+                      "ioValue": 6.35
+                    },
+                    {
+                      "name": "Passes",
+                      "ioValue": 1
+                    },
+                    {
+                      "name": "Speed",
+                      "ioValue": 1500
+                    },
+                    {
+                      "name": "Cut Through",
+                      "ioValue": 2,
+                      "currentEquation": "2"
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Cut Layout",
+                      "currentEquation": "Cut Layout"
+                    }
+                  ],
+                  "partName": "Cut Layout",
+                  "sortDirection": "Left"
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.8908730158730158,
+                  "y": 0.21727019498607245,
+                  "uniqueID": "id-102170",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 330.2,
+                      "currentEquation": "13*25.4"
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 711.1999999999999,
+                      "currentEquation": "28*25.4"
+                    }
+                  ]
                 }
               ],
               "allConnectors": [
@@ -5767,6 +6103,31 @@
                   "ap2Name": "geometry",
                   "ap1ID": "id-102051",
                   "ap2ID": "id-102060"
+                },
+                {
+                  "ap2Name": "Geometry",
+                  "ap1ID": "id-102054",
+                  "ap2ID": "id-102077"
+                },
+                {
+                  "ap2Name": "Geometry",
+                  "ap1ID": "id-102060",
+                  "ap2ID": "id-102134"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-102077",
+                  "ap2ID": "id-102162"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-102134",
+                  "ap2ID": "id-102154"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-102170",
+                  "ap2ID": "id-102046"
                 }
               ],
               "fileTypeVersion": 1
