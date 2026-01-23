@@ -11,4 +11,5 @@
 |36 Inch Aluminum Sheet|2|$112.00||
 |Door Hinge|2|$0.00||
 |End Cap|1|$0.00||
-|Total: |106|$112.00| |
+|Razo White Oak Wood Floor Register, Drop in Vent Cover with Damper|1|$25.50|[Amazon](https://www.amazon.com/Razo-Register-Opening-Thickness-Unfinished/dp/B0BLYWKLPW/ref=sr_1_4_sspa?crid=87PNO3LVJSSZ&dib=eyJ2IjoiMSJ9.98KO7YhoQRsLBqLqLQeeS7Tdf_J5PMeerdK8YISpDAhR_JT_7Sb7fycsvamRaK6V9sQ1zwVXBCI0CDbYWnfx42pNBJckrOaKuf4gsAdT-u6XV-DY4YViQUGmbhtkW1gBtu3TxZUU0wOTnGMGTv8CCWfrRHxrO3bORNp7nhk1fIRGnLZLkfOpEvj_HYwX-sQXDGV1tJVQfAJjoHB0GwwArCU-9Gx0W7TXvUwIDFq1qSpxKzIE1MmtTaa7uJmCzLN6Joxd65D4rhu8l4r1z_Whc2g_2Rg_m14zeoXudag35Pg.sLiT_7Q3PXPzndU4hLyUVunyYRqSzBTxzEHkz8IXu_Y&dib_tag=se&keywords=wood%2Bfloor%2Bregister%2Bdamper&qid=1769193267&sprefix=wood%2Bfloor%2Bregister%2Bdampe%2Caps%2C184&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1?tag=maslowcnc01-20)|
+|Total: |107|$137.50| |
