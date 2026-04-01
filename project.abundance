@@ -4551,6 +4551,10 @@
                     {
                       "name": "Dist",
                       "ioValue": 107.47
+                    },
+                    {
+                      "name": "Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ],
                   "codeVersion": 1,
@@ -5200,6 +5204,12 @@
               "y": 0.17039106145251398,
               "uniqueID": 1746922984330,
               "name": "Corrugated Envlope",
+              "ioValues": [
+                {
+                  "name": "Wood Thickness",
+                  "ioValue": 2438.4
+                }
+              ],
               "topLevel": false,
               "allAtoms": [
                 {
@@ -5236,6 +5246,16 @@
                   "y": 0.34818941504178275,
                   "uniqueID": "0ea23283-efb4-42db-95d2-12ba04b47c02",
                   "name": "Corrugated-Roofing-Circle",
+                  "ioValues": [
+                    {
+                      "name": "Number of Bumps",
+                      "ioValue": 79
+                    },
+                    {
+                      "name": "Thickness",
+                      "ioValue": 2438.4
+                    }
+                  ],
                   "topLevel": false,
                   "allAtoms": [
                     {
@@ -5255,6 +5275,16 @@
                       "x": 0.4503968253968254,
                       "y": 0.3687150837988827,
                       "uniqueID": "0ea5a829-0678-4375-9453-03e3c109e8c3",
+                      "ioValues": [
+                        {
+                          "name": "thickness",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "numBumps",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ],
                       "codeVersion": 1,
                       "code": " \n      //Inputs:[thickness, numBumps]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Define a circle\n       const circleFunction = (t) => {\n\n         \n       const period = 72;\n       const circumference = numBumps * period;\n       const baseRadius = circumference / (2 * Math.PI);\n       console.log(\"Base Radius: \" + baseRadius);\n\n        t = t === 1 ? 0: t\n      \n        const length = Math.PI*2*baseRadius;\n        const amplitude = 19 / 2;\n        const sinX = t * length; // Scale  to the total length (circumference)\n        const sinY = amplitude * Math.sin((2 * Math.PI * sinX) / period)\n      \n        const angle = 2 * Math.PI * t;\n      \n        const radius = baseRadius + sinY;\n      \n        const circleX = radius * Math.cos(angle);\n        const circleY = radius * Math.sin(angle);\n      \n        const x = circleX ;\n        const y = circleY;\n      \n      \n        return [x, y];\n      };\n\n      // Step 3: Create the sinewave shape\n      const points = Math.max(200, 6*numBumps);\n      const sinewaveShape = replicad.drawParametricFunction(circleFunction, { pointsCount: points });\n  \n    \n      // Return the combined shape\n      let createdShape =  sinewaveShape.sketchOnPlane().extrude(thickness);\n\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                     },
@@ -7629,6 +7659,10 @@
                         {
                           "name": "Angle",
                           "ioValue": 60
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -9549,6 +9583,10 @@
                             {
                               "name": "Angle",
                               "ioValue": 90
+                            },
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -9850,11 +9888,57 @@
                       "ioValues": [
                         {
                           "name": "Shape 1",
-                          "ioValue": null
+                          "ioValue": {
+                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0--30",
+                            "dimension": "3D",
+                            "tags": [],
+                            "plane": {
+                              "origin": [
+                                0,
+                                0,
+                                0
+                              ],
+                              "xDir": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "normal": [
+                                0,
+                                0,
+                                1
+                              ]
+                            },
+                            "color": "#aad7f2",
+                            "bom": []
+                          }
                         },
                         {
                           "name": "Shape 2",
-                          "ioValue": null
+                          "ioValue": {
+                            "geometry": "rotate-move-extrude-circle-3.2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-100-732.5-0-0-0-0-30",
+                            "dimension": "3D",
+                            "tags": [],
+                            "plane": {
+                              "origin": [
+                                0,
+                                0,
+                                0
+                              ],
+                              "xDir": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "normal": [
+                                0,
+                                0,
+                                1
+                              ]
+                            },
+                            "color": "#aad7f2",
+                            "bom": []
+                          }
                         }
                       ],
                       "unionType": "Fusion"
@@ -10027,6 +10111,20 @@
                           "x": 0.4933862433862434,
                           "y": 0.4608938547486033,
                           "uniqueID": "e391437d-ea6a-4c3b-9bf5-9810d130409b",
+                          "ioValues": [
+                            {
+                              "name": "angle",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "height",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "thickness",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            }
+                          ],
                           "codeVersion": 1,
                           "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                         },
@@ -11304,6 +11402,10 @@
                             {
                               "name": "Angle",
                               "ioValue": 45
+                            },
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -11663,10 +11765,10 @@
                             }
                           ],
                           "BOMitem": {
-                            "BOMitemName": "1/4-20 T-Nut",
+                            "BOMitemName": "New Item",
                             "numberNeeded": 1,
-                            "costUSD": 0.51,
-                            "source": "https://www.amazon.com/dp/B08WFG7WYP?ref=ppx_yo2ov_dt_b_fed_asin_title"
+                            "costUSD": 0,
+                            "source": ""
                           }
                         },
                         {
@@ -13511,6 +13613,20 @@
                           "x": 0.5112433862433863,
                           "y": 0.4345403899721449,
                           "uniqueID": 1739990534755,
+                          "ioValues": [
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "Number",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "Dist",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            }
+                          ],
                           "codeVersion": 1,
                           "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
@@ -13644,6 +13760,10 @@
                             {
                               "name": "Dist",
                               "ioValue": 800
+                            },
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -18127,6 +18247,10 @@
                             {
                               "name": "radius",
                               "ioValue": 3
+                            },
+                            {
+                              "name": "inputShape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -20065,11 +20189,57 @@
                                 },
                                 {
                                   "name": "Shape 1",
-                                  "ioValue": null
+                                  "ioValue": {
+                                    "geometry": "move-circle-1.65-0-0-0",
+                                    "dimension": "2D",
+                                    "tags": [],
+                                    "plane": {
+                                      "origin": [
+                                        0,
+                                        0,
+                                        -4
+                                      ],
+                                      "xDir": [
+                                        1,
+                                        0,
+                                        0
+                                      ],
+                                      "normal": [
+                                        0,
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    "color": "#aad7f2",
+                                    "bom": []
+                                  }
                                 },
                                 {
                                   "name": "Shape 2",
-                                  "ioValue": null
+                                  "ioValue": {
+                                    "geometry": "circle-4.25",
+                                    "dimension": "2D",
+                                    "tags": [],
+                                    "plane": {
+                                      "origin": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "xDir": [
+                                        1,
+                                        0,
+                                        0
+                                      ],
+                                      "normal": [
+                                        0,
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    "color": "#aad7f2",
+                                    "bom": []
+                                  }
                                 }
                               ],
                               "closedSelection": 0
@@ -20139,10 +20309,10 @@
                                 }
                               ],
                               "BOMitem": {
-                                "BOMitemName": "#6 Wood Screw",
+                                "BOMitemName": "New Item",
                                 "numberNeeded": 1,
-                                "costUSD": 0.1,
-                                "source": "www.example.com"
+                                "costUSD": 0,
+                                "source": ""
                               }
                             },
                             {
@@ -25398,6 +25568,10 @@
                                 {
                                   "name": "radius",
                                   "ioValue": 5
+                                },
+                                {
+                                  "name": "inputShape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -25963,11 +26137,57 @@
                                 },
                                 {
                                   "name": "Shape 1",
-                                  "ioValue": null
+                                  "ioValue": {
+                                    "geometry": "move-circle-1.65-0-0-0",
+                                    "dimension": "2D",
+                                    "tags": [],
+                                    "plane": {
+                                      "origin": [
+                                        0,
+                                        0,
+                                        -4
+                                      ],
+                                      "xDir": [
+                                        1,
+                                        0,
+                                        0
+                                      ],
+                                      "normal": [
+                                        0,
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    "color": "#aad7f2",
+                                    "bom": []
+                                  }
                                 },
                                 {
                                   "name": "Shape 2",
-                                  "ioValue": null
+                                  "ioValue": {
+                                    "geometry": "circle-4.25",
+                                    "dimension": "2D",
+                                    "tags": [],
+                                    "plane": {
+                                      "origin": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "xDir": [
+                                        1,
+                                        0,
+                                        0
+                                      ],
+                                      "normal": [
+                                        0,
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    "color": "#aad7f2",
+                                    "bom": []
+                                  }
                                 }
                               ],
                               "closedSelection": 0
@@ -26037,10 +26257,10 @@
                                 }
                               ],
                               "BOMitem": {
-                                "BOMitemName": "#6 Wood Screw",
+                                "BOMitemName": "New Item",
                                 "numberNeeded": 1,
-                                "costUSD": 0.1,
-                                "source": "www.example.com"
+                                "costUSD": 0,
+                                "source": ""
                               }
                             },
                             {
@@ -27184,10 +27404,6 @@
               "uniqueID": "id-118134",
               "ioValues": [
                 {
-                  "name": "Shape 1",
-                  "ioValue": null
-                },
-                {
                   "name": "Shape 3",
                   "ioValue": null
                 }
@@ -27791,6 +28007,10 @@
                         {
                           "name": "distZ",
                           "ioValue": 0
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -29733,6 +29953,10 @@
                         {
                           "name": "distZ",
                           "ioValue": 0
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -29798,6 +30022,10 @@
                         {
                           "name": "distZ",
                           "ioValue": 0
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -30115,10 +30343,6 @@
                             {
                               "name": "distZ",
                               "ioValue": 0
-                            },
-                            {
-                              "name": "Shape",
-                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -30184,6 +30408,10 @@
                             {
                               "name": "distZ",
                               "ioValue": 0
+                            },
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -30382,7 +30610,13 @@
                       "atomType": "Rectangle",
                       "x": 0.2718253968253968,
                       "y": 0.5459610027855153,
-                      "uniqueID": "id-118240"
+                      "uniqueID": "id-118240",
+                      "ioValues": [
+                        {
+                          "name": "y length",
+                          "ioValue": 175
+                        }
+                      ]
                     },
                     {
                       "atomType": "Constant",
@@ -30920,6 +31154,10 @@
                         {
                           "name": "Hexagon Dameter",
                           "ioValue": 40
+                        },
+                        {
+                          "name": "Y Length",
+                          "ioValue": 175
                         }
                       ],
                       "topLevel": false,
@@ -30969,6 +31207,10 @@
                             {
                               "name": "number of sides",
                               "ioValue": 6
+                            },
+                            {
+                              "name": "diameter",
+                              "ioValue": 40
                             }
                           ]
                         },
@@ -30976,7 +31218,13 @@
                           "atomType": "Rectangle",
                           "x": 0.2645502645502646,
                           "y": 0.8997214484679666,
-                          "uniqueID": "id-118270"
+                          "uniqueID": "id-118270",
+                          "ioValues": [
+                            {
+                              "name": "y length",
+                              "ioValue": 175
+                            }
+                          ]
                         },
                         {
                           "atomType": "Equation",
@@ -30984,6 +31232,12 @@
                           "y": 0.27019498607242337,
                           "uniqueID": "id-118271",
                           "name": "D/2+.5*D",
+                          "ioValues": [
+                            {
+                              "name": "D",
+                              "ioValue": 40
+                            }
+                          ],
                           "currentEquation": "D/2+.5*D"
                         },
                         {
@@ -30992,6 +31246,12 @@
                           "y": 0.6518105849582172,
                           "uniqueID": "id-118272",
                           "name": "X/D+1",
+                          "ioValues": [
+                            {
+                              "name": "D",
+                              "ioValue": 40
+                            }
+                          ],
                           "currentEquation": "X/D+1"
                         },
                         {
@@ -31000,6 +31260,12 @@
                           "y": 0.18384401114206128,
                           "uniqueID": "id-118273",
                           "name": "1.75*D",
+                          "ioValues": [
+                            {
+                              "name": "D",
+                              "ioValue": 40
+                            }
+                          ],
                           "currentEquation": "1.75*D"
                         },
                         {
@@ -31011,6 +31277,10 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": 35
                             },
                             {
                               "name": "zDist",
@@ -31040,6 +31310,12 @@
                           "y": 0.3203342618384401,
                           "uniqueID": "id-118276",
                           "name": "Y/2",
+                          "ioValues": [
+                            {
+                              "name": "Y",
+                              "ioValue": 70
+                            }
+                          ],
                           "currentEquation": "Y/2"
                         },
                         {
@@ -31056,6 +31332,16 @@
                           "y": 0.08635097493036212,
                           "uniqueID": "id-118278",
                           "name": "(Y/D)/2+2",
+                          "ioValues": [
+                            {
+                              "name": "Y",
+                              "ioValue": 175
+                            },
+                            {
+                              "name": "D",
+                              "ioValue": 40
+                            }
+                          ],
                           "currentEquation": "(Y/D)/2+2"
                         },
                         {
@@ -31072,6 +31358,12 @@
                           "y": 0.7158774373259054,
                           "uniqueID": "id-118280",
                           "name": "Y/-2",
+                          "ioValues": [
+                            {
+                              "name": "Y",
+                              "ioValue": 175
+                            }
+                          ],
                           "currentEquation": "Y/-2"
                         },
                         {
@@ -31083,6 +31375,10 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -87.5
                             },
                             {
                               "name": "zDist",
@@ -31116,6 +31412,10 @@
                             {
                               "name": "Geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "distX",
+                              "ioValue": 40
                             },
                             {
                               "name": "distY",
@@ -31177,6 +31477,28 @@
                               "x": 0.4901746724890829,
                               "y": 0.7515151515151516,
                               "uniqueID": "id-118288",
+                              "ioValues": [
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Number",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distX",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distY",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distZ",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                }
+                              ],
                               "codeVersion": 1,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
@@ -31240,6 +31562,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -31340,12 +31666,20 @@
                           "name": "Linear-Pattern",
                           "ioValues": [
                             {
+                              "name": "Number",
+                              "ioValue": 4.1875
+                            },
+                            {
                               "name": "Geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distX",
                               "ioValue": 0
+                            },
+                            {
+                              "name": "distY",
+                              "ioValue": 70
                             },
                             {
                               "name": "distZ",
@@ -31403,6 +31737,28 @@
                               "x": 0.4901746724890829,
                               "y": 0.7515151515151516,
                               "uniqueID": "id-118300",
+                              "ioValues": [
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Number",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distX",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distY",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distZ",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                }
+                              ],
                               "codeVersion": 1,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
@@ -31466,6 +31822,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -31566,12 +31926,20 @@
                           "name": "Linear-Pattern",
                           "ioValues": [
                             {
+                              "name": "Number",
+                              "ioValue": 4.1875
+                            },
+                            {
                               "name": "Geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distX",
                               "ioValue": 0
+                            },
+                            {
+                              "name": "distY",
+                              "ioValue": 70
                             },
                             {
                               "name": "distZ",
@@ -31629,6 +31997,28 @@
                               "x": 0.4901746724890829,
                               "y": 0.7515151515151516,
                               "uniqueID": "id-118312",
+                              "ioValues": [
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Number",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distX",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distY",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distZ",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                }
+                              ],
                               "codeVersion": 1,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
@@ -31692,6 +32082,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -31817,16 +32211,6 @@
                           "ap2ID": "id-118270"
                         },
                         {
-                          "ap2Name": "X",
-                          "ap1ID": "id-118267",
-                          "ap2ID": "id-118272"
-                        },
-                        {
-                          "ap2Name": "X",
-                          "ap1ID": "id-118267",
-                          "ap2ID": "id-118279"
-                        },
-                        {
                           "ap2Name": "y length",
                           "ap1ID": "id-118268",
                           "ap2ID": "id-118270"
@@ -31855,11 +32239,6 @@
                           "ap2Name": "distX",
                           "ap1ID": "id-118271",
                           "ap2ID": "id-118283"
-                        },
-                        {
-                          "ap2Name": "X",
-                          "ap1ID": "id-118271",
-                          "ap2ID": "id-118277"
                         },
                         {
                           "ap2Name": "Number",
@@ -32226,11 +32605,6 @@
               "ap2ID": "id-118125"
             },
             {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-118133",
-              "ap2ID": "id-118134"
-            },
-            {
               "ap2Name": "Shape 3",
               "ap1ID": "id-118135",
               "ap2ID": "id-118134"
@@ -32400,23 +32774,138 @@
               "ioValues": [
                 {
                   "name": "Shape 4",
-                  "ioValue": null
+                  "ioValue": {
+                    "geometry": "move-rotate-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-200-0-45-0-0-0-970",
+                    "dimension": "3D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
                 },
                 {
                   "name": "Shape 5",
-                  "ioValue": null
+                  "ioValue": {
+                    "geometry": "move-rotate-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-430-0-90-0-110-0-1100",
+                    "dimension": "3D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
                 },
                 {
                   "name": "Shape 6",
-                  "ioValue": null
+                  "ioValue": {
+                    "geometry": "move-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-400-500-0-1100",
+                    "dimension": "3D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
                 },
                 {
                   "name": "Shape 7",
-                  "ioValue": null
+                  "ioValue": {
+                    "geometry": "extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-990",
+                    "dimension": "3D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
                 },
                 {
                   "name": "Shape 8",
-                  "ioValue": null
+                  "ioValue": {
+                    "geometry": "move-fuse-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6-move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6-500-0-1500",
+                    "tags": [],
+                    "bom": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "dimension": "3D"
+                  }
                 }
               ],
               "unionType": "Fusion"
@@ -32874,11 +33363,57 @@
                     },
                     {
                       "name": "Shape 1",
-                      "ioValue": null
+                      "ioValue": {
+                        "geometry": "move-circle-76.19999999999999-0-0-0",
+                        "dimension": "2D",
+                        "tags": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            63.5
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "bom": []
+                      }
                     },
                     {
                       "name": "Shape 2",
-                      "ioValue": null
+                      "ioValue": {
+                        "geometry": "circle-101.6",
+                        "dimension": "2D",
+                        "tags": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "bom": []
+                      }
                     },
                     {
                       "name": "Shape 3",
@@ -32920,11 +33455,57 @@
                   "ioValues": [
                     {
                       "name": "Shape 1",
-                      "ioValue": null
+                      "ioValue": {
+                        "geometry": "move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6",
+                        "dimension": "3D",
+                        "tags": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "bom": []
+                      }
                     },
                     {
                       "name": "Shape 2",
-                      "ioValue": null
+                      "ioValue": {
+                        "geometry": "extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6",
+                        "dimension": "3D",
+                        "tags": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "bom": []
+                      }
                     }
                   ],
                   "unionType": "Fusion"
@@ -36261,6 +36842,14 @@
                       "name": "Rectangle-Rounded",
                       "ioValues": [
                         {
+                          "name": "Width",
+                          "ioValue": 457.2
+                        },
+                        {
+                          "name": "Height",
+                          "ioValue": 457.2
+                        },
+                        {
                           "name": "Radius",
                           "ioValue": 50.8,
                           "currentEquation": "2*25.4"
@@ -36308,7 +36897,13 @@
                           "atomType": "Circle",
                           "x": 0.1363080684596577,
                           "y": 0.6821345707656613,
-                          "uniqueID": "id-75785"
+                          "uniqueID": "id-75785",
+                          "ioValues": [
+                            {
+                              "name": "diameter",
+                              "ioValue": 101.6
+                            }
+                          ]
                         },
                         {
                           "atomType": "Equation",
@@ -36316,6 +36911,12 @@
                           "y": 0.8863109048723898,
                           "uniqueID": "id-75786",
                           "name": "2*R",
+                          "ioValues": [
+                            {
+                              "name": "R",
+                              "ioValue": 50.8
+                            }
+                          ],
                           "currentEquation": "2*R"
                         },
                         {
@@ -36324,6 +36925,16 @@
                           "y": 0.30394431554524365,
                           "uniqueID": "id-75787",
                           "name": "(H/2)-R",
+                          "ioValues": [
+                            {
+                              "name": "H",
+                              "ioValue": 457.2
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 50.8
+                            }
+                          ],
                           "currentEquation": "(H/2)-R"
                         },
                         {
@@ -36335,6 +36946,14 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": 177.8
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": 177.8
                             },
                             {
                               "name": "zDist",
@@ -36364,6 +36983,16 @@
                           "y": 0.16009280742459397,
                           "uniqueID": "id-75790",
                           "name": "(W/2)-R",
+                          "ioValues": [
+                            {
+                              "name": "W",
+                              "ioValue": 457.2
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 50.8
+                            }
+                          ],
                           "currentEquation": "(W/2)-R"
                         },
                         {
@@ -36372,6 +37001,16 @@
                           "y": 0.43387470997679817,
                           "uniqueID": "id-75791",
                           "name": "-1*((H/2)-R)",
+                          "ioValues": [
+                            {
+                              "name": "H",
+                              "ioValue": 457.2
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 50.8
+                            }
+                          ],
                           "currentEquation": "-1*((H/2)-R)"
                         },
                         {
@@ -36383,6 +37022,14 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": 177.8
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -177.8
                             },
                             {
                               "name": "zDist",
@@ -36401,6 +37048,14 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": -177.8
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": 177.8
+                            },
+                            {
                               "name": "zDist",
                               "ioValue": 0
                             }
@@ -36417,6 +37072,14 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": -177.8
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -177.8
+                            },
+                            {
                               "name": "zDist",
                               "ioValue": 0
                             }
@@ -36428,6 +37091,16 @@
                           "y": 0.5893271461716937,
                           "uniqueID": "id-75795",
                           "name": "-1*((W/2)-R)",
+                          "ioValues": [
+                            {
+                              "name": "W",
+                              "ioValue": 457.2
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 50.8
+                            }
+                          ],
                           "currentEquation": "-1*((W/2)-R)"
                         },
                         {
@@ -36463,19 +37136,111 @@
                             },
                             {
                               "name": "Shape 1",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-50.8--177.8--177.8-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 2",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-50.8--177.8-177.8-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-50.8-177.8--177.8-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 4",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-50.8-177.8-177.8-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             }
                           ]
                         }
@@ -36704,7 +37469,13 @@
                           "atomType": "Circle",
                           "x": 0.1363080684596577,
                           "y": 0.6821345707656613,
-                          "uniqueID": "id-75874"
+                          "uniqueID": "id-75874",
+                          "ioValues": [
+                            {
+                              "name": "diameter",
+                              "ioValue": 30
+                            }
+                          ]
                         },
                         {
                           "atomType": "Equation",
@@ -36712,6 +37483,12 @@
                           "y": 0.8863109048723898,
                           "uniqueID": "id-75875",
                           "name": "2*R",
+                          "ioValues": [
+                            {
+                              "name": "R",
+                              "ioValue": 15
+                            }
+                          ],
                           "currentEquation": "2*R"
                         },
                         {
@@ -36720,6 +37497,16 @@
                           "y": 0.30394431554524365,
                           "uniqueID": "id-75876",
                           "name": "(H/2)-R",
+                          "ioValues": [
+                            {
+                              "name": "H",
+                              "ioValue": 260
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 15
+                            }
+                          ],
                           "currentEquation": "(H/2)-R"
                         },
                         {
@@ -36731,6 +37518,14 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": 120
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": 115
                             },
                             {
                               "name": "zDist",
@@ -36760,6 +37555,16 @@
                           "y": 0.16009280742459397,
                           "uniqueID": "id-75879",
                           "name": "(W/2)-R",
+                          "ioValues": [
+                            {
+                              "name": "W",
+                              "ioValue": 270
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 15
+                            }
+                          ],
                           "currentEquation": "(W/2)-R"
                         },
                         {
@@ -36768,6 +37573,16 @@
                           "y": 0.43387470997679817,
                           "uniqueID": "id-75880",
                           "name": "-1*((H/2)-R)",
+                          "ioValues": [
+                            {
+                              "name": "H",
+                              "ioValue": 260
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 15
+                            }
+                          ],
                           "currentEquation": "-1*((H/2)-R)"
                         },
                         {
@@ -36779,6 +37594,14 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": 120
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -115
                             },
                             {
                               "name": "zDist",
@@ -36797,6 +37620,14 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": -120
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": 115
+                            },
+                            {
                               "name": "zDist",
                               "ioValue": 0
                             }
@@ -36813,6 +37644,14 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": -120
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -115
+                            },
+                            {
                               "name": "zDist",
                               "ioValue": 0
                             }
@@ -36824,6 +37663,16 @@
                           "y": 0.5893271461716937,
                           "uniqueID": "id-75884",
                           "name": "-1*((W/2)-R)",
+                          "ioValues": [
+                            {
+                              "name": "W",
+                              "ioValue": 270
+                            },
+                            {
+                              "name": "R",
+                              "ioValue": 15
+                            }
+                          ],
                           "currentEquation": "-1*((W/2)-R)"
                         },
                         {
@@ -36855,19 +37704,111 @@
                             },
                             {
                               "name": "Shape 1",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-15--120--115-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 2",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-15--120-115-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-15-120--115-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 4",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-circle-15-120-115-0",
+                                "dimension": "2D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 5",
@@ -37044,6 +37985,12 @@
                       "y": 0.7994428969359332,
                       "uniqueID": "id-75956",
                       "name": "Bolt Holes",
+                      "ioValues": [
+                        {
+                          "name": "input",
+                          "ioValue": 457.2
+                        }
+                      ],
                       "topLevel": false,
                       "allAtoms": [
                         {
@@ -37084,6 +38031,12 @@
                           "y": 0.7855153203342619,
                           "uniqueID": "id-81044",
                           "name": "S/4",
+                          "ioValues": [
+                            {
+                              "name": "S",
+                              "ioValue": 457.2
+                            }
+                          ],
                           "currentEquation": "S/4"
                         },
                         {
@@ -37097,6 +38050,14 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": 213.6
+                            },
+                            {
+                              "name": "yDist",
+                              "ioValue": -171.45
+                            },
+                            {
                               "name": "zDist",
                               "ioValue": 0
                             }
@@ -37108,6 +38069,12 @@
                           "y": 0.2646239554317549,
                           "uniqueID": "id-81055",
                           "name": "S/2 - 15",
+                          "ioValues": [
+                            {
+                              "name": "S",
+                              "ioValue": 457.2
+                            }
+                          ],
                           "currentEquation": "S/2 - 15"
                         },
                         {
@@ -37116,6 +38083,12 @@
                           "y": 0.8635097493036212,
                           "uniqueID": "id-81060",
                           "name": "S*-1.5",
+                          "ioValues": [
+                            {
+                              "name": "S",
+                              "ioValue": 114.3
+                            }
+                          ],
                           "currentEquation": "S*-1.5"
                         },
                         {
@@ -37152,6 +38125,10 @@
                             {
                               "name": "distX",
                               "ioValue": 0
+                            },
+                            {
+                              "name": "distY",
+                              "ioValue": 114.3
                             },
                             {
                               "name": "distZ",
@@ -37209,6 +38186,28 @@
                               "x": 0.4901746724890829,
                               "y": 0.7515151515151516,
                               "uniqueID": "id-81000",
+                              "ioValues": [
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Number",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distX",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distY",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distZ",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                }
+                              ],
                               "codeVersion": 1,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
@@ -37272,6 +38271,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -37456,6 +38459,20 @@
                               "x": 0.5741525423728814,
                               "y": 0.6072423398328691,
                               "uniqueID": "id-81133",
+                              "ioValues": [
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Number",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "Angle",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                }
+                              ],
                               "codeVersion": 1,
                               "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
@@ -38519,11 +39536,57 @@
                           "ioValues": [
                             {
                               "name": "Shape 2",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "extrude-circle-57.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-220",
+                                "dimension": "3D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-rotate-extrude-circle-57.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-220-90-0-0-0-0-220",
+                                "dimension": "3D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             }
                           ],
                           "unionType": "Fusion"
@@ -39639,11 +40702,57 @@
                           "ioValues": [
                             {
                               "name": "Shape 2",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "extrude-circle-110-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-300",
+                                "dimension": "3D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": {
+                                "geometry": "move-rotate-extrude-circle-110-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-300-90-0-0-0-0-300",
+                                "dimension": "3D",
+                                "tags": [],
+                                "plane": {
+                                  "origin": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "xDir": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "normal": [
+                                    0,
+                                    0,
+                                    1
+                                  ]
+                                },
+                                "color": "#aad7f2",
+                                "bom": []
+                              }
                             }
                           ],
                           "unionType": "Fusion"
@@ -41410,6 +42519,10 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": -382
                             },
                             {
                               "name": "yDist",
@@ -43324,6 +44437,10 @@
                                     {
                                       "name": "Dist",
                                       "ioValue": 25
+                                    },
+                                    {
+                                      "name": "Shape",
+                                      "ioValue": "__GEOMETRY_INPUT__"
                                     }
                                   ],
                                   "codeVersion": 1,
