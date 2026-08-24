@@ -47,7 +47,12 @@
         }
       ],
       "tag": "Sauna",
-      "tagIndex": 0
+      "tagIndex": 0,
+      "selectedTags": [
+        "Sauna"
+      ],
+      "includeUntagged": false,
+      "notKeepOut": false
     },
     {
       "atomType": "Circle",
@@ -242,11 +247,11 @@
           "uniqueID": "id-15321",
           "ioValues": [
             {
-              "name": "geometry1",
+              "name": "retain",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "geometry2",
+              "name": "remove",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -254,7 +259,7 @@
       ],
       "allConnectors": [
         {
-          "ap2Name": "geometry1",
+          "ap2Name": "retain",
           "ap1ID": "id-15312",
           "ap2ID": "id-15321"
         },
@@ -294,7 +299,7 @@
           "ap2ID": "id-15320"
         },
         {
-          "ap2Name": "geometry2",
+          "ap2Name": "remove",
           "ap1ID": "id-15320",
           "ap2ID": "id-15321"
         },
@@ -495,11 +500,11 @@
           "uniqueID": "id-30950",
           "ioValues": [
             {
-              "name": "geometry1",
+              "name": "retain",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "geometry2",
+              "name": "remove",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -507,7 +512,7 @@
       ],
       "allConnectors": [
         {
-          "ap2Name": "geometry1",
+          "ap2Name": "retain",
           "ap1ID": "id-30941",
           "ap2ID": "id-30950"
         },
@@ -547,7 +552,7 @@
           "ap2ID": "id-30949"
         },
         {
-          "ap2Name": "geometry2",
+          "ap2Name": "remove",
           "ap1ID": "id-30949",
           "ap2ID": "id-30950"
         },
@@ -668,15 +673,15 @@
           "uniqueID": "id-124083",
           "ioValues": [
             {
-              "name": "radius",
-              "ioValue": 2
+              "name": "inputShape",
+              "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "inputShape",
+              "name": "radius",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
-          "codeVersion": 1,
+          "interpreterVersion": 0,
           "code": "      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let chamferedShape = await Fillet(inputShape, radius);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [chamferedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1"
         },
         {
@@ -686,11 +691,15 @@
           "uniqueID": "id-124084",
           "ioValues": [
             {
+              "name": "inputShape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
               "name": "radius",
-              "ioValue": 2
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
-          "codeVersion": 1,
+          "interpreterVersion": 0,
           "code": "      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let chamferedShape = await Fillet(inputShape, radius);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [chamferedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1"
         },
         {
@@ -1721,11 +1730,11 @@
               "uniqueID": 1738956727408,
               "ioValues": [
                 {
-                  "name": "geometry1",
+                  "name": "retain",
                   "ioValue": "__GEOMETRY_INPUT__"
                 },
                 {
-                  "name": "geometry2",
+                  "name": "remove",
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
@@ -1917,7 +1926,7 @@
           ],
           "allConnectors": [
             {
-              "ap2Name": "geometry1",
+              "ap2Name": "retain",
               "ap1ID": 1738956651899,
               "ap2ID": 1738956727408
             },
@@ -1932,7 +1941,7 @@
               "ap2ID": 1738956710344
             },
             {
-              "ap2Name": "geometry2",
+              "ap2Name": "remove",
               "ap1ID": 1738956710344,
               "ap2ID": 1738956727408
             },
@@ -2224,7 +2233,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "fuse-fuse-fuse-fuse-fuse-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--596.9-0-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--1208.09-0-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--1225.55-0-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--1816.1-0-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--2406.65-0",
+                    "geometry": "fuse-fuse-fuse-#97a8de88d6c16839f04cf00dbce8685b-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--1816.1-0-move-move-rotate-extrude-rectangle-73-41.25-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1206-0-90-0--603--20.63-0-0--2406.65-0",
                     "tags": [],
                     "bom": [],
                     "plane": {
@@ -3454,8 +3463,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2744708994708995,
-      "y": 0.7075208913649026,
+      "x": 0.2718253968253968,
+      "y": 0.7409470752089137,
       "uniqueID": 1738956170299,
       "name": "Sauna",
       "ioValues": [
@@ -3509,11 +3518,11 @@
           "uniqueID": 1738958842644,
           "ioValues": [
             {
-              "name": "geometry1",
+              "name": "retain",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "geometry2",
+              "name": "remove",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -3665,11 +3674,11 @@
           "uniqueID": "da9e0d72-7116-4568-8734-1721e6a0e1e1",
           "ioValues": [
             {
-              "name": "geometry1",
+              "name": "retain",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "geometry2",
+              "name": "remove",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -4110,7 +4119,12 @@
                 }
               ],
               "tag": "Chimney Wood",
-              "tagIndex": 0
+              "tagIndex": 0,
+              "selectedTags": [
+                "Chimney Wood"
+              ],
+              "includeUntagged": false,
+              "notKeepOut": false
             },
             {
               "atomType": "CutLayout",
@@ -4597,11 +4611,11 @@
                   "uniqueID": "12ca03b9-e453-4013-9b71-448fb809ddc6",
                   "ioValues": [
                     {
-                      "name": "geometry1",
+                      "name": "retain",
                       "ioValue": "__GEOMETRY_INPUT__"
                     },
                     {
-                      "name": "geometry2",
+                      "name": "remove",
                       "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ]
@@ -4705,12 +4719,12 @@
                   "ap2ID": "44ff0337-0a47-4ed3-904f-ba90094def0b"
                 },
                 {
-                  "ap2Name": "geometry1",
+                  "ap2Name": "retain",
                   "ap1ID": "44ff0337-0a47-4ed3-904f-ba90094def0b",
                   "ap2ID": "12ca03b9-e453-4013-9b71-448fb809ddc6"
                 },
                 {
-                  "ap2Name": "geometry2",
+                  "ap2Name": "remove",
                   "ap1ID": "216180f2-9e8c-45ba-9c78-172c82b3df48",
                   "ap2ID": "12ca03b9-e453-4013-9b71-448fb809ddc6"
                 },
@@ -4774,19 +4788,19 @@
                   "uniqueID": "e037cdd2-5ca6-4621-9686-d78c6c1240c1",
                   "ioValues": [
                     {
+                      "name": "Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
                       "name": "Number",
-                      "ioValue": 20
+                      "ioValue": "__GEOMETRY_INPUT__"
                     },
                     {
                       "name": "Dist",
-                      "ioValue": 107.47
-                    },
-                    {
-                      "name": "Shape",
                       "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ],
-                  "codeVersion": 1,
+                  "interpreterVersion": 0,
                   "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                 },
                 {
@@ -5279,11 +5293,11 @@
               "uniqueID": 1738958076807,
               "ioValues": [
                 {
-                  "name": "geometry1",
+                  "name": "retain",
                   "ioValue": "__GEOMETRY_INPUT__"
                 },
                 {
-                  "name": "geometry2",
+                  "name": "remove",
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
@@ -5507,14 +5521,14 @@
                       "ioValues": [
                         {
                           "name": "thickness",
-                          "ioValue": 2438.4
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "numBumps",
-                          "ioValue": 79
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": " \n      //Inputs:[thickness, numBumps]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Define a circle\n       const circleFunction = (t) => {\n\n         \n       const period = 72;\n       const circumference = numBumps * period;\n       const baseRadius = circumference / (2 * Math.PI);\n       console.log(\"Base Radius: \" + baseRadius);\n\n        t = t === 1 ? 0: t\n      \n        const length = Math.PI*2*baseRadius;\n        const amplitude = 19 / 2;\n        const sinX = t * length; // Scale  to the total length (circumference)\n        const sinY = amplitude * Math.sin((2 * Math.PI * sinX) / period)\n      \n        const angle = 2 * Math.PI * t;\n      \n        const radius = baseRadius + sinY;\n      \n        const circleX = radius * Math.cos(angle);\n        const circleY = radius * Math.sin(angle);\n      \n        const x = circleX ;\n        const y = circleY;\n      \n      \n        return [x, y];\n      };\n\n      // Step 3: Create the sinewave shape\n      const points = Math.max(200, 6*numBumps);\n      const sinewaveShape = replicad.drawParametricFunction(circleFunction, { pointsCount: points });\n  \n    \n      // Return the combined shape\n      let createdShape =  sinewaveShape.sketchOnPlane().extrude(thickness);\n\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                     },
                     {
@@ -5657,7 +5671,7 @@
               "ap2ID": 1738958065348
             },
             {
-              "ap2Name": "geometry2",
+              "ap2Name": "remove",
               "ap1ID": 1738958065348,
               "ap2ID": 1738958076807
             },
@@ -5677,7 +5691,7 @@
               "ap2ID": 1746922984330
             },
             {
-              "ap2Name": "geometry1",
+              "ap2Name": "retain",
               "ap1ID": 1746927854490,
               "ap2ID": 1738958076807
             },
@@ -6158,11 +6172,11 @@
               "uniqueID": "id-102188",
               "ioValues": [
                 {
-                  "name": "geometry1",
+                  "name": "retain",
                   "ioValue": "__GEOMETRY_INPUT__"
                 },
                 {
-                  "name": "geometry2",
+                  "name": "remove",
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
@@ -6382,7 +6396,12 @@
                     }
                   ],
                   "tag": "Chimney Wood",
-                  "tagIndex": 0
+                  "tagIndex": 0,
+                  "selectedTags": [
+                    "Chimney Wood"
+                  ],
+                  "includeUntagged": false,
+                  "notKeepOut": false
                 },
                 {
                   "atomType": "Input",
@@ -6505,7 +6524,7 @@
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and recenters it in the XY plane based on its bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // Nothing to do if no input provided\n  return null\n}\n\n// Get bounding box of A\nlet boundsA = await GetBounds(A);\n// boundsA.min and boundsA.max are arrays [x,y,z]\nlet min = boundsA.min\nlet max = boundsA.max\n\n// Compute the center of the bounding box in X and Y\nlet centerX = (min[0] + max[0]) / 2.0\nlet centerY = (min[1] + max[1]) / 2.0\n\n// Translation to move the bounding box center to the origin (0,0) in XY,\n// leaving Z unchanged.\nlet translationX = -centerX\nlet translationY = -centerY\nlet translationZ = 0\n\n// Move the shape. Move takes the input ID and translations (x,y,z)\nlet movedOutput = await Move(A, translationX, translationY, translationZ)\n\n// Return the moved shape. Move typically returns a replicad object suitable for return.\nreturn movedOutput"
                     },
                     {
@@ -7054,11 +7073,11 @@
                       "uniqueID": "id-91504",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -7076,12 +7095,12 @@
                       "ap2ID": "id-91503"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-91502",
                       "ap2ID": "id-91504"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-91503",
                       "ap2ID": "id-91504"
                     },
@@ -7262,7 +7281,7 @@
               "ap2ID": "id-96732"
             },
             {
-              "ap2Name": "geometry1",
+              "ap2Name": "retain",
               "ap1ID": "id-91387",
               "ap2ID": "id-102188"
             },
@@ -7337,7 +7356,7 @@
               "ap2ID": "id-96776"
             },
             {
-              "ap2Name": "geometry2",
+              "ap2Name": "remove",
               "ap1ID": "id-96765",
               "ap2ID": "id-102188"
             },
@@ -7882,19 +7901,19 @@
                       "uniqueID": "1ce8157b-3532-476a-a096-3ccabd9e01bf",
                       "ioValues": [
                         {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
                           "name": "Number",
-                          "ioValue": 6
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Angle",
-                          "ioValue": 60
-                        },
-                        {
-                          "name": "Shape",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                     },
                     {
@@ -8064,7 +8083,7 @@
                     {
                       "name": "Shape 2",
                       "ioValue": {
-                        "geometry": "move-cut-loft-circle-800-move-circle-775-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-loft-circle-790-move-circle-765-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-20",
+                        "geometry": "move-cut-loft-circle-800-move-circle-775-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---loft-circle-790-move-circle-765-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---0-0-20",
                         "dimension": "3D",
                         "tags": [],
                         "plane": {
@@ -8124,7 +8143,7 @@
                     {
                       "name": "Shape 1",
                       "ioValue": {
-                        "geometry": "rotate-fuse-extrude-cut-circle-765-circle-700-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--5-move-cut-loft-circle-800-move-circle-775-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-loft-circle-790-move-circle-765-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-20-0-90-0",
+                        "geometry": "rotate-fuse-extrude-cut-circle-765-circle-700-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--5-move-cut-loft-circle-800-move-circle-775-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---loft-circle-790-move-circle-765-0-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,-25],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---0-0-20-0-90-0",
                         "tags": [],
                         "bom": [],
                         "plane": {
@@ -8314,7 +8333,7 @@
                         },
                         {
                           "name": "Shape 3",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -8393,7 +8412,7 @@
                         },
                         {
                           "name": "Shape 3",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -8459,11 +8478,11 @@
                       "uniqueID": 1741647664927,
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -8525,12 +8544,12 @@
                       "ap2ID": 1741647635987
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": 1741647635987,
                       "ap2ID": 1741647664927
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": 1741647653193,
                       "ap2ID": 1741647664927
                     },
@@ -8598,11 +8617,11 @@
                       "uniqueID": 1741647825194,
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -8641,12 +8660,12 @@
                   ],
                   "allConnectors": [
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": 1741647724264,
                       "ap2ID": 1741647825194
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": 1741647733481,
                       "ap2ID": 1741647825194
                     },
@@ -8746,11 +8765,11 @@
                       "uniqueID": 1741646737793,
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -8786,11 +8805,11 @@
                       "uniqueID": 1741646930309,
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -8829,10 +8848,10 @@
                           "ioValues": [
                             {
                               "name": "radius",
-                              "ioValue": 740
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -8919,10 +8938,10 @@
                           "ioValues": [
                             {
                               "name": "radius",
-                              "ioValue": 750
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -8988,7 +9007,7 @@
                       "ap2ID": 1741646708747
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": 1741646708747,
                       "ap2ID": 1741646737793
                     },
@@ -8998,7 +9017,7 @@
                       "ap2ID": 1741646560983
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": 1741646803186,
                       "ap2ID": 1741646737793
                     },
@@ -9008,12 +9027,12 @@
                       "ap2ID": 1741646803186
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "0c687c17-ee8d-4385-99bd-805efa906924",
                       "ap2ID": 1741646930309
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "5fc94801-4769-477d-ab21-e7d1101dd6ea",
                       "ap2ID": 1741646930309
                     }
@@ -9199,11 +9218,11 @@
                   "uniqueID": "34cd7f8a-7eb2-41a7-a38c-6a36334399e8",
                   "ioValues": [
                     {
-                      "name": "geometry1",
+                      "name": "retain",
                       "ioValue": "__GEOMETRY_INPUT__"
                     },
                     {
-                      "name": "geometry2",
+                      "name": "remove",
                       "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ]
@@ -9216,7 +9235,8 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 1530
+                      "ioValue": 1530,
+                      "currentEquation": "1530"
                     }
                   ]
                 },
@@ -9627,18 +9647,18 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": 90
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "height",
-                              "ioValue": 2000
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "thickness",
-                              "ioValue": 100
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                         },
                         {
@@ -9806,19 +9826,19 @@
                           "uniqueID": "7607b4de-ad8d-4470-bd1e-f9e6c0646f9f",
                           "ioValues": [
                             {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
                               "name": "Number",
-                              "ioValue": 4
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Angle",
-                              "ioValue": 90
-                            },
-                            {
-                              "name": "Shape",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -10100,11 +10120,11 @@
                       "uniqueID": "fcc6a00e-fd58-4433-bfda-2ef9d12718e7",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -10343,18 +10363,18 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": 70
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "height",
-                              "ioValue": 2000
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "thickness",
-                              "ioValue": 100
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                         },
                         {
@@ -10432,7 +10452,7 @@
                   ],
                   "allConnectors": [
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "11c8e4b2-6bbc-4d48-80ad-981a90dd53a0",
                       "ap2ID": "fcc6a00e-fd58-4433-bfda-2ef9d12718e7"
                     },
@@ -10477,7 +10497,7 @@
                       "ap2ID": "c0552c9c-d94c-4f2d-8526-ea676d01e9aa"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "8ce30f36-8aff-4572-9a52-55c93f9ce02d",
                       "ap2ID": "fcc6a00e-fd58-4433-bfda-2ef9d12718e7"
                     },
@@ -10512,7 +10532,7 @@
                   "ap2ID": "55f51b68-2563-479e-9ad8-1340d0b466f6"
                 },
                 {
-                  "ap2Name": "geometry2",
+                  "ap2Name": "remove",
                   "ap1ID": "c0e9bd27-944e-4c85-a3b6-83726eb030ec",
                   "ap2ID": "34cd7f8a-7eb2-41a7-a38c-6a36334399e8"
                 },
@@ -10532,7 +10552,7 @@
                   "ap2ID": "c0e9bd27-944e-4c85-a3b6-83726eb030ec"
                 },
                 {
-                  "ap2Name": "geometry1",
+                  "ap2Name": "retain",
                   "ap1ID": "099b599d-3ced-488b-a209-63c5e1edf803",
                   "ap2ID": "34cd7f8a-7eb2-41a7-a38c-6a36334399e8"
                 },
@@ -10688,6 +10708,22 @@
                 },
                 {
                   "name": "Shape 3",
+                  "ioValue": null
+                }
+              ]
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.46494708994708994,
+              "y": 0.6991643454038997,
+              "uniqueID": "id-129521",
+              "ioValues": [
+                {
+                  "name": "Shape 1",
+                  "ioValue": null
+                },
+                {
+                  "name": "Shape 2",
                   "ioValue": null
                 }
               ]
@@ -11207,7 +11243,12 @@
                     }
                   ],
                   "tag": "Ring Wood",
-                  "tagIndex": 0
+                  "tagIndex": 0,
+                  "selectedTags": [
+                    "Ring Wood"
+                  ],
+                  "includeUntagged": false,
+                  "notKeepOut": false
                 },
                 {
                   "atomType": "CutLayout",
@@ -11447,18 +11488,18 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": 45
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "height",
-                              "ioValue": 2000
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "thickness",
-                              "ioValue": 12
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                         },
                         {
@@ -11625,19 +11666,19 @@
                           "uniqueID": "1d8db0cb-967d-4eff-9ff9-7846ef219f1c",
                           "ioValues": [
                             {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
                               "name": "Number",
-                              "ioValue": 8
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Angle",
-                              "ioValue": 45
-                            },
-                            {
-                              "name": "Shape",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -12916,11 +12957,11 @@
                       "uniqueID": "317f34ff-ac5a-4f93-98b1-610f9d036d6b",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -13508,7 +13549,7 @@
                       "ap2ID": "f07340c4-bf53-484a-af3e-0aa73df5df32"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "eae7a8b0-2e47-4180-9982-a7832fa42435",
                       "ap2ID": "317f34ff-ac5a-4f93-98b1-610f9d036d6b"
                     },
@@ -13608,7 +13649,7 @@
                       "ap2ID": "aa8452b0-f5e7-4413-85ad-20f89cbf15d9"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "aa8452b0-f5e7-4413-85ad-20f89cbf15d9",
                       "ap2ID": "317f34ff-ac5a-4f93-98b1-610f9d036d6b"
                     },
@@ -13845,18 +13886,18 @@
                           "ioValues": [
                             {
                               "name": "Shape",
-                              "ioValue": 10
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Number",
-                              "ioValue": 4
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Dist",
-                              "ioValue": 800
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -13983,19 +14024,19 @@
                           "uniqueID": 1739990583525,
                           "ioValues": [
                             {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
                               "name": "Number",
-                              "ioValue": 5
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Dist",
-                              "ioValue": 800
-                            },
-                            {
-                              "name": "Shape",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -14254,22 +14295,6 @@
                 }
               ],
               "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Assembly",
-              "x": 0.46494708994708994,
-              "y": 0.6991643454038997,
-              "uniqueID": "id-129521",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": null
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": null
-                }
-              ]
             }
           ],
           "allConnectors": [
@@ -14391,7 +14416,12 @@
                 }
               ],
               "tag": "Door Frame",
-              "tagIndex": 0
+              "tagIndex": 0,
+              "selectedTags": [
+                "Door Frame"
+              ],
+              "includeUntagged": false,
+              "notKeepOut": false
             },
             {
               "atomType": "Gcode",
@@ -15198,7 +15228,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -16128,7 +16158,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -17071,7 +17101,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -17804,7 +17834,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -18143,7 +18173,12 @@
                     }
                   ],
                   "tag": "Plastic",
-                  "tagIndex": 0
+                  "tagIndex": 0,
+                  "selectedTags": [
+                    "Plastic"
+                  ],
+                  "includeUntagged": false,
+                  "notKeepOut": false
                 },
                 {
                   "atomType": "Rotate",
@@ -18435,7 +18470,12 @@
                         }
                       ],
                       "tag": "Plastic",
-                      "tagIndex": 0
+                      "tagIndex": 0,
+                      "selectedTags": [
+                        "Plastic"
+                      ],
+                      "includeUntagged": false,
+                      "notKeepOut": false
                     },
                     {
                       "atomType": "Export",
@@ -18500,15 +18540,15 @@
                           "uniqueID": "id-43069",
                           "ioValues": [
                             {
-                              "name": "radius",
-                              "ioValue": 3
+                              "name": "inputShape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "inputShape",
+                              "name": "radius",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": " \n      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let movedShape = importedShape.geometry[0].clone().chamfer(radius)\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1\n      \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                         },
                         {
@@ -18771,11 +18811,11 @@
                           "uniqueID": "id-43085",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -18783,7 +18823,7 @@
                       ],
                       "allConnectors": [
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-43076",
                           "ap2ID": "id-43085"
                         },
@@ -18823,7 +18863,7 @@
                           "ap2ID": "id-43084"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-43084",
                           "ap2ID": "id-43085"
                         },
@@ -18935,11 +18975,11 @@
                           "uniqueID": "id-43092",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -19295,7 +19335,7 @@
                                 },
                                 {
                                   "name": "Shape 5",
-                                  "ioValue": ""
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Shape 1",
@@ -19866,7 +19906,7 @@
                                 },
                                 {
                                   "name": "Shape 5",
-                                  "ioValue": ""
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Shape 1",
@@ -20208,12 +20248,12 @@
                           "ap2ID": "id-43113"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-43096",
                           "ap2ID": "id-43092"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-43113",
                           "ap2ID": "id-43092"
                         }
@@ -20440,7 +20480,7 @@
                                 },
                                 {
                                   "name": "Shape 3",
-                                  "ioValue": ""
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Shape 1",
@@ -20838,7 +20878,7 @@
                                 },
                                 {
                                   "name": "Shape 3",
-                                  "ioValue": null
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "closedSelection": 0
@@ -20852,7 +20892,7 @@
                                 {
                                   "name": "Shape 1",
                                   "ioValue": {
-                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
+                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--",
                                     "dimension": "3D",
                                     "tags": [],
                                     "plane": {
@@ -22527,7 +22567,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
                     }
@@ -22801,7 +22841,12 @@
                     }
                   ],
                   "tag": "End",
-                  "tagIndex": 0
+                  "tagIndex": 0,
+                  "selectedTags": [
+                    "End"
+                  ],
+                  "includeUntagged": false,
+                  "notKeepOut": false
                 },
                 {
                   "atomType": "Molecule",
@@ -23172,7 +23217,12 @@
                         }
                       ],
                       "tag": "End",
-                      "tagIndex": 0
+                      "tagIndex": 0,
+                      "selectedTags": [
+                        "End"
+                      ],
+                      "includeUntagged": false,
+                      "notKeepOut": false
                     },
                     {
                       "atomType": "Rectangle",
@@ -23441,11 +23491,11 @@
                       "uniqueID": "id-21774",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -23797,7 +23847,7 @@
                             },
                             {
                               "name": "Shape 5",
-                              "ioValue": ""
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Shape 1",
@@ -24085,7 +24135,7 @@
                       "ap2ID": "id-21771"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-21771",
                       "ap2ID": "id-21774"
                     },
@@ -24095,7 +24145,7 @@
                       "ap2ID": "id-21773"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-21773",
                       "ap2ID": "id-21774"
                     },
@@ -24284,11 +24334,11 @@
                       "uniqueID": "id-21801",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -24589,7 +24639,7 @@
                                 },
                                 {
                                   "name": "Shape 3",
-                                  "ioValue": null
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "closedSelection": 0
@@ -24603,7 +24653,7 @@
                                 {
                                   "name": "Shape 1",
                                   "ioValue": {
-                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
+                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--",
                                     "dimension": "3D",
                                     "tags": [],
                                     "plane": {
@@ -24816,7 +24866,7 @@
                   ],
                   "allConnectors": [
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-21796",
                       "ap2ID": "id-21801"
                     },
@@ -24836,7 +24886,7 @@
                       "ap2ID": "id-21800"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-21800",
                       "ap2ID": "id-21801"
                     },
@@ -24949,11 +24999,11 @@
                       "uniqueID": "id-21825",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -25407,11 +25457,11 @@
                               "uniqueID": "id-21849",
                               "ioValues": [
                                 {
-                                  "name": "geometry1",
+                                  "name": "retain",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
-                                  "name": "geometry2",
+                                  "name": "remove",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ]
@@ -25429,12 +25479,12 @@
                               "ap2ID": "id-21848"
                             },
                             {
-                              "ap2Name": "geometry1",
+                              "ap2Name": "retain",
                               "ap1ID": "id-21847",
                               "ap2ID": "id-21849"
                             },
                             {
-                              "ap2Name": "geometry2",
+                              "ap2Name": "remove",
                               "ap1ID": "id-21848",
                               "ap2ID": "id-21849"
                             },
@@ -25821,15 +25871,15 @@
                               "uniqueID": "id-21868",
                               "ioValues": [
                                 {
-                                  "name": "radius",
-                                  "ioValue": 5
+                                  "name": "inputShape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
-                                  "name": "inputShape",
+                                  "name": "radius",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let chamferedShape = await Fillet(inputShape, radius);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [chamferedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1"
                             }
                           ],
@@ -26046,11 +26096,11 @@
                               "uniqueID": "id-21880",
                               "ioValues": [
                                 {
-                                  "name": "geometry1",
+                                  "name": "retain",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
-                                  "name": "geometry2",
+                                  "name": "remove",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ]
@@ -26058,7 +26108,7 @@
                           ],
                           "allConnectors": [
                             {
-                              "ap2Name": "geometry1",
+                              "ap2Name": "retain",
                               "ap1ID": "id-21871",
                               "ap2ID": "id-21880"
                             },
@@ -26098,7 +26148,7 @@
                               "ap2ID": "id-21879"
                             },
                             {
-                              "ap2Name": "geometry2",
+                              "ap2Name": "remove",
                               "ap1ID": "id-21879",
                               "ap2ID": "id-21880"
                             },
@@ -26388,7 +26438,7 @@
                                 },
                                 {
                                   "name": "Shape 3",
-                                  "ioValue": ""
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Shape 1",
@@ -26787,7 +26837,7 @@
                                 },
                                 {
                                   "name": "Shape 3",
-                                  "ioValue": null
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "closedSelection": 0
@@ -26801,7 +26851,7 @@
                                 {
                                   "name": "Shape 1",
                                   "ioValue": {
-                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
+                                    "geometry": "loft-move-circle-2.5-0-0-0-circle-1.5-{\"origin\":[0,0,1.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--",
                                     "dimension": "3D",
                                     "tags": [],
                                     "plane": {
@@ -27024,7 +27074,7 @@
                       "ap2ID": "id-21824"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-21824",
                       "ap2ID": "id-21825"
                     },
@@ -27039,7 +27089,7 @@
                       "ap2ID": "id-21821"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-21832",
                       "ap2ID": "id-21825"
                     },
@@ -27310,7 +27360,12 @@
                 }
               ],
               "tag": "Thick",
-              "tagIndex": 0
+              "tagIndex": 0,
+              "selectedTags": [
+                "Thick"
+              ],
+              "includeUntagged": false,
+              "notKeepOut": false
             },
             {
               "atomType": "Rotate",
@@ -28248,27 +28303,27 @@
                       "uniqueID": "id-118155",
                       "ioValues": [
                         {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
                           "name": "Number",
-                          "ioValue": 5
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distX",
-                          "ioValue": 400
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distY",
-                          "ioValue": 0
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distZ",
-                          "ioValue": 0
-                        },
-                        {
-                          "name": "Shape",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                     },
                     {
@@ -28434,11 +28489,11 @@
                       "uniqueID": "id-118165",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -28490,11 +28545,11 @@
                       "uniqueID": "id-118168",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -28815,7 +28870,7 @@
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
                         },
@@ -28826,11 +28881,11 @@
                           "uniqueID": "id-118180",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -28838,7 +28893,7 @@
                       ],
                       "allConnectors": [
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-118175",
                           "ap2ID": "id-118180"
                         },
@@ -28858,7 +28913,7 @@
                           "ap2ID": "id-118179"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-118179",
                           "ap2ID": "id-118180"
                         },
@@ -28873,7 +28928,7 @@
                   ],
                   "allConnectors": [
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-118161",
                       "ap2ID": "id-118168"
                     },
@@ -28903,7 +28958,7 @@
                       "ap2ID": "id-118167"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-118167",
                       "ap2ID": "id-118168"
                     },
@@ -28923,12 +28978,12 @@
                       "ap2ID": "id-118171"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-118171",
                       "ap2ID": "id-118165"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-118172",
                       "ap2ID": "id-118165"
                     },
@@ -29153,7 +29208,7 @@
                         },
                         {
                           "name": "Shape 3",
-                          "ioValue": null
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
                     },
@@ -29337,11 +29392,11 @@
                       "uniqueID": "id-118197",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -29457,11 +29512,11 @@
                       "uniqueID": "id-118200",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -29649,7 +29704,7 @@
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
                         },
@@ -29660,11 +29715,11 @@
                           "uniqueID": "id-118209",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -29672,7 +29727,7 @@
                       ],
                       "allConnectors": [
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-118204",
                           "ap2ID": "id-118209"
                         },
@@ -29692,7 +29747,7 @@
                           "ap2ID": "id-118208"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-118208",
                           "ap2ID": "id-118209"
                         },
@@ -29707,7 +29762,7 @@
                   ],
                   "allConnectors": [
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-118183",
                       "ap2ID": "id-118197"
                     },
@@ -29752,7 +29807,7 @@
                       "ap2ID": "id-118192"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-118192",
                       "ap2ID": "id-118200"
                     },
@@ -29772,7 +29827,7 @@
                       "ap2ID": "id-118196"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-118196",
                       "ap2ID": "id-118197"
                     },
@@ -29797,7 +29852,7 @@
                       "ap2ID": "id-118185"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-118201",
                       "ap2ID": "id-118200"
                     },
@@ -30194,27 +30249,27 @@
                       "uniqueID": "id-118228",
                       "ioValues": [
                         {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
                           "name": "Number",
-                          "ioValue": 4
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distX",
-                          "ioValue": 400
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distY",
-                          "ioValue": 0
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distZ",
-                          "ioValue": 0
-                        },
-                        {
-                          "name": "Shape",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                     },
                     {
@@ -30263,27 +30318,27 @@
                       "uniqueID": "id-118233",
                       "ioValues": [
                         {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
                           "name": "Number",
-                          "ioValue": 5
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distX",
-                          "ioValue": 15
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distY",
-                          "ioValue": 2
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "distZ",
-                          "ioValue": 0
-                        },
-                        {
-                          "name": "Shape",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
-                      "codeVersion": 1,
+                      "interpreterVersion": 0,
                       "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                     },
                     {
@@ -30584,23 +30639,27 @@
                           "uniqueID": "id-118332",
                           "ioValues": [
                             {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
                               "name": "Number",
-                              "ioValue": 6
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distX",
-                              "ioValue": 0
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distY",
-                              "ioValue": 50
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distZ",
-                              "ioValue": 0
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -30649,27 +30708,27 @@
                           "uniqueID": "id-118337",
                           "ioValues": [
                             {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
                               "name": "Number",
-                              "ioValue": 5
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distX",
-                              "ioValue": 15
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distY",
-                              "ioValue": 2
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "distZ",
-                              "ioValue": 0
-                            },
-                            {
-                              "name": "Shape",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
@@ -30868,6 +30927,10 @@
                       "uniqueID": "id-118240",
                       "ioValues": [
                         {
+                          "name": "x length",
+                          "ioValue": 307
+                        },
+                        {
                           "name": "y length",
                           "ioValue": 175
                         }
@@ -30909,11 +30972,11 @@
                       "uniqueID": "id-118244",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -31411,6 +31474,10 @@
                           "ioValue": 40
                         },
                         {
+                          "name": "X Length",
+                          "ioValue": 307
+                        },
+                        {
                           "name": "Y Length",
                           "ioValue": 175
                         }
@@ -31476,6 +31543,10 @@
                           "uniqueID": "id-118270",
                           "ioValues": [
                             {
+                              "name": "x length",
+                              "ioValue": 307
+                            },
+                            {
                               "name": "y length",
                               "ioValue": 175
                             }
@@ -31532,6 +31603,10 @@
                             {
                               "name": "geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "xDist",
+                              "ioValue": 191
                             },
                             {
                               "name": "yDist",
@@ -31632,6 +31707,10 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
+                              "name": "xDist",
+                              "ioValue": -191
+                            },
+                            {
                               "name": "yDist",
                               "ioValue": -87.5
                             },
@@ -31664,6 +31743,10 @@
                           "uniqueID": "id-118283",
                           "name": "Linear-Pattern",
                           "ioValues": [
+                            {
+                              "name": "Number",
+                              "ioValue": 10.55
+                            },
                             {
                               "name": "Geometry",
                               "ioValue": "__GEOMETRY_INPUT__"
@@ -31734,27 +31817,27 @@
                               "uniqueID": "id-118288",
                               "ioValues": [
                                 {
-                                  "name": "distX",
-                                  "ioValue": 40
-                                },
-                                {
-                                  "name": "distY",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
                                   "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Number",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distX",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distY",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "distZ",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -31803,27 +31886,27 @@
                               "uniqueID": "id-118293",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 5
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 15
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 2
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -31994,27 +32077,27 @@
                               "uniqueID": "id-118300",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 4.1875
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 0
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 70
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -32063,27 +32146,27 @@
                               "uniqueID": "id-118305",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 5
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 15
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 2
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -32254,27 +32337,27 @@
                               "uniqueID": "id-118312",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 4.1875
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 0
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 70
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -32323,27 +32406,27 @@
                               "uniqueID": "id-118317",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 5
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 15
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 2
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -32685,7 +32768,7 @@
                       "ap2ID": "id-118246"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-118246",
                       "ap2ID": "id-118244"
                     },
@@ -32695,7 +32778,7 @@
                       "ap2ID": "id-118247"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-118249",
                       "ap2ID": "id-118244"
                     },
@@ -33138,7 +33221,7 @@
                 {
                   "name": "Shape 8",
                   "ioValue": {
-                    "geometry": "move-fuse-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6-move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6-500-0-1500",
+                    "geometry": "move-fuse-extrude-circle-50.8-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-101.6-move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---0-0-101.6-500-0-1500",
                     "tags": [],
                     "bom": [],
                     "plane": {
@@ -33672,7 +33755,7 @@
                     },
                     {
                       "name": "Shape 3",
-                      "ioValue": null
+                      "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ],
                   "closedSelection": 0
@@ -33711,7 +33794,7 @@
                     {
                       "name": "Shape 1",
                       "ioValue": {
-                        "geometry": "move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0-0-101.6",
+                        "geometry": "move-loft-move-circle-76.19999999999999-0-0-0-circle-101.6-{\"origin\":[0,0,63.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}---0-0-101.6",
                         "dimension": "3D",
                         "tags": [],
                         "plane": {
@@ -33988,11 +34071,11 @@
                       "uniqueID": "id-52456",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -34010,12 +34093,12 @@
                       "ap2ID": "id-52455"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-52454",
                       "ap2ID": "id-52456"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-52455",
                       "ap2ID": "id-52456"
                     },
@@ -34177,11 +34260,11 @@
                   "uniqueID": "id-15213",
                   "ioValues": [
                     {
-                      "name": "geometry1",
+                      "name": "retain",
                       "ioValue": "__GEOMETRY_INPUT__"
                     },
                     {
-                      "name": "geometry2",
+                      "name": "remove",
                       "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ]
@@ -34809,7 +34892,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
                     }
@@ -35276,7 +35359,7 @@
                         },
                         {
                           "name": "Shape 5",
-                          "ioValue": ""
+                          "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
                           "name": "Shape 1",
@@ -35585,11 +35668,11 @@
                       "uniqueID": "id-15026",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -35966,7 +36049,7 @@
                             },
                             {
                               "name": "Shape 5",
-                              "ioValue": ""
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Shape 1",
@@ -36541,7 +36624,7 @@
                             },
                             {
                               "name": "Shape 5",
-                              "ioValue": ""
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Shape 1",
@@ -36859,12 +36942,12 @@
                       "ap2ID": "id-15048"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-15031",
                       "ap2ID": "id-15026"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-15048",
                       "ap2ID": "id-15026"
                     }
@@ -37034,11 +37117,11 @@
                       "uniqueID": "id-75952",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -37050,11 +37133,11 @@
                       "uniqueID": "id-81070",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -37387,7 +37470,7 @@
                             },
                             {
                               "name": "Shape 5",
-                              "ioValue": ""
+                              "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
                               "name": "Shape 1",
@@ -38067,7 +38150,7 @@
                             },
                             {
                               "name": "Shape 5",
-                              "ioValue": ""
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
                         }
@@ -38443,27 +38526,27 @@
                               "uniqueID": "id-81000",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 4
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 0
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 114.3
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -38512,27 +38595,27 @@
                               "uniqueID": "id-81005",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 5
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": 15
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": 2
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, distX, distY, distZ];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, distX * i, distY * i,distZ * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -38716,19 +38799,19 @@
                               "uniqueID": "id-81133",
                               "ioValues": [
                                 {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
                                   "name": "Number",
-                                  "ioValue": 4
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Angle",
-                                  "ioValue": 90
-                                },
-                                {
-                                  "name": "Shape",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                             },
                             {
@@ -38883,7 +38966,7 @@
                       "ap2ID": "id-75956"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-75777",
                       "ap2ID": "id-81070"
                     },
@@ -38898,7 +38981,7 @@
                       "ap2ID": "id-75774"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-75946",
                       "ap2ID": "id-75952"
                     },
@@ -38918,7 +39001,7 @@
                       "ap2ID": "id-86253"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-75780",
                       "ap2ID": "id-75952"
                     },
@@ -38928,7 +39011,7 @@
                       "ap2ID": "id-75946"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-75956",
                       "ap2ID": "id-81070"
                     }
@@ -38958,7 +39041,7 @@
                   "ap2ID": "id-15207"
                 },
                 {
-                  "ap2Name": "geometry2",
+                  "ap2Name": "remove",
                   "ap1ID": "id-15207",
                   "ap2ID": "id-15213"
                 },
@@ -39033,7 +39116,7 @@
                   "ap2ID": "id-47962"
                 },
                 {
-                  "ap2Name": "geometry1",
+                  "ap2Name": "retain",
                   "ap1ID": "id-15024",
                   "ap2ID": "id-15213"
                 }
@@ -39285,11 +39368,11 @@
                       "uniqueID": "id-70881",
                       "ioValues": [
                         {
-                          "name": "geometry1",
+                          "name": "retain",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
                         {
-                          "name": "geometry2",
+                          "name": "remove",
                           "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
@@ -39317,12 +39400,12 @@
                       "ap2ID": "id-70878"
                     },
                     {
-                      "ap2Name": "geometry2",
+                      "ap2Name": "remove",
                       "ap1ID": "id-70878",
                       "ap2ID": "id-70881"
                     },
                     {
-                      "ap2Name": "geometry1",
+                      "ap2Name": "retain",
                       "ap1ID": "id-70879",
                       "ap2ID": "id-70881"
                     },
@@ -40838,11 +40921,11 @@
                           "uniqueID": "id-70826",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -40855,7 +40938,7 @@
                           "ap2ID": "id-70823"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-70823",
                           "ap2ID": "id-70826"
                         },
@@ -40865,7 +40948,7 @@
                           "ap2ID": "id-70825"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-70825",
                           "ap2ID": "id-70826"
                         },
@@ -41371,7 +41454,7 @@
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
-                          "codeVersion": 1,
+                          "interpreterVersion": 0,
                           "code": "\n      Inputs = [\n       {inputName: \"A\", type: \"geometry\", defaultValue: null},\n        {inputName: \"B\", type: \"geometry\", defaultValue: null}\n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      let boundsA = await GetBounds(A);\n      let A_minZ = boundsA.min[2];\n\n      let B_maxZ = 0;\n      if(B){\n          let boundsB = await GetBounds(B);\n          console.log(\"Bounding Box B:  \");\n          console.log(boundsB);\n          B_maxZ  = boundsB.max[2];\n      }\n\n     let translationZ = B_maxZ - A_minZ;\n     \n      let movedOutput = await Move(A, 0, 0, translationZ);\n\n      return movedOutput;\n\n      // //We can also create a new shape from scratch\n      // let createdRectangle = replicad.drawRectangle(5,7)\n      // //This is the plane we are going to put our new shape on\n      // const newPlane = new replicad.Plane().pivot(0, 'Y');\n      // //And we extrude the shape to make it 3D\n      // let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      // //For our new geometry we need to define the tags, color, plane, etc\n      // let shape2 = {\n      //     geometry: [createdShape],\n      //     tags: [\"aTag\"],\n      //     color: '#A3CE5B',\n      //     plane: newPlane,\n      //     bom: []\n      // }\n\n      // //Then we can return our created shape in just the same way\n      // //return shape2\n\n      // //If we want to return both shapes at once, we can create an assembly with them\n      // let anAssembly = {\n      //   geometry: [shape1, shape2],\n      //   tags: [\"aNewTag\"],\n      //   color: '#A3CF5B',\n      //   plane: newPlane,\n      //   bom: []\n      // }\n\n      // //And we can return that in the same way\n      // return anAssembly\n\n      /**\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n      If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0]\n      Use any replicad available methods to modify your geometry. Learn more about all of the available methods at\n      https://replicad.xyz/docs/introapp/UserGuide.html\n      Return a replicad object that includes geometry, color, tags and plane.\n\n      Example Code Atom:\n        Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let finalShape = library[shape].geometry[0].clone().translate([x,0,0])\n        return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      */\n      "
                         },
                         {
@@ -41638,7 +41721,7 @@
                             },
                             {
                               "name": "Shape 3",
-                              "ioValue": null
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "closedSelection": 0
@@ -41652,7 +41735,7 @@
                             {
                               "name": "Shape 1",
                               "ioValue": {
-                                "geometry": "loft-move-circle-110-0-0-0-move-circle-60-0-0-0-{\"origin\":[0,0,70],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,125],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
+                                "geometry": "loft-move-circle-110-0-0-0-move-circle-60-0-0-0-{\"origin\":[0,0,70],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,125],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--",
                                 "dimension": "3D",
                                 "tags": [],
                                 "plane": {
@@ -41733,7 +41816,7 @@
                             {
                               "name": "Shape 4",
                               "ioValue": {
-                                "geometry": "move-83967834-{\"geometry\":\"loft-circle-112.5-move-circle-50-0-0-0-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}-{\\\"origin\\\":[0,0,10],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}\",\"dimension\":\"3D\",\"tags\":[],\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"bom\":[]}-{\"geometry\":\"extrude-move-circle-60-0-0-0-{\\\"origin\\\":[0,0,125],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}-111\",\"dimension\":\"3D\",\"tags\":[],\"plane\":{\"origin\":[0,0,125],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"bom\":[]}-3-0-0-80",
+                                "geometry": "move-#31e2064c7d5f69d4180079fdefd6e45c",
                                 "dimension": "3D",
                                 "tags": [],
                                 "plane": {
@@ -41922,7 +42005,7 @@
                             },
                             {
                               "name": "Shape 4",
-                              "ioValue": null
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "closedSelection": 0
@@ -41988,7 +42071,7 @@
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
-                              "codeVersion": 1,
+                              "interpreterVersion": 0,
                               "code": "\n      Inputs = [\n       {inputName: \"A\", type: \"geometry\", defaultValue: null},\n        {inputName: \"B\", type: \"geometry\", defaultValue: null}\n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      let boundsA = await GetBounds(A);\n      let A_minZ = boundsA.min[2];\n\n      let B_maxZ = 0;\n      if(B){\n          let boundsB = await GetBounds(B);\n          console.log(\"Bounding Box B:  \");\n          console.log(boundsB);\n          B_maxZ  = boundsB.max[2];\n      }\n\n     let translationZ = B_maxZ - A_minZ;\n     \n      let movedOutput = await Move(A, 0, 0, translationZ);\n\n      return movedOutput;\n\n      // //We can also create a new shape from scratch\n      // let createdRectangle = replicad.drawRectangle(5,7)\n      // //This is the plane we are going to put our new shape on\n      // const newPlane = new replicad.Plane().pivot(0, 'Y');\n      // //And we extrude the shape to make it 3D\n      // let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      // //For our new geometry we need to define the tags, color, plane, etc\n      // let shape2 = {\n      //     geometry: [createdShape],\n      //     tags: [\"aTag\"],\n      //     color: '#A3CE5B',\n      //     plane: newPlane,\n      //     bom: []\n      // }\n\n      // //Then we can return our created shape in just the same way\n      // //return shape2\n\n      // //If we want to return both shapes at once, we can create an assembly with them\n      // let anAssembly = {\n      //   geometry: [shape1, shape2],\n      //   tags: [\"aNewTag\"],\n      //   color: '#A3CF5B',\n      //   plane: newPlane,\n      //   bom: []\n      // }\n\n      // //And we can return that in the same way\n      // return anAssembly\n\n      /**\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n      If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0]\n      Use any replicad available methods to modify your geometry. Learn more about all of the available methods at\n      https://replicad.xyz/docs/introapp/UserGuide.html\n      Return a replicad object that includes geometry, color, tags and plane.\n\n      Example Code Atom:\n        Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let finalShape = library[shape].geometry[0].clone().translate([x,0,0])\n        return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      */\n      "
                             },
                             {
@@ -42615,11 +42698,11 @@
                           "uniqueID": "id-8502",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -42655,11 +42738,11 @@
                           "uniqueID": "id-8504",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -42756,11 +42839,11 @@
                           "uniqueID": "id-8510",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -42796,11 +42879,11 @@
                           "uniqueID": "id-8512",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -42816,7 +42899,7 @@
                       ],
                       "allConnectors": [
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-8499",
                           "ap2ID": "id-8502"
                         },
@@ -42826,7 +42909,7 @@
                           "ap2ID": "id-8501"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-8501",
                           "ap2ID": "id-8502"
                         },
@@ -42836,12 +42919,12 @@
                           "ap2ID": "id-8503"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-8503",
                           "ap2ID": "id-8504"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-8504",
                           "ap2ID": "id-8510"
                         },
@@ -42856,7 +42939,7 @@
                           "ap2ID": "id-8498"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-8507",
                           "ap2ID": "id-8504"
                         },
@@ -42871,12 +42954,12 @@
                           "ap2ID": "id-8511"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-8509",
                           "ap2ID": "id-8510"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-8510",
                           "ap2ID": "id-8512"
                         },
@@ -42886,7 +42969,7 @@
                           "ap2ID": "id-8505"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-8511",
                           "ap2ID": "id-8512"
                         },
@@ -43848,7 +43931,7 @@
                                 },
                                 {
                                   "name": "Shape 5",
-                                  "ioValue": ""
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 },
                                 {
                                   "name": "Shape 1",
@@ -44268,11 +44351,11 @@
                           "uniqueID": "id-8568",
                           "ioValues": [
                             {
-                              "name": "geometry1",
+                              "name": "retain",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
                             {
-                              "name": "geometry2",
+                              "name": "remove",
                               "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ]
@@ -44686,19 +44769,19 @@
                                   "uniqueID": "id-8591",
                                   "ioValues": [
                                     {
+                                      "name": "Shape",
+                                      "ioValue": "__GEOMETRY_INPUT__"
+                                    },
+                                    {
                                       "name": "Number",
-                                      "ioValue": 4
+                                      "ioValue": "__GEOMETRY_INPUT__"
                                     },
                                     {
                                       "name": "Dist",
-                                      "ioValue": 25
-                                    },
-                                    {
-                                      "name": "Shape",
                                       "ioValue": "__GEOMETRY_INPUT__"
                                     }
                                   ],
-                                  "codeVersion": 1,
+                                  "interpreterVersion": 0,
                                   "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                                 },
                                 {
@@ -44841,7 +44924,7 @@
                           "ap2ID": "id-8564"
                         },
                         {
-                          "ap2Name": "geometry1",
+                          "ap2Name": "retain",
                           "ap1ID": "id-8564",
                           "ap2ID": "id-8568"
                         },
@@ -44856,7 +44939,7 @@
                           "ap2ID": "id-8567"
                         },
                         {
-                          "ap2Name": "geometry2",
+                          "ap2Name": "remove",
                           "ap1ID": "id-8567",
                           "ap2ID": "id-8568"
                         },
@@ -45173,7 +45256,7 @@
       ],
       "allConnectors": [
         {
-          "ap2Name": "geometry1",
+          "ap2Name": "retain",
           "ap1ID": 1738957188514,
           "ap2ID": 1738958842644
         },
@@ -45198,12 +45281,12 @@
           "ap2ID": 1741650522058
         },
         {
-          "ap2Name": "geometry2",
+          "ap2Name": "remove",
           "ap1ID": 1741650522058,
           "ap2ID": 1738958842644
         },
         {
-          "ap2Name": "geometry2",
+          "ap2Name": "remove",
           "ap1ID": 1741650522058,
           "ap2ID": "da9e0d72-7116-4568-8734-1721e6a0e1e1"
         },
@@ -45268,7 +45351,7 @@
           "ap2ID": 1738957188514
         },
         {
-          "ap2Name": "geometry1",
+          "ap2Name": "retain",
           "ap1ID": "912e598d-23d3-429e-9e08-ab5f4ac3b768",
           "ap2ID": "da9e0d72-7116-4568-8734-1721e6a0e1e1"
         },
