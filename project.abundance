@@ -9340,6 +9340,10 @@
             {
               "name": "Shape10",
               "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape11",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
         },
@@ -33029,6 +33033,1118 @@
         },
         {
           "atomType": "Molecule",
+          "x": 0.5,
+          "y": 0.5,
+          "uniqueID": "id-135281",
+          "name": "Window Lounge",
+          "ioValues": [
+            {
+              "name": "Seat Height",
+              "ioValue": 280
+            },
+            {
+              "name": "Rim Height",
+              "ioValue": 700
+            },
+            {
+              "name": "Wood Thickness",
+              "ioValue": 18
+            },
+            {
+              "name": "Knee Height",
+              "ioValue": 430
+            },
+            {
+              "name": "Seat Offset",
+              "ioValue": 350
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-135283",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.2,
+              "uniqueID": "id-135291",
+              "name": "Seat Height",
+              "type": "number",
+              "options": []
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.2,
+              "uniqueID": "id-135294",
+              "name": "Rim Height",
+              "type": "number",
+              "options": []
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.4,
+              "uniqueID": "id-135300",
+              "name": "Wood Thickness",
+              "type": "number",
+              "options": []
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.4,
+              "y": 0.3,
+              "uniqueID": "id-135303",
+              "name": "Lounge Frame",
+              "ioValues": [
+                {
+                  "name": "Seat Height",
+                  "ioValue": 280
+                },
+                {
+                  "name": "Rim Height",
+                  "ioValue": 700
+                },
+                {
+                  "name": "Wood Thickness",
+                  "ioValue": 18
+                },
+                {
+                  "name": "Knee Height",
+                  "ioValue": 430
+                },
+                {
+                  "name": "Seat Offset",
+                  "ioValue": 350
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 1,
+                  "y": 0.5,
+                  "uniqueID": "id-135305",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.2,
+                  "uniqueID": "id-135325",
+                  "name": "Seat Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.2,
+                  "uniqueID": "id-135328",
+                  "name": "Rim Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.4,
+                  "uniqueID": "id-135334",
+                  "name": "Wood Thickness",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.3,
+                  "y": 0.3,
+                  "uniqueID": "id-135337",
+                  "ioValues": [
+                    {
+                      "name": "seatHeight",
+                      "ioValue": 280
+                    },
+                    {
+                      "name": "rimHeight",
+                      "ioValue": 700
+                    },
+                    {
+                      "name": "halfSpan",
+                      "ioValue": 660
+                    },
+                    {
+                      "name": "slatThickness",
+                      "ioValue": 25
+                    },
+                    {
+                      "name": "notchDepth",
+                      "ioValue": 6
+                    },
+                    {
+                      "name": "endBottom",
+                      "ioValue": 410
+                    },
+                    {
+                      "name": "kneeHeight",
+                      "ioValue": 430
+                    },
+                    {
+                      "name": "seatOffset",
+                      "ioValue": 350
+                    },
+                    {
+                      "name": "slatWidth",
+                      "ioValue": 40
+                    },
+                    {
+                      "name": "slatGap",
+                      "ioValue": 10
+                    },
+                    {
+                      "name": "backRound",
+                      "ioValue": 150
+                    },
+                    {
+                      "name": "footOuter",
+                      "ioValue": 530
+                    },
+                    {
+                      "name": "archHalfWidth",
+                      "ioValue": 220
+                    },
+                    {
+                      "name": "archHeight",
+                      "ioValue": 250
+                    }
+                  ],
+                  "interpreterVersion": 1,
+                  "code": "/**\n * Side outline of one Window Lounge frame, as a 2D sketch in the sauna's\n * Y-Z plane (sketch X = sauna Y across the barrel, sketch Y = sauna Z,\n * floor at 0). The Extrude, Rotate and Tag atoms in this molecule turn it\n * into the part.\n *\n * The lounge is a symmetric W so you can lie with your head at either\n * wall: seat dips at +/- seatOffset (slat tops at seatHeight), a knee\n * bump in the middle (kneeHeight) and a backrest rising to rimHeight at\n * the outermost slats. The top edge runs (slatThickness - notchDepth)\n * below the slat tops, so each slat sinks into the frame and the Window\n * Lounge Assembly cuts its notch; curve joints sit under slat centres,\n * where the notches remove them.\n *\n * Underneath, the frame stands on the floor on two feet (out to\n * footOuter) with an arch under the knee bump, and its ends keep the\n * bench arms' wall mounting: a flat underside at endBottom where the\n * Wall Bumps hang.\n *\n * The lounge curve and slat layout are shared with the Slats Along Curve\n * code; change both together.\n */\nfunction run(\n  seatHeight: number = 280,\n  kneeHeight: number = 430,\n  rimHeight: number = 700,\n  seatOffset: number = 350,\n  halfSpan: number = 660,\n  slatWidth: number = 40,\n  slatThickness: number = 25,\n  slatGap: number = 10,\n  backRound: number = 150,\n  notchDepth: number = 6,\n  endBottom: number = 410,\n  footOuter: number = 530,\n  archHalfWidth: number = 220,\n  archHeight: number = 250,\n): Assembly {\n  // Reject missing or out-of-range inputs up front (for example while inputs\n  // are being rewired): NaN geometry can hang the CAD worker.\n  const sizes: Record<string, number> = { seatHeight, kneeHeight, rimHeight, seatOffset, halfSpan, slatWidth, slatThickness, slatGap, backRound };\n  for (const [name, value] of Object.entries(sizes)) {\n    if (typeof value !== \"number\" || !Number.isFinite(value)) {\n      throw new Error(`${name} must be a number (got ${value})`);\n    }\n  }\n  if (seatOffset < 50 || seatOffset > halfSpan - 120) {\n    throw new Error(`seatOffset must be between 50 and ${halfSpan - 120} mm`);\n  }\n  if (rimHeight < seatHeight + 50) {\n    throw new Error(\"rimHeight must be at least 50 mm above seatHeight\");\n  }\n  if (slatWidth <= 0 || slatThickness <= 0 || slatGap <= 0) {\n    throw new Error(\"slatWidth, slatThickness and slatGap must be positive\");\n  }\n\n  // ---- Lounge curve and slat layout, shared with Slats Along Curve ----\n  const yv = seatOffset; // seat dips at +/- yv\n  const yr = halfSpan - 20; // outermost slat centre\n  const U = yr - yv;\n  const c = Math.max(backRound, 1);\n  const K = (rimHeight - seatHeight) / (Math.sqrt(U * U + c * c) - c);\n  const bump = kneeHeight - seatHeight;\n  const top = (y: number) => {\n    const a = Math.abs(y);\n    if (a <= yv) return seatHeight + (bump * (1 + Math.cos((Math.PI * a) / yv))) / 2;\n    const u = a - yv;\n    return seatHeight + K * (Math.sqrt(u * u + c * c) - c);\n  };\n  const slope = (y: number) => {\n    const a = Math.abs(y);\n    const s = Math.sign(y);\n    if (a <= yv) return (-s * bump * Math.PI * Math.sin((Math.PI * a) / yv)) / (2 * yv);\n    const u = a - yv;\n    return (s * K * u) / Math.sqrt(u * u + c * c);\n  };\n  const n = 4000;\n  const ys: number[] = [0];\n  const ss: number[] = [0];\n  for (let i = 1; i <= n; i++) {\n    const y0 = (yr * (i - 1)) / n;\n    const y1 = (yr * i) / n;\n    ys.push(y1);\n    ss.push(ss[i - 1] + Math.hypot(y1 - y0, top(y1) - top(y0)));\n  }\n  const sEnd = ss[n];\n  const yAt = (s: number) => {\n    if (s >= sEnd) return yr;\n    let lo = 0;\n    let hi = n;\n    while (hi - lo > 1) {\n      const mid = (lo + hi) >> 1;\n      if (ss[mid] < s) lo = mid;\n      else hi = mid;\n    }\n    const f = (s - ss[lo]) / (ss[hi] - ss[lo]);\n    return ys[lo] + f * (ys[hi] - ys[lo]);\n  };\n  // Side face of the slat whose top centre is at arc length s (side +1 = outer).\n  const face = (s: number, side: number): number[][] => {\n    const y = yAt(s);\n    const t = Math.atan(slope(y));\n    const px = y + (side * slatWidth * Math.cos(t)) / 2;\n    const pz = top(y) + (side * slatWidth * Math.sin(t)) / 2;\n    return [\n      [px, pz],\n      [px + slatThickness * Math.sin(t), pz - slatThickness * Math.cos(t)],\n    ];\n  };\n  const pointSeg = (p: number[], a: number[], b: number[]) => {\n    const dx = b[0] - a[0];\n    const dz = b[1] - a[1];\n    const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dz) / (dx * dx + dz * dz)));\n    return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dz);\n  };\n  const cross = (o: number[], a: number[], b: number[]) =>\n    (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);\n  // Narrowest gap between neighbouring slats at arc lengths s1 < s2.\n  const clearance = (s1: number, s2: number) => {\n    const [a0, a1] = face(s1, 1);\n    const [b0, b1] = face(s2, -1);\n    if (cross(a0, a1, b0) * cross(a0, a1, b1) < 0 && cross(b0, b1, a0) * cross(b0, b1, a1) < 0) return 0;\n    return Math.min(pointSeg(a0, b0, b1), pointSeg(a1, b0, b1), pointSeg(b0, a0, a1), pointSeg(b1, a0, a1));\n  };\n  // Slats from the middle outward, each one `gap` clear of the last, so they\n  // fan open over the knee bump instead of touching underneath.\n  const pack = (gap: number, count: number) => {\n    const out = [0];\n    for (let i = 1; i <= count; i++) {\n      const prev = out[i - 1];\n      let lo = prev + slatWidth / 2;\n      let hi = prev + 4 * (slatWidth + gap);\n      for (let j = 0; j < 40; j++) {\n        const mid = (lo + hi) / 2;\n        if (clearance(prev, mid) < gap) lo = mid;\n        else hi = mid;\n      }\n      out.push(hi);\n    }\n    return out;\n  };\n  // The gap that puts the outermost slat exactly at the rim.\n  const fit = (count: number) => {\n    let lo = 0;\n    let hi = 4 * slatGap + slatWidth;\n    for (let j = 0; j < 40; j++) {\n      const mid = (lo + hi) / 2;\n      if (pack(mid, count)[count] < sEnd) lo = mid;\n      else hi = mid;\n    }\n    return lo;\n  };\n  let perSide = 1;\n  while (pack(slatGap, perSide + 1)[perSide + 1] <= sEnd) perSide++;\n  const gapA = fit(perSide);\n  const gapB = fit(perSide + 1);\n  const useMore = Math.abs(gapB - slatGap) < Math.abs(gapA - slatGap);\n  if (useMore) perSide++;\n  const gap = useMore ? gapB : gapA;\n  const outward = pack(gap, perSide).map(yAt);\n  const centres = [...outward.slice(1).reverse().map((y) => -y), ...outward];\n  // ---- end of shared lounge layout ----\n\n  type Knot = { p: [number, number]; dir: [number, number] };\n\n  // Point on the frame's top edge below the slat top at y, with its tangent.\n  const sink = slatThickness - notchDepth;\n  const edgeAt = (y: number): Knot => {\n    const t = Math.atan(slope(y));\n    return {\n      p: [y + sink * Math.sin(t), top(y) - sink * Math.cos(t)],\n      dir: [Math.cos(t), Math.sin(t)],\n    };\n  };\n  // Curve position where the top edge reaches the frame end.\n  let lo = 0;\n  let hi = halfSpan;\n  for (let i = 0; i < 60; i++) {\n    const mid = (lo + hi) / 2;\n    if (edgeAt(mid).p[0] < halfSpan) lo = mid;\n    else hi = mid;\n  }\n  const uEnd = (lo + hi) / 2;\n  const knots = [-uEnd, ...centres, uEnd].map(edgeAt);\n  knots[0].p[0] = -halfSpan;\n  knots[knots.length - 1].p[0] = halfSpan;\n\n  // Cubic between two knots that leaves and arrives along their tangents.\n  const curveTo = (pen: any, a: Knot, b: Knot) => {\n    const h = Math.hypot(b.p[0] - a.p[0], b.p[1] - a.p[1]) / 3;\n    return pen.cubicBezierCurveTo(\n      b.p,\n      [a.p[0] + a.dir[0] * h, a.p[1] + a.dir[1] * h],\n      [b.p[0] - b.dir[0] * h, b.p[1] - b.dir[1] * h],\n    );\n  };\n\n  let pen = replicad.draw(knots[0].p);\n  for (let i = 1; i < knots.length; i++) pen = curveTo(pen, knots[i - 1], knots[i]);\n\n  // Right wall end (bumps hang from the flat at endBottom), then in and down\n  // to the right foot, which stays inside the barrel's lower walls.\n  pen = pen\n    .lineTo([halfSpan, endBottom])\n    .lineTo([halfSpan - 60, endBottom])\n    .lineTo([footOuter, endBottom - 80])\n    .lineTo([footOuter, 0])\n    .lineTo([archHalfWidth, 0]);\n\n  // Arch under the knee bump, drawn right to left.\n  const archAt = (y: number): Knot => {\n    const w = (Math.PI * y) / archHalfWidth;\n    const m = ((-archHeight * Math.PI) / (2 * archHalfWidth)) * Math.sin(w);\n    const len = Math.hypot(1, m);\n    return {\n      p: [y, (archHeight * (1 + Math.cos(w))) / 2],\n      dir: [-1 / len, -m / len],\n    };\n  };\n  const pieces = 8;\n  for (let i = 1; i <= pieces; i++) {\n    const a = archAt(archHalfWidth - (2 * archHalfWidth * (i - 1)) / pieces);\n    const b = archAt(archHalfWidth - (2 * archHalfWidth * i) / pieces);\n    pen = curveTo(pen, a, b);\n  }\n\n  // Left foot and left wall end, mirroring the right.\n  pen = pen\n    .lineTo([-footOuter, 0])\n    .lineTo([-footOuter, endBottom - 80])\n    .lineTo([-(halfSpan - 60), endBottom])\n    .lineTo([-halfSpan, endBottom]);\n  return new Assembly({ geometry: pen.close() });\n}\n",
+                  "compiledCode": "\"use strict\";\n/**\n * Side outline of one Window Lounge frame, as a 2D sketch in the sauna's\n * Y-Z plane (sketch X = sauna Y across the barrel, sketch Y = sauna Z,\n * floor at 0). The Extrude, Rotate and Tag atoms in this molecule turn it\n * into the part.\n *\n * The lounge is a symmetric W so you can lie with your head at either\n * wall: seat dips at +/- seatOffset (slat tops at seatHeight), a knee\n * bump in the middle (kneeHeight) and a backrest rising to rimHeight at\n * the outermost slats. The top edge runs (slatThickness - notchDepth)\n * below the slat tops, so each slat sinks into the frame and the Window\n * Lounge Assembly cuts its notch; curve joints sit under slat centres,\n * where the notches remove them.\n *\n * Underneath, the frame stands on the floor on two feet (out to\n * footOuter) with an arch under the knee bump, and its ends keep the\n * bench arms' wall mounting: a flat underside at endBottom where the\n * Wall Bumps hang.\n *\n * The lounge curve and slat layout are shared with the Slats Along Curve\n * code; change both together.\n */\nfunction run(seatHeight = 280, kneeHeight = 430, rimHeight = 700, seatOffset = 350, halfSpan = 660, slatWidth = 40, slatThickness = 25, slatGap = 10, backRound = 150, notchDepth = 6, endBottom = 410, footOuter = 530, archHalfWidth = 220, archHeight = 250) {\n    // Reject missing or out-of-range inputs up front (for example while inputs\n    // are being rewired): NaN geometry can hang the CAD worker.\n    const sizes = { seatHeight, kneeHeight, rimHeight, seatOffset, halfSpan, slatWidth, slatThickness, slatGap, backRound };\n    for (const [name, value] of Object.entries(sizes)) {\n        if (typeof value !== \"number\" || !Number.isFinite(value)) {\n            throw new Error(`${name} must be a number (got ${value})`);\n        }\n    }\n    if (seatOffset < 50 || seatOffset > halfSpan - 120) {\n        throw new Error(`seatOffset must be between 50 and ${halfSpan - 120} mm`);\n    }\n    if (rimHeight < seatHeight + 50) {\n        throw new Error(\"rimHeight must be at least 50 mm above seatHeight\");\n    }\n    if (slatWidth <= 0 || slatThickness <= 0 || slatGap <= 0) {\n        throw new Error(\"slatWidth, slatThickness and slatGap must be positive\");\n    }\n    // ---- Lounge curve and slat layout, shared with Slats Along Curve ----\n    const yv = seatOffset; // seat dips at +/- yv\n    const yr = halfSpan - 20; // outermost slat centre\n    const U = yr - yv;\n    const c = Math.max(backRound, 1);\n    const K = (rimHeight - seatHeight) / (Math.sqrt(U * U + c * c) - c);\n    const bump = kneeHeight - seatHeight;\n    const top = (y) => {\n        const a = Math.abs(y);\n        if (a <= yv)\n            return seatHeight + (bump * (1 + Math.cos((Math.PI * a) / yv))) / 2;\n        const u = a - yv;\n        return seatHeight + K * (Math.sqrt(u * u + c * c) - c);\n    };\n    const slope = (y) => {\n        const a = Math.abs(y);\n        const s = Math.sign(y);\n        if (a <= yv)\n            return (-s * bump * Math.PI * Math.sin((Math.PI * a) / yv)) / (2 * yv);\n        const u = a - yv;\n        return (s * K * u) / Math.sqrt(u * u + c * c);\n    };\n    const n = 4000;\n    const ys = [0];\n    const ss = [0];\n    for (let i = 1; i <= n; i++) {\n        const y0 = (yr * (i - 1)) / n;\n        const y1 = (yr * i) / n;\n        ys.push(y1);\n        ss.push(ss[i - 1] + Math.hypot(y1 - y0, top(y1) - top(y0)));\n    }\n    const sEnd = ss[n];\n    const yAt = (s) => {\n        if (s >= sEnd)\n            return yr;\n        let lo = 0;\n        let hi = n;\n        while (hi - lo > 1) {\n            const mid = (lo + hi) >> 1;\n            if (ss[mid] < s)\n                lo = mid;\n            else\n                hi = mid;\n        }\n        const f = (s - ss[lo]) / (ss[hi] - ss[lo]);\n        return ys[lo] + f * (ys[hi] - ys[lo]);\n    };\n    // Side face of the slat whose top centre is at arc length s (side +1 = outer).\n    const face = (s, side) => {\n        const y = yAt(s);\n        const t = Math.atan(slope(y));\n        const px = y + (side * slatWidth * Math.cos(t)) / 2;\n        const pz = top(y) + (side * slatWidth * Math.sin(t)) / 2;\n        return [\n            [px, pz],\n            [px + slatThickness * Math.sin(t), pz - slatThickness * Math.cos(t)],\n        ];\n    };\n    const pointSeg = (p, a, b) => {\n        const dx = b[0] - a[0];\n        const dz = b[1] - a[1];\n        const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dz) / (dx * dx + dz * dz)));\n        return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dz);\n    };\n    const cross = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);\n    // Narrowest gap between neighbouring slats at arc lengths s1 < s2.\n    const clearance = (s1, s2) => {\n        const [a0, a1] = face(s1, 1);\n        const [b0, b1] = face(s2, -1);\n        if (cross(a0, a1, b0) * cross(a0, a1, b1) < 0 && cross(b0, b1, a0) * cross(b0, b1, a1) < 0)\n            return 0;\n        return Math.min(pointSeg(a0, b0, b1), pointSeg(a1, b0, b1), pointSeg(b0, a0, a1), pointSeg(b1, a0, a1));\n    };\n    // Slats from the middle outward, each one `gap` clear of the last, so they\n    // fan open over the knee bump instead of touching underneath.\n    const pack = (gap, count) => {\n        const out = [0];\n        for (let i = 1; i <= count; i++) {\n            const prev = out[i - 1];\n            let lo = prev + slatWidth / 2;\n            let hi = prev + 4 * (slatWidth + gap);\n            for (let j = 0; j < 40; j++) {\n                const mid = (lo + hi) / 2;\n                if (clearance(prev, mid) < gap)\n                    lo = mid;\n                else\n                    hi = mid;\n            }\n            out.push(hi);\n        }\n        return out;\n    };\n    // The gap that puts the outermost slat exactly at the rim.\n    const fit = (count) => {\n        let lo = 0;\n        let hi = 4 * slatGap + slatWidth;\n        for (let j = 0; j < 40; j++) {\n            const mid = (lo + hi) / 2;\n            if (pack(mid, count)[count] < sEnd)\n                lo = mid;\n            else\n                hi = mid;\n        }\n        return lo;\n    };\n    let perSide = 1;\n    while (pack(slatGap, perSide + 1)[perSide + 1] <= sEnd)\n        perSide++;\n    const gapA = fit(perSide);\n    const gapB = fit(perSide + 1);\n    const useMore = Math.abs(gapB - slatGap) < Math.abs(gapA - slatGap);\n    if (useMore)\n        perSide++;\n    const gap = useMore ? gapB : gapA;\n    const outward = pack(gap, perSide).map(yAt);\n    const centres = [...outward.slice(1).reverse().map((y) => -y), ...outward];\n    // Point on the frame's top edge below the slat top at y, with its tangent.\n    const sink = slatThickness - notchDepth;\n    const edgeAt = (y) => {\n        const t = Math.atan(slope(y));\n        return {\n            p: [y + sink * Math.sin(t), top(y) - sink * Math.cos(t)],\n            dir: [Math.cos(t), Math.sin(t)],\n        };\n    };\n    // Curve position where the top edge reaches the frame end.\n    let lo = 0;\n    let hi = halfSpan;\n    for (let i = 0; i < 60; i++) {\n        const mid = (lo + hi) / 2;\n        if (edgeAt(mid).p[0] < halfSpan)\n            lo = mid;\n        else\n            hi = mid;\n    }\n    const uEnd = (lo + hi) / 2;\n    const knots = [-uEnd, ...centres, uEnd].map(edgeAt);\n    knots[0].p[0] = -halfSpan;\n    knots[knots.length - 1].p[0] = halfSpan;\n    // Cubic between two knots that leaves and arrives along their tangents.\n    const curveTo = (pen, a, b) => {\n        const h = Math.hypot(b.p[0] - a.p[0], b.p[1] - a.p[1]) / 3;\n        return pen.cubicBezierCurveTo(b.p, [a.p[0] + a.dir[0] * h, a.p[1] + a.dir[1] * h], [b.p[0] - b.dir[0] * h, b.p[1] - b.dir[1] * h]);\n    };\n    let pen = replicad.draw(knots[0].p);\n    for (let i = 1; i < knots.length; i++)\n        pen = curveTo(pen, knots[i - 1], knots[i]);\n    // Right wall end (bumps hang from the flat at endBottom), then in and down\n    // to the right foot, which stays inside the barrel's lower walls.\n    pen = pen\n        .lineTo([halfSpan, endBottom])\n        .lineTo([halfSpan - 60, endBottom])\n        .lineTo([footOuter, endBottom - 80])\n        .lineTo([footOuter, 0])\n        .lineTo([archHalfWidth, 0]);\n    // Arch under the knee bump, drawn right to left.\n    const archAt = (y) => {\n        const w = (Math.PI * y) / archHalfWidth;\n        const m = ((-archHeight * Math.PI) / (2 * archHalfWidth)) * Math.sin(w);\n        const len = Math.hypot(1, m);\n        return {\n            p: [y, (archHeight * (1 + Math.cos(w))) / 2],\n            dir: [-1 / len, -m / len],\n        };\n    };\n    const pieces = 8;\n    for (let i = 1; i <= pieces; i++) {\n        const a = archAt(archHalfWidth - (2 * archHalfWidth * (i - 1)) / pieces);\n        const b = archAt(archHalfWidth - (2 * archHalfWidth * i) / pieces);\n        pen = curveTo(pen, a, b);\n    }\n    // Left foot and left wall end, mirroring the right.\n    pen = pen\n        .lineTo([-footOuter, 0])\n        .lineTo([-footOuter, endBottom - 80])\n        .lineTo([-(halfSpan - 60), endBottom])\n        .lineTo([-halfSpan, endBottom]);\n    return new Assembly({ geometry: pen.close() });\n}\n"
+                },
+                {
+                  "atomType": "Molecule",
+                  "x": 0.3,
+                  "y": 0.7,
+                  "uniqueID": "id-135346",
+                  "name": "Wall Bumps",
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 1,
+                      "y": 0.5,
+                      "uniqueID": "id-135348",
+                      "ioValues": [
+                        {
+                          "name": "number or geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Rectangle",
+                      "x": 0.1,
+                      "y": 0.3,
+                      "uniqueID": "id-135366",
+                      "ioValues": [
+                        {
+                          "name": "x length",
+                          "ioValue": 25
+                        },
+                        {
+                          "name": "y length",
+                          "ioValue": 25
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.3,
+                      "y": 0.3,
+                      "uniqueID": "id-135370",
+                      "ioValues": [
+                        {
+                          "name": "geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "xDist",
+                          "ioValue": 0
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 50
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Circle",
+                      "x": 0.3,
+                      "y": 0.6,
+                      "uniqueID": "id-135376",
+                      "ioValues": [
+                        {
+                          "name": "diameter",
+                          "ioValue": 25
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "ShrinkWrap",
+                      "x": 0.5,
+                      "y": 0.5,
+                      "uniqueID": "id-135379",
+                      "name": "Shrink Wrap",
+                      "ioValues": [
+                        {
+                          "name": "Shape 1",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape2",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape3",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape 1",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape2",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape3",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.7,
+                      "y": 0.3,
+                      "uniqueID": "id-135382",
+                      "ioValues": [
+                        {
+                          "name": "geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "xDist",
+                          "ioValue": -647.5
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 395
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Move",
+                      "x": 0.7,
+                      "y": 0.6,
+                      "uniqueID": "id-135388",
+                      "ioValues": [
+                        {
+                          "name": "geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "xDist",
+                          "ioValue": 647.5
+                        },
+                        {
+                          "name": "yDist",
+                          "ioValue": 395
+                        },
+                        {
+                          "name": "zDist",
+                          "ioValue": 0
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Fusion",
+                      "x": 0.9,
+                      "y": 0.5,
+                      "uniqueID": "id-135394",
+                      "ioValues": [
+                        {
+                          "name": "Shape 1",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "Shape2",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ],
+                      "unionType": "Fusion"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-135366",
+                      "ap2ID": "id-135370"
+                    },
+                    {
+                      "ap2Name": "Shape 1",
+                      "ap1ID": "id-135370",
+                      "ap2ID": "id-135379"
+                    },
+                    {
+                      "ap2Name": "Shape2",
+                      "ap1ID": "id-135376",
+                      "ap2ID": "id-135379"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-135379",
+                      "ap2ID": "id-135382"
+                    },
+                    {
+                      "ap2Name": "geometry",
+                      "ap1ID": "id-135379",
+                      "ap2ID": "id-135388"
+                    },
+                    {
+                      "ap2Name": "Shape 1",
+                      "ap1ID": "id-135382",
+                      "ap2ID": "id-135394"
+                    },
+                    {
+                      "ap2Name": "Shape2",
+                      "ap1ID": "id-135388",
+                      "ap2ID": "id-135394"
+                    },
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-135394",
+                      "ap2ID": "id-135348"
+                    }
+                  ],
+                  "fileTypeVersion": 1
+                },
+                {
+                  "atomType": "Fusion",
+                  "x": 0.5,
+                  "y": 0.5,
+                  "uniqueID": "id-135350",
+                  "ioValues": [
+                    {
+                      "name": "Shape 1",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "Shape2",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ],
+                  "unionType": "Fusion"
+                },
+                {
+                  "atomType": "Extrude",
+                  "x": 0.7,
+                  "y": 0.5,
+                  "uniqueID": "id-135353",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "height",
+                      "ioValue": 18
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Rotate",
+                  "x": 0.8,
+                  "y": 0.5,
+                  "uniqueID": "id-135357",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "x-axis degrees",
+                      "ioValue": 90
+                    },
+                    {
+                      "name": "y-axis degrees",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "z-axis degrees",
+                      "ioValue": 90
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Tag",
+                  "x": 0.9,
+                  "y": 0.5,
+                  "uniqueID": "id-135363",
+                  "name": "Thick",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ],
+                  "tags": [
+                    "Thick"
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.5,
+                  "uniqueID": "id-135510",
+                  "name": "Knee Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.6,
+                  "uniqueID": "id-135513",
+                  "name": "Seat Offset",
+                  "type": "number",
+                  "options": []
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "seatHeight",
+                  "ap1ID": "id-135325",
+                  "ap2ID": "id-135337"
+                },
+                {
+                  "ap2Name": "rimHeight",
+                  "ap1ID": "id-135328",
+                  "ap2ID": "id-135337"
+                },
+                {
+                  "ap2Name": "height",
+                  "ap1ID": "id-135334",
+                  "ap2ID": "id-135353"
+                },
+                {
+                  "ap2Name": "Shape 1",
+                  "ap1ID": "id-135337",
+                  "ap2ID": "id-135350"
+                },
+                {
+                  "ap2Name": "Shape2",
+                  "ap1ID": "id-135346",
+                  "ap2ID": "id-135350"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135350",
+                  "ap2ID": "id-135353"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135353",
+                  "ap2ID": "id-135357"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135357",
+                  "ap2ID": "id-135363"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-135363",
+                  "ap2ID": "id-135305"
+                },
+                {
+                  "ap2Name": "kneeHeight",
+                  "ap1ID": "id-135510",
+                  "ap2ID": "id-135337"
+                },
+                {
+                  "ap2Name": "seatOffset",
+                  "ap1ID": "id-135513",
+                  "ap2ID": "id-135337"
+                }
+              ],
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Move",
+              "x": 0.6,
+              "y": 0.4,
+              "uniqueID": "id-135307",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 340
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.3,
+              "y": 0.8,
+              "uniqueID": "id-135313",
+              "name": "Lounge Slat",
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 1,
+                  "y": 0.5,
+                  "uniqueID": "id-135315",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.2,
+                  "y": 0.5,
+                  "uniqueID": "id-135397",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 40
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 25
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.4,
+                  "y": 0.5,
+                  "uniqueID": "id-135401",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "xDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": -12.5
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": 0
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Extrude",
+                  "x": 0.6,
+                  "y": 0.5,
+                  "uniqueID": "id-135407",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "height",
+                      "ioValue": 400
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Rotate",
+                  "x": 0.8,
+                  "y": 0.5,
+                  "uniqueID": "id-135411",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "x-axis degrees",
+                      "ioValue": 90
+                    },
+                    {
+                      "name": "y-axis degrees",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "z-axis degrees",
+                      "ioValue": 90
+                    }
+                  ]
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135397",
+                  "ap2ID": "id-135401"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135401",
+                  "ap2ID": "id-135407"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-135407",
+                  "ap2ID": "id-135411"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-135411",
+                  "ap2ID": "id-135315"
+                }
+              ],
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.6,
+              "y": 0.7,
+              "uniqueID": "id-135317",
+              "name": "Slats Along Curve",
+              "ioValues": [
+                {
+                  "name": "Slat",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Seat Height",
+                  "ioValue": 280
+                },
+                {
+                  "name": "Rim Height",
+                  "ioValue": 700
+                },
+                {
+                  "name": "Knee Height",
+                  "ioValue": 430
+                },
+                {
+                  "name": "Seat Offset",
+                  "ioValue": 350
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 1,
+                  "y": 0.5,
+                  "uniqueID": "id-135319",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.2,
+                  "uniqueID": "id-135417",
+                  "name": "Slat",
+                  "type": "geometry",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.2,
+                  "uniqueID": "id-135420",
+                  "name": "Seat Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.3,
+                  "uniqueID": "id-135423",
+                  "name": "Rim Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.5,
+                  "y": 0.5,
+                  "uniqueID": "id-135429",
+                  "ioValues": [
+                    {
+                      "name": "slat",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "seatHeight",
+                      "ioValue": 280
+                    },
+                    {
+                      "name": "rimHeight",
+                      "ioValue": 700
+                    },
+                    {
+                      "name": "halfSpan",
+                      "ioValue": 660
+                    },
+                    {
+                      "name": "kneeHeight",
+                      "ioValue": 430
+                    },
+                    {
+                      "name": "seatOffset",
+                      "ioValue": 350
+                    },
+                    {
+                      "name": "slatWidth",
+                      "ioValue": 40
+                    },
+                    {
+                      "name": "slatThickness",
+                      "ioValue": 25
+                    },
+                    {
+                      "name": "slatGap",
+                      "ioValue": 10
+                    },
+                    {
+                      "name": "backRound",
+                      "ioValue": 150
+                    }
+                  ],
+                  "interpreterVersion": 1,
+                  "code": "/**\n * Pattern for the Window Lounge: places copies of the Lounge Slat along the\n * lounge's W curve, symmetric about the middle, each tilted to follow it.\n * The slat arrives with its top face centred on the origin and its length\n * along X. Slats are packed outward from the middle so neighbours keep the\n * same narrowest gap (they fan open over the knee bump), with the gap\n * adjusted so the outermost slats sit 20 mm in from the frame ends.\n *\n * Heights are sauna Z (floor at 0): seat dips at +/- seatOffset at\n * seatHeight, the knee bump at kneeHeight, backrests rising to rimHeight.\n *\n * The lounge curve and slat layout are shared with the Lounge Frame\n * outline code; change both together.\n */\nfunction run(\n  slat: Assembly,\n  seatHeight: number = 280,\n  kneeHeight: number = 430,\n  rimHeight: number = 700,\n  seatOffset: number = 350,\n  halfSpan: number = 660,\n  slatWidth: number = 40,\n  slatThickness: number = 25,\n  slatGap: number = 10,\n  backRound: number = 150,\n): Assembly {\n  if (!slat) throw new Error(\"Connect the Lounge Slat to the slat input\");\n  // Reject missing or out-of-range inputs up front (for example while inputs\n  // are being rewired): NaN geometry can hang the CAD worker.\n  const sizes: Record<string, number> = { seatHeight, kneeHeight, rimHeight, seatOffset, halfSpan, slatWidth, slatThickness, slatGap, backRound };\n  for (const [name, value] of Object.entries(sizes)) {\n    if (typeof value !== \"number\" || !Number.isFinite(value)) {\n      throw new Error(`${name} must be a number (got ${value})`);\n    }\n  }\n  if (seatOffset < 50 || seatOffset > halfSpan - 120) {\n    throw new Error(`seatOffset must be between 50 and ${halfSpan - 120} mm`);\n  }\n  if (rimHeight < seatHeight + 50) {\n    throw new Error(\"rimHeight must be at least 50 mm above seatHeight\");\n  }\n  if (slatWidth <= 0 || slatThickness <= 0 || slatGap <= 0) {\n    throw new Error(\"slatWidth, slatThickness and slatGap must be positive\");\n  }\n\n  // ---- Lounge curve and slat layout, shared with Lounge Frame ----\n  const yv = seatOffset; // seat dips at +/- yv\n  const yr = halfSpan - 20; // outermost slat centre\n  const U = yr - yv;\n  const c = Math.max(backRound, 1);\n  const K = (rimHeight - seatHeight) / (Math.sqrt(U * U + c * c) - c);\n  const bump = kneeHeight - seatHeight;\n  const top = (y: number) => {\n    const a = Math.abs(y);\n    if (a <= yv) return seatHeight + (bump * (1 + Math.cos((Math.PI * a) / yv))) / 2;\n    const u = a - yv;\n    return seatHeight + K * (Math.sqrt(u * u + c * c) - c);\n  };\n  const slope = (y: number) => {\n    const a = Math.abs(y);\n    const s = Math.sign(y);\n    if (a <= yv) return (-s * bump * Math.PI * Math.sin((Math.PI * a) / yv)) / (2 * yv);\n    const u = a - yv;\n    return (s * K * u) / Math.sqrt(u * u + c * c);\n  };\n  const n = 4000;\n  const ys: number[] = [0];\n  const ss: number[] = [0];\n  for (let i = 1; i <= n; i++) {\n    const y0 = (yr * (i - 1)) / n;\n    const y1 = (yr * i) / n;\n    ys.push(y1);\n    ss.push(ss[i - 1] + Math.hypot(y1 - y0, top(y1) - top(y0)));\n  }\n  const sEnd = ss[n];\n  const yAt = (s: number) => {\n    if (s >= sEnd) return yr;\n    let lo = 0;\n    let hi = n;\n    while (hi - lo > 1) {\n      const mid = (lo + hi) >> 1;\n      if (ss[mid] < s) lo = mid;\n      else hi = mid;\n    }\n    const f = (s - ss[lo]) / (ss[hi] - ss[lo]);\n    return ys[lo] + f * (ys[hi] - ys[lo]);\n  };\n  // Side face of the slat whose top centre is at arc length s (side +1 = outer).\n  const face = (s: number, side: number): number[][] => {\n    const y = yAt(s);\n    const t = Math.atan(slope(y));\n    const px = y + (side * slatWidth * Math.cos(t)) / 2;\n    const pz = top(y) + (side * slatWidth * Math.sin(t)) / 2;\n    return [\n      [px, pz],\n      [px + slatThickness * Math.sin(t), pz - slatThickness * Math.cos(t)],\n    ];\n  };\n  const pointSeg = (p: number[], a: number[], b: number[]) => {\n    const dx = b[0] - a[0];\n    const dz = b[1] - a[1];\n    const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dz) / (dx * dx + dz * dz)));\n    return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dz);\n  };\n  const cross = (o: number[], a: number[], b: number[]) =>\n    (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);\n  // Narrowest gap between neighbouring slats at arc lengths s1 < s2.\n  const clearance = (s1: number, s2: number) => {\n    const [a0, a1] = face(s1, 1);\n    const [b0, b1] = face(s2, -1);\n    if (cross(a0, a1, b0) * cross(a0, a1, b1) < 0 && cross(b0, b1, a0) * cross(b0, b1, a1) < 0) return 0;\n    return Math.min(pointSeg(a0, b0, b1), pointSeg(a1, b0, b1), pointSeg(b0, a0, a1), pointSeg(b1, a0, a1));\n  };\n  // Slats from the middle outward, each one `gap` clear of the last, so they\n  // fan open over the knee bump instead of touching underneath.\n  const pack = (gap: number, count: number) => {\n    const out = [0];\n    for (let i = 1; i <= count; i++) {\n      const prev = out[i - 1];\n      let lo = prev + slatWidth / 2;\n      let hi = prev + 4 * (slatWidth + gap);\n      for (let j = 0; j < 40; j++) {\n        const mid = (lo + hi) / 2;\n        if (clearance(prev, mid) < gap) lo = mid;\n        else hi = mid;\n      }\n      out.push(hi);\n    }\n    return out;\n  };\n  // The gap that puts the outermost slat exactly at the rim.\n  const fit = (count: number) => {\n    let lo = 0;\n    let hi = 4 * slatGap + slatWidth;\n    for (let j = 0; j < 40; j++) {\n      const mid = (lo + hi) / 2;\n      if (pack(mid, count)[count] < sEnd) lo = mid;\n      else hi = mid;\n    }\n    return lo;\n  };\n  let perSide = 1;\n  while (pack(slatGap, perSide + 1)[perSide + 1] <= sEnd) perSide++;\n  const gapA = fit(perSide);\n  const gapB = fit(perSide + 1);\n  const useMore = Math.abs(gapB - slatGap) < Math.abs(gapA - slatGap);\n  if (useMore) perSide++;\n  const gap = useMore ? gapB : gapA;\n  const outward = pack(gap, perSide).map(yAt);\n  const centres = [...outward.slice(1).reverse().map((y) => -y), ...outward];\n  // ---- end of shared lounge layout ----\n\n  const copies = centres.map((y) =>\n    slat.onLeafs((leaf) => {\n      const copy = new Assembly(leaf);\n      const angle = (Math.atan(slope(y)) * 180) / Math.PI;\n      copy.geometry = copy.geometry\n        .rotate(angle, [0, 0, 0], [1, 0, 0])\n        .translate(0, y, top(y));\n      return copy;\n    }),\n  );\n  console.log(`${centres.length} slats, narrowest gap ${gap.toFixed(1)} mm`);\n  // The packing keeps every slat clear of its neighbours, so skip the disjoint check.\n  return new Assembly({ geometry: copies }).skipDisjointPostprocess();\n}\n",
+                  "compiledCode": "\"use strict\";\n/**\n * Pattern for the Window Lounge: places copies of the Lounge Slat along the\n * lounge's W curve, symmetric about the middle, each tilted to follow it.\n * The slat arrives with its top face centred on the origin and its length\n * along X. Slats are packed outward from the middle so neighbours keep the\n * same narrowest gap (they fan open over the knee bump), with the gap\n * adjusted so the outermost slats sit 20 mm in from the frame ends.\n *\n * Heights are sauna Z (floor at 0): seat dips at +/- seatOffset at\n * seatHeight, the knee bump at kneeHeight, backrests rising to rimHeight.\n *\n * The lounge curve and slat layout are shared with the Lounge Frame\n * outline code; change both together.\n */\nfunction run(slat, seatHeight = 280, kneeHeight = 430, rimHeight = 700, seatOffset = 350, halfSpan = 660, slatWidth = 40, slatThickness = 25, slatGap = 10, backRound = 150) {\n    if (!slat)\n        throw new Error(\"Connect the Lounge Slat to the slat input\");\n    // Reject missing or out-of-range inputs up front (for example while inputs\n    // are being rewired): NaN geometry can hang the CAD worker.\n    const sizes = { seatHeight, kneeHeight, rimHeight, seatOffset, halfSpan, slatWidth, slatThickness, slatGap, backRound };\n    for (const [name, value] of Object.entries(sizes)) {\n        if (typeof value !== \"number\" || !Number.isFinite(value)) {\n            throw new Error(`${name} must be a number (got ${value})`);\n        }\n    }\n    if (seatOffset < 50 || seatOffset > halfSpan - 120) {\n        throw new Error(`seatOffset must be between 50 and ${halfSpan - 120} mm`);\n    }\n    if (rimHeight < seatHeight + 50) {\n        throw new Error(\"rimHeight must be at least 50 mm above seatHeight\");\n    }\n    if (slatWidth <= 0 || slatThickness <= 0 || slatGap <= 0) {\n        throw new Error(\"slatWidth, slatThickness and slatGap must be positive\");\n    }\n    // ---- Lounge curve and slat layout, shared with Lounge Frame ----\n    const yv = seatOffset; // seat dips at +/- yv\n    const yr = halfSpan - 20; // outermost slat centre\n    const U = yr - yv;\n    const c = Math.max(backRound, 1);\n    const K = (rimHeight - seatHeight) / (Math.sqrt(U * U + c * c) - c);\n    const bump = kneeHeight - seatHeight;\n    const top = (y) => {\n        const a = Math.abs(y);\n        if (a <= yv)\n            return seatHeight + (bump * (1 + Math.cos((Math.PI * a) / yv))) / 2;\n        const u = a - yv;\n        return seatHeight + K * (Math.sqrt(u * u + c * c) - c);\n    };\n    const slope = (y) => {\n        const a = Math.abs(y);\n        const s = Math.sign(y);\n        if (a <= yv)\n            return (-s * bump * Math.PI * Math.sin((Math.PI * a) / yv)) / (2 * yv);\n        const u = a - yv;\n        return (s * K * u) / Math.sqrt(u * u + c * c);\n    };\n    const n = 4000;\n    const ys = [0];\n    const ss = [0];\n    for (let i = 1; i <= n; i++) {\n        const y0 = (yr * (i - 1)) / n;\n        const y1 = (yr * i) / n;\n        ys.push(y1);\n        ss.push(ss[i - 1] + Math.hypot(y1 - y0, top(y1) - top(y0)));\n    }\n    const sEnd = ss[n];\n    const yAt = (s) => {\n        if (s >= sEnd)\n            return yr;\n        let lo = 0;\n        let hi = n;\n        while (hi - lo > 1) {\n            const mid = (lo + hi) >> 1;\n            if (ss[mid] < s)\n                lo = mid;\n            else\n                hi = mid;\n        }\n        const f = (s - ss[lo]) / (ss[hi] - ss[lo]);\n        return ys[lo] + f * (ys[hi] - ys[lo]);\n    };\n    // Side face of the slat whose top centre is at arc length s (side +1 = outer).\n    const face = (s, side) => {\n        const y = yAt(s);\n        const t = Math.atan(slope(y));\n        const px = y + (side * slatWidth * Math.cos(t)) / 2;\n        const pz = top(y) + (side * slatWidth * Math.sin(t)) / 2;\n        return [\n            [px, pz],\n            [px + slatThickness * Math.sin(t), pz - slatThickness * Math.cos(t)],\n        ];\n    };\n    const pointSeg = (p, a, b) => {\n        const dx = b[0] - a[0];\n        const dz = b[1] - a[1];\n        const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dz) / (dx * dx + dz * dz)));\n        return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dz);\n    };\n    const cross = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);\n    // Narrowest gap between neighbouring slats at arc lengths s1 < s2.\n    const clearance = (s1, s2) => {\n        const [a0, a1] = face(s1, 1);\n        const [b0, b1] = face(s2, -1);\n        if (cross(a0, a1, b0) * cross(a0, a1, b1) < 0 && cross(b0, b1, a0) * cross(b0, b1, a1) < 0)\n            return 0;\n        return Math.min(pointSeg(a0, b0, b1), pointSeg(a1, b0, b1), pointSeg(b0, a0, a1), pointSeg(b1, a0, a1));\n    };\n    // Slats from the middle outward, each one `gap` clear of the last, so they\n    // fan open over the knee bump instead of touching underneath.\n    const pack = (gap, count) => {\n        const out = [0];\n        for (let i = 1; i <= count; i++) {\n            const prev = out[i - 1];\n            let lo = prev + slatWidth / 2;\n            let hi = prev + 4 * (slatWidth + gap);\n            for (let j = 0; j < 40; j++) {\n                const mid = (lo + hi) / 2;\n                if (clearance(prev, mid) < gap)\n                    lo = mid;\n                else\n                    hi = mid;\n            }\n            out.push(hi);\n        }\n        return out;\n    };\n    // The gap that puts the outermost slat exactly at the rim.\n    const fit = (count) => {\n        let lo = 0;\n        let hi = 4 * slatGap + slatWidth;\n        for (let j = 0; j < 40; j++) {\n            const mid = (lo + hi) / 2;\n            if (pack(mid, count)[count] < sEnd)\n                lo = mid;\n            else\n                hi = mid;\n        }\n        return lo;\n    };\n    let perSide = 1;\n    while (pack(slatGap, perSide + 1)[perSide + 1] <= sEnd)\n        perSide++;\n    const gapA = fit(perSide);\n    const gapB = fit(perSide + 1);\n    const useMore = Math.abs(gapB - slatGap) < Math.abs(gapA - slatGap);\n    if (useMore)\n        perSide++;\n    const gap = useMore ? gapB : gapA;\n    const outward = pack(gap, perSide).map(yAt);\n    const centres = [...outward.slice(1).reverse().map((y) => -y), ...outward];\n    // ---- end of shared lounge layout ----\n    const copies = centres.map((y) => slat.onLeafs((leaf) => {\n        const copy = new Assembly(leaf);\n        const angle = (Math.atan(slope(y)) * 180) / Math.PI;\n        copy.geometry = copy.geometry\n            .rotate(angle, [0, 0, 0], [1, 0, 0])\n            .translate(0, y, top(y));\n        return copy;\n    }));\n    console.log(`${centres.length} slats, narrowest gap ${gap.toFixed(1)} mm`);\n    // The packing keeps every slat clear of its neighbours, so skip the disjoint check.\n    return new Assembly({ geometry: copies }).skipDisjointPostprocess();\n}\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.4,
+                  "uniqueID": "id-135516",
+                  "name": "Knee Height",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.5,
+                  "uniqueID": "id-135519",
+                  "name": "Seat Offset",
+                  "type": "number",
+                  "options": []
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "slat",
+                  "ap1ID": "id-135417",
+                  "ap2ID": "id-135429"
+                },
+                {
+                  "ap2Name": "seatHeight",
+                  "ap1ID": "id-135420",
+                  "ap2ID": "id-135429"
+                },
+                {
+                  "ap2Name": "rimHeight",
+                  "ap1ID": "id-135423",
+                  "ap2ID": "id-135429"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-135429",
+                  "ap2ID": "id-135319"
+                },
+                {
+                  "ap2Name": "kneeHeight",
+                  "ap1ID": "id-135516",
+                  "ap2ID": "id-135429"
+                },
+                {
+                  "ap2Name": "seatOffset",
+                  "ap1ID": "id-135519",
+                  "ap2ID": "id-135429"
+                }
+              ],
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.8,
+              "y": 0.5,
+              "uniqueID": "id-135321",
+              "ioValues": [
+                {
+                  "name": "makeDisjoint",
+                  "ioValue": true
+                },
+                {
+                  "name": "Shape 1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape3",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape4",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.5,
+              "uniqueID": "id-135504",
+              "name": "Knee Height",
+              "type": "number",
+              "options": []
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.6,
+              "uniqueID": "id-135507",
+              "name": "Seat Offset",
+              "type": "number",
+              "options": []
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "Seat Height",
+              "ap1ID": "id-135291",
+              "ap2ID": "id-135303"
+            },
+            {
+              "ap2Name": "Seat Height",
+              "ap1ID": "id-135291",
+              "ap2ID": "id-135317"
+            },
+            {
+              "ap2Name": "Rim Height",
+              "ap1ID": "id-135294",
+              "ap2ID": "id-135303"
+            },
+            {
+              "ap2Name": "Rim Height",
+              "ap1ID": "id-135294",
+              "ap2ID": "id-135317"
+            },
+            {
+              "ap2Name": "Wood Thickness",
+              "ap1ID": "id-135300",
+              "ap2ID": "id-135303"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-135303",
+              "ap2ID": "id-135307"
+            },
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-135303",
+              "ap2ID": "id-135321"
+            },
+            {
+              "ap2Name": "Shape2",
+              "ap1ID": "id-135307",
+              "ap2ID": "id-135321"
+            },
+            {
+              "ap2Name": "Slat",
+              "ap1ID": "id-135313",
+              "ap2ID": "id-135317"
+            },
+            {
+              "ap2Name": "Shape3",
+              "ap1ID": "id-135317",
+              "ap2ID": "id-135321"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-135321",
+              "ap2ID": "id-135283"
+            },
+            {
+              "ap2Name": "Knee Height",
+              "ap1ID": "id-135504",
+              "ap2ID": "id-135303"
+            },
+            {
+              "ap2Name": "Knee Height",
+              "ap1ID": "id-135504",
+              "ap2ID": "id-135317"
+            },
+            {
+              "ap2Name": "Seat Offset",
+              "ap1ID": "id-135507",
+              "ap2ID": "id-135303"
+            },
+            {
+              "ap2Name": "Seat Offset",
+              "ap1ID": "id-135507",
+              "ap2ID": "id-135317"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Move",
+          "x": 0.6,
+          "y": 0.4,
+          "uniqueID": "id-135285",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -1180
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.5,
+          "y": 0.3,
+          "uniqueID": "id-135463",
+          "name": "Remove Window Section",
+          "ioValues": [
+            {
+              "name": "Bench",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-135465",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.2,
+              "uniqueID": "id-135467",
+              "name": "Bench",
+              "type": "geometry",
+              "options": []
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5,
+              "y": 0.5,
+              "uniqueID": "id-135470",
+              "ioValues": [
+                {
+                  "name": "bench",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "sectionLength",
+                  "ioValue": 400
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/**\n * Removes the window-end section (the first sectionLength along X) from\n * the imported Trailer_Bench so the Window Lounge can take its place.\n * Parts that sit only in that section (its frames and panels) are dropped,\n * and parts that run the whole bench (the seat planks) lose one\n * sectionLength at their window end. Everything else passes through\n * unchanged, so the other three sections stay exactly as imported.\n */\nfunction run(bench: Assembly, sectionLength: number = 400): Assembly {\n  if (!bench) throw new Error(\"Connect the Trailer_Bench output to bench\");\n  let dropped = 0;\n  let shortened = 0;\n  const result = bench.onLeafs((leaf) => {\n    const [[minX], [maxX]] = leaf.geometry.boundingBox.bounds;\n    if (minX >= sectionLength - 10) return leaf;\n    if (maxX < sectionLength + 40) {\n      dropped++;\n      return null;\n    }\n    const start = Math.round(minX);\n    const cutter = replicad.makeBox(\n      [start - 10, -5000, -5000],\n      [start + sectionLength, 5000, 5000],\n    );\n    const plank = new Assembly(leaf);\n    plank.geometry = plank.geometry.cut(cutter);\n    shortened++;\n    return plank;\n  });\n  console.log(`Dropped ${dropped} parts, shortened ${shortened}`);\n  // Removing and shortening parts can't make them overlap.\n  return result.skipDisjointPostprocess();\n}\n",
+              "compiledCode": "\"use strict\";\n/**\n * Removes the window-end section (the first sectionLength along X) from\n * the imported Trailer_Bench so the Window Lounge can take its place.\n * Parts that sit only in that section (its frames and panels) are dropped,\n * and parts that run the whole bench (the seat planks) lose one\n * sectionLength at their window end. Everything else passes through\n * unchanged, so the other three sections stay exactly as imported.\n */\nfunction run(bench, sectionLength = 400) {\n    if (!bench)\n        throw new Error(\"Connect the Trailer_Bench output to bench\");\n    let dropped = 0;\n    let shortened = 0;\n    const result = bench.onLeafs((leaf) => {\n        const [[minX], [maxX]] = leaf.geometry.boundingBox.bounds;\n        if (minX >= sectionLength - 10)\n            return leaf;\n        if (maxX < sectionLength + 40) {\n            dropped++;\n            return null;\n        }\n        const start = Math.round(minX);\n        const cutter = replicad.makeBox([start - 10, -5000, -5000], [start + sectionLength, 5000, 5000]);\n        const plank = new Assembly(leaf);\n        plank.geometry = plank.geometry.cut(cutter);\n        shortened++;\n        return plank;\n    });\n    console.log(`Dropped ${dropped} parts, shortened ${shortened}`);\n    // Removing and shortening parts can't make them overlap.\n    return result.skipDisjointPostprocess();\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "bench",
+              "ap1ID": "id-135467",
+              "ap2ID": "id-135470"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-135470",
+              "ap2ID": "id-135465"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
           "x": 0.8,
           "y": 0.2,
           "uniqueID": "id-15356",
@@ -40503,8 +41619,23 @@
           "ap2ID": "2ede00f0-ba12-4a6b-8ffb-f770367f92cc"
         },
         {
-          "ap2Name": "geometry",
+          "ap2Name": "Bench",
           "ap1ID": "id-118339",
+          "ap2ID": "id-135463"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-135281",
+          "ap2ID": "id-135285"
+        },
+        {
+          "ap2Name": "Shape10",
+          "ap1ID": "id-135285",
+          "ap2ID": "2ede00f0-ba12-4a6b-8ffb-f770367f92cc"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-135463",
           "ap2ID": "id-30916"
         },
         {
