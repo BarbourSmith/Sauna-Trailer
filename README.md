@@ -2,7 +2,7 @@
 
 # Sauna-Trailer
 
-![](/project.svg)
+![](/project.png)
 
 
 
