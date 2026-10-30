@@ -2091,11 +2091,11 @@
                       "ioValues": [
                         {
                           "name": "thickness",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 2438.4
                         },
                         {
                           "name": "numBumps",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 79
                         }
                       ],
                       "interpreterVersion": 0,
@@ -2499,7 +2499,7 @@
                           "ioValues": [
                             {
                               "name": "radius",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 740
                             }
                           ],
                           "interpreterVersion": 0,
@@ -2693,7 +2693,7 @@
                           "ioValues": [
                             {
                               "name": "radius",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 750
                             }
                           ],
                           "interpreterVersion": 0,
@@ -2923,6 +2923,10 @@
                       "uniqueID": 1741647635987,
                       "ioValues": [
                         {
+                          "name": "smooth",
+                          "ioValue": false
+                        },
+                        {
                           "name": "Shape 3",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
@@ -2933,6 +2937,10 @@
                         {
                           "name": "Shape 2",
                           "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "smooth",
+                          "ioValue": false
                         },
                         {
                           "name": "Shape 3",
@@ -2956,6 +2964,10 @@
                       "uniqueID": 1741647653193,
                       "ioValues": [
                         {
+                          "name": "smooth",
+                          "ioValue": false
+                        },
+                        {
                           "name": "Shape 3",
                           "ioValue": "__GEOMETRY_INPUT__"
                         },
@@ -2966,6 +2978,10 @@
                         {
                           "name": "Shape 2",
                           "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "smooth",
+                          "ioValue": false
                         },
                         {
                           "name": "Shape 3",
@@ -3495,16 +3511,16 @@
                       "name": "Isosceles-Triangle---Angle",
                       "ioValues": [
                         {
-                          "name": "Angle",
-                          "ioValue": 70
-                        },
-                        {
                           "name": "Height",
                           "ioValue": 2000
                         },
                         {
                           "name": "Thickness",
                           "ioValue": 100
+                        },
+                        {
+                          "name": "Angle",
+                          "ioValue": 70
                         }
                       ],
                       "topLevel": false,
@@ -3521,7 +3537,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.3,
+                          "y": 0.2,
                           "uniqueID": "48a09743-0c4c-4797-aabf-ecceaeb974d8",
                           "name": "Thickness",
                           "type": "number",
@@ -3542,7 +3558,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.2,
+                          "y": 0.3,
                           "uniqueID": "b66119f7-0fa3-4cbe-910d-a431a22a4af8",
                           "name": "Angle",
                           "type": "number",
@@ -3556,15 +3572,15 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 70
                             },
                             {
                               "name": "height",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 2000
                             },
                             {
                               "name": "thickness",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 100
                             }
                           ],
                           "interpreterVersion": 0,
@@ -4067,16 +4083,16 @@
                       "name": "Isosceles-Triangle---Angle",
                       "ioValues": [
                         {
-                          "name": "Angle",
-                          "ioValue": 90
-                        },
-                        {
                           "name": "Height",
                           "ioValue": 2000
                         },
                         {
                           "name": "Thickness",
                           "ioValue": 100
+                        },
+                        {
+                          "name": "Angle",
+                          "ioValue": 90
                         }
                       ],
                       "topLevel": false,
@@ -4093,7 +4109,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.3,
+                          "y": 0.2,
                           "uniqueID": "aa4766e8-437e-4138-95e3-5772a3f5f9a6",
                           "name": "Thickness",
                           "type": "number",
@@ -4102,7 +4118,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.2,
+                          "y": 0.3,
                           "uniqueID": "c9d29a94-e78a-4c88-9ecd-a9e8ba5a0880",
                           "name": "Angle",
                           "type": "number",
@@ -4116,15 +4132,15 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 90
                             },
                             {
                               "name": "height",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 2000
                             },
                             {
                               "name": "thickness",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 100
                             }
                           ],
                           "interpreterVersion": 0,
@@ -4353,11 +4369,11 @@
                             },
                             {
                               "name": "Number",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 4
                             },
                             {
                               "name": "Angle",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 90
                             }
                           ],
                           "interpreterVersion": 0,
@@ -5212,11 +5228,11 @@
                         },
                         {
                           "name": "Number",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 6
                         },
                         {
                           "name": "Angle",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 60
                         }
                       ],
                       "interpreterVersion": 0,
@@ -5269,7 +5285,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.3,
+                      "y": 0.2,
                       "uniqueID": "7a67ba6d-066d-4612-bee1-49409e2741d5",
                       "name": "Angle",
                       "options": []
@@ -5277,7 +5293,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.2,
+                      "y": 0.3,
                       "uniqueID": "86b1a2a0-dc0c-435a-9950-8c2aaba0d8b9",
                       "name": "Shape",
                       "options": []
@@ -6470,11 +6486,11 @@
                             },
                             {
                               "name": "Number",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 8
                             },
                             {
                               "name": "Angle",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 45
                             }
                           ],
                           "interpreterVersion": 0,
@@ -6653,16 +6669,16 @@
                       "name": "Isosceles-Triangle---Angle",
                       "ioValues": [
                         {
-                          "name": "Angle",
-                          "ioValue": 45
+                          "name": "Thickness",
+                          "ioValue": 12
                         },
                         {
                           "name": "Height",
                           "ioValue": 2000
                         },
                         {
-                          "name": "Thickness",
-                          "ioValue": 12
+                          "name": "Angle",
+                          "ioValue": 45
                         }
                       ],
                       "topLevel": false,
@@ -6670,7 +6686,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.3,
+                          "y": 0.2,
                           "uniqueID": "056b8fad-420b-4df6-99cb-827b0aec2a66",
                           "name": "Thickness",
                           "type": "number",
@@ -6684,15 +6700,15 @@
                           "ioValues": [
                             {
                               "name": "angle",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 45
                             },
                             {
                               "name": "height",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 2000
                             },
                             {
                               "name": "thickness",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 12
                             }
                           ],
                           "interpreterVersion": 0,
@@ -6722,7 +6738,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.2,
+                          "y": 0.3,
                           "uniqueID": "b44e8586-b386-437c-8a09-bb9784a9cdab",
                           "name": "Angle",
                           "type": "number",
@@ -8418,12 +8434,12 @@
                       "name": "Linear-Pattern",
                       "ioValues": [
                         {
-                          "name": "Number",
-                          "ioValue": 4
-                        },
-                        {
                           "name": "Dist",
                           "ioValue": 800
+                        },
+                        {
+                          "name": "Number",
+                          "ioValue": 4
                         },
                         {
                           "name": "Geometry",
@@ -8456,15 +8472,15 @@
                           "ioValues": [
                             {
                               "name": "Shape",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 10
                             },
                             {
                               "name": "Number",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 4
                             },
                             {
                               "name": "Dist",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 800
                             }
                           ],
                           "interpreterVersion": 0,
@@ -8564,12 +8580,12 @@
                       "name": "Linear-Pattern",
                       "ioValues": [
                         {
-                          "name": "Number",
-                          "ioValue": 5
-                        },
-                        {
                           "name": "Dist",
                           "ioValue": 800
+                        },
+                        {
+                          "name": "Number",
+                          "ioValue": 5
                         }
                       ],
                       "topLevel": false,
@@ -8577,7 +8593,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.3,
+                          "y": 0.2,
                           "uniqueID": 1739990582983,
                           "name": "Geometry",
                           "type": "number",
@@ -8632,11 +8648,11 @@
                             },
                             {
                               "name": "Number",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 5
                             },
                             {
                               "name": "Dist",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 800
                             }
                           ],
                           "interpreterVersion": 0,
@@ -8645,7 +8661,7 @@
                         {
                           "atomType": "Input",
                           "x": 0,
-                          "y": 0.2,
+                          "y": 0.3,
                           "uniqueID": 1739990583539,
                           "name": "Number",
                           "type": "number",
@@ -9379,11 +9395,11 @@
           "name": "Envlope Switch",
           "ioValues": [
             {
-              "name": "Old Envlope",
+              "name": "New Envlope",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "New Envlope",
+              "name": "Old Envlope",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
@@ -9674,7 +9690,7 @@
                 {
                   "atomType": "Input",
                   "x": 0,
-                  "y": 0.3,
+                  "y": 0.2,
                   "uniqueID": "3969a2d1-99e3-4d5e-a5df-2f3f2d155080",
                   "name": "Geometry",
                   "type": "number",
@@ -9720,7 +9736,7 @@
                 {
                   "atomType": "Input",
                   "x": 0,
-                  "y": 0.2,
+                  "y": 0.3,
                   "uniqueID": "b0b2fe36-3c4a-4e33-b202-d0cb8bfe5fe9",
                   "name": "Dist",
                   "type": "number",
@@ -9738,11 +9754,11 @@
                     },
                     {
                       "name": "Number",
-                      "ioValue": "__GEOMETRY_INPUT__"
+                      "ioValue": 20
                     },
                     {
                       "name": "Dist",
-                      "ioValue": "__GEOMETRY_INPUT__"
+                      "ioValue": 107.47
                     }
                   ],
                   "interpreterVersion": 0,
@@ -10429,6 +10445,10 @@
                   "uniqueID": "55a0cd22-0bfc-4d8a-a9ea-0d7816a7f8de",
                   "ioValues": [
                     {
+                      "name": "smooth",
+                      "ioValue": false
+                    },
+                    {
                       "name": "Shape 1",
                       "ioValue": "__GEOMETRY_INPUT__"
                     },
@@ -10439,6 +10459,10 @@
                     {
                       "name": "Shape 3",
                       "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "smooth",
+                      "ioValue": false
                     },
                     {
                       "name": "Shape 1",
@@ -14491,19 +14515,19 @@
                                 },
                                 {
                                   "name": "Number",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 4
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 114.3
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -14861,11 +14885,11 @@
                                 },
                                 {
                                   "name": "Number",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 4
                                 },
                                 {
                                   "name": "Angle",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 90
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -17713,6 +17737,10 @@
                           "uniqueID": "id-70856",
                           "ioValues": [
                             {
+                              "name": "smooth",
+                              "ioValue": false
+                            },
+                            {
                               "name": "Shape 1",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
@@ -17723,6 +17751,10 @@
                             {
                               "name": "Shape 3",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "smooth",
+                              "ioValue": false
                             },
                             {
                               "name": "Shape 1",
@@ -17859,6 +17891,10 @@
                           "uniqueID": "id-70863",
                           "ioValues": [
                             {
+                              "name": "smooth",
+                              "ioValue": false
+                            },
+                            {
                               "name": "Shape 2",
                               "ioValue": "__GEOMETRY_INPUT__"
                             },
@@ -17869,6 +17905,10 @@
                             {
                               "name": "Shape 4",
                               "ioValue": "__GEOMETRY_INPUT__"
+                            },
+                            {
+                              "name": "smooth",
+                              "ioValue": false
                             },
                             {
                               "name": "Shape 2",
@@ -20865,11 +20905,11 @@
                                     },
                                     {
                                       "name": "Number",
-                                      "ioValue": "__GEOMETRY_INPUT__"
+                                      "ioValue": 4
                                     },
                                     {
                                       "name": "Dist",
-                                      "ioValue": "__GEOMETRY_INPUT__"
+                                      "ioValue": 25
                                     }
                                   ],
                                   "interpreterVersion": 0,
@@ -21383,12 +21423,12 @@
           "name": "Door",
           "ioValues": [
             {
-              "name": "Height",
-              "ioValue": 1675
-            },
-            {
               "name": "Thickness",
               "ioValue": 13
+            },
+            {
+              "name": "Height",
+              "ioValue": 1675
             }
           ],
           "topLevel": false,
@@ -21461,11 +21501,11 @@
               "ioValues": [
                 {
                   "name": "Wood Thickness",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "ioValue": 13
                 },
                 {
                   "name": "Height",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "ioValue": 1675
                 }
               ],
               "topLevel": false,
@@ -21604,16 +21644,16 @@
                   "name": "Rectangle-Rounded",
                   "ioValues": [
                     {
-                      "name": "Width",
-                      "ioValue": 1615
+                      "name": "Radius",
+                      "ioValue": 70
                     },
                     {
                       "name": "Height",
                       "ioValue": 549.6
                     },
                     {
-                      "name": "Radius",
-                      "ioValue": 70
+                      "name": "Width",
+                      "ioValue": 1615
                     }
                   ],
                   "topLevel": false,
@@ -21673,7 +21713,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.3,
+                      "y": 0.2,
                       "uniqueID": "976a9549-282a-4a04-a5e1-acd416823e7d",
                       "name": "Radius",
                       "type": "number",
@@ -21807,7 +21847,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.2,
+                      "y": 0.3,
                       "uniqueID": "e8a4cbf5-50cd-44b1-b1c1-3b65e3066b90",
                       "name": "Width",
                       "type": "number",
@@ -22383,9 +22423,8 @@
                   "name": "Rectangle-Rounded",
                   "ioValues": [
                     {
-                      "name": "Width",
-                      "ioValue": 88.89999999999999,
-                      "currentEquation": "3.5*25.4"
+                      "name": "Radius",
+                      "ioValue": 10
                     },
                     {
                       "name": "Height",
@@ -22393,8 +22432,9 @@
                       "currentEquation": "2.5*25.4"
                     },
                     {
-                      "name": "Radius",
-                      "ioValue": 10
+                      "name": "Width",
+                      "ioValue": 88.89999999999999,
+                      "currentEquation": "3.5*25.4"
                     }
                   ],
                   "topLevel": false,
@@ -22594,7 +22634,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.3,
+                      "y": 0.2,
                       "uniqueID": "a29fc3dc-0687-49ef-99ff-9264391df9e3",
                       "name": "Radius",
                       "type": "number",
@@ -22673,7 +22713,7 @@
                     {
                       "atomType": "Input",
                       "x": 0,
-                      "y": 0.2,
+                      "y": 0.3,
                       "uniqueID": "f12ca4f4-fd03-4625-88bf-5cd157883562",
                       "name": "Width",
                       "type": "number",
@@ -22929,12 +22969,12 @@
               "name": "Door",
               "ioValues": [
                 {
-                  "name": "Wood Thickness",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "name": "Height",
+                  "ioValue": 1675
                 },
                 {
-                  "name": "Height",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "name": "Wood Thickness",
+                  "ioValue": 13
                 }
               ],
               "topLevel": false,
@@ -22997,12 +23037,12 @@
                   "name": "Rectangle-Rounded",
                   "ioValues": [
                     {
-                      "name": "Width",
-                      "ioValue": 1607
-                    },
-                    {
                       "name": "Height",
                       "ioValue": 541.6
+                    },
+                    {
+                      "name": "Width",
+                      "ioValue": 1607
                     },
                     {
                       "name": "Radius",
@@ -23705,11 +23745,11 @@
               "ioValues": [
                 {
                   "name": "Wood Thickness",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "ioValue": 13
                 },
                 {
                   "name": "Height",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "ioValue": 1675
                 }
               ],
               "topLevel": false,
@@ -23908,12 +23948,12 @@
                   "name": "Rectangle-Rounded",
                   "ioValues": [
                     {
-                      "name": "Width",
-                      "ioValue": 1675
-                    },
-                    {
                       "name": "Height",
                       "ioValue": 609.6
+                    },
+                    {
+                      "name": "Width",
+                      "ioValue": 1675
                     },
                     {
                       "name": "Radius",
@@ -24845,7 +24885,7 @@
                             },
                             {
                               "name": "radius",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 3
                             }
                           ],
                           "interpreterVersion": 0,
@@ -26608,6 +26648,10 @@
                               "uniqueID": "id-43142",
                               "ioValues": [
                                 {
+                                  "name": "smooth",
+                                  "ioValue": false
+                                },
+                                {
                                   "name": "Shape 3",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
@@ -26618,6 +26662,10 @@
                                 {
                                   "name": "Shape 2",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "smooth",
+                                  "ioValue": false
                                 },
                                 {
                                   "name": "Shape 3",
@@ -26912,6 +26960,10 @@
                               "uniqueID": "id-43155",
                               "ioValues": [
                                 {
+                                  "name": "smooth",
+                                  "ioValue": false
+                                },
+                                {
                                   "name": "Shape 1",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
@@ -26922,6 +26974,10 @@
                                 {
                                   "name": "Shape 3",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "smooth",
+                                  "ioValue": false
                                 },
                                 {
                                   "name": "Shape 1",
@@ -28649,19 +28705,19 @@
                         },
                         {
                           "name": "Number",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 5
                         },
                         {
                           "name": "distX",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 400
                         },
                         {
                           "name": "distY",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 0
                         },
                         {
                           "name": "distZ",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 0
                         }
                       ],
                       "interpreterVersion": 0,
@@ -28761,7 +28817,7 @@
                   "ioValues": [
                     {
                       "name": "Wood Thickness",
-                      "ioValue": "__GEOMETRY_INPUT__"
+                      "ioValue": 18
                     }
                   ],
                   "topLevel": false,
@@ -29232,7 +29288,7 @@
                   "ioValues": [
                     {
                       "name": "Wood Thickness",
-                      "ioValue": "__GEOMETRY_INPUT__"
+                      "ioValue": 18
                     }
                   ],
                   "topLevel": false,
@@ -30290,19 +30346,19 @@
                         },
                         {
                           "name": "Number",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 4
                         },
                         {
                           "name": "distX",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 400
                         },
                         {
                           "name": "distY",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 0
                         },
                         {
                           "name": "distZ",
-                          "ioValue": "__GEOMETRY_INPUT__"
+                          "ioValue": 0
                         }
                       ],
                       "interpreterVersion": 0,
@@ -31381,19 +31437,19 @@
                                 },
                                 {
                                   "name": "Number",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 10.55
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 40
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -31646,19 +31702,19 @@
                                 },
                                 {
                                   "name": "Number",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 4.1875
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 70
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -31911,19 +31967,19 @@
                                 },
                                 {
                                   "name": "Number",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 4.1875
                                 },
                                 {
                                   "name": "distX",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 },
                                 {
                                   "name": "distY",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 70
                                 },
                                 {
                                   "name": "distZ",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 0
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -32594,19 +32650,19 @@
                             },
                             {
                               "name": "Number",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 6
                             },
                             {
                               "name": "distX",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 0
                             },
                             {
                               "name": "distY",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 50
                             },
                             {
                               "name": "distZ",
-                              "ioValue": "__GEOMETRY_INPUT__"
+                              "ioValue": 0
                             }
                           ],
                           "interpreterVersion": 0,
@@ -33094,7 +33150,7 @@
             {
               "atomType": "Input",
               "x": 0,
-              "y": 0.4,
+              "y": 0.3,
               "uniqueID": "id-135300",
               "name": "Wood Thickness",
               "type": "number",
@@ -33163,7 +33219,7 @@
                 {
                   "atomType": "Input",
                   "x": 0,
-                  "y": 0.4,
+                  "y": 0.3,
                   "uniqueID": "id-135334",
                   "name": "Wood Thickness",
                   "type": "number",
@@ -33180,36 +33236,28 @@
                       "ioValue": 280
                     },
                     {
-                      "name": "rimHeight",
-                      "ioValue": 700
-                    },
-                    {
-                      "name": "halfSpan",
-                      "ioValue": 660
-                    },
-                    {
-                      "name": "slatThickness",
-                      "ioValue": 25
-                    },
-                    {
-                      "name": "notchDepth",
-                      "ioValue": 6
-                    },
-                    {
-                      "name": "endBottom",
-                      "ioValue": 410
-                    },
-                    {
                       "name": "kneeHeight",
                       "ioValue": 430
+                    },
+                    {
+                      "name": "rimHeight",
+                      "ioValue": 700
                     },
                     {
                       "name": "seatOffset",
                       "ioValue": 350
                     },
                     {
+                      "name": "halfSpan",
+                      "ioValue": 660
+                    },
+                    {
                       "name": "slatWidth",
                       "ioValue": 40
+                    },
+                    {
+                      "name": "slatThickness",
+                      "ioValue": 25
                     },
                     {
                       "name": "slatGap",
@@ -33218,6 +33266,14 @@
                     {
                       "name": "backRound",
                       "ioValue": 150
+                    },
+                    {
+                      "name": "notchDepth",
+                      "ioValue": 6
+                    },
+                    {
+                      "name": "endBottom",
+                      "ioValue": 410
                     },
                     {
                       "name": "footOuter",
@@ -33527,7 +33583,7 @@
                 {
                   "atomType": "Input",
                   "x": 0,
-                  "y": 0.5,
+                  "y": 0.4,
                   "uniqueID": "id-135510",
                   "name": "Knee Height",
                   "type": "number",
@@ -33536,7 +33592,7 @@
                 {
                   "atomType": "Input",
                   "x": 0,
-                  "y": 0.6,
+                  "y": 0.5,
                   "uniqueID": "id-135513",
                   "name": "Seat Offset",
                   "type": "number",
@@ -33835,20 +33891,20 @@
                       "ioValue": 280
                     },
                     {
-                      "name": "rimHeight",
-                      "ioValue": 700
-                    },
-                    {
-                      "name": "halfSpan",
-                      "ioValue": 660
-                    },
-                    {
                       "name": "kneeHeight",
                       "ioValue": 430
                     },
                     {
+                      "name": "rimHeight",
+                      "ioValue": 700
+                    },
+                    {
                       "name": "seatOffset",
                       "ioValue": 350
+                    },
+                    {
+                      "name": "halfSpan",
+                      "ioValue": 660
                     },
                     {
                       "name": "slatWidth",
@@ -33955,7 +34011,7 @@
             {
               "atomType": "Input",
               "x": 0,
-              "y": 0.5,
+              "y": 0.4,
               "uniqueID": "id-135504",
               "name": "Knee Height",
               "type": "number",
@@ -33964,7 +34020,7 @@
             {
               "atomType": "Input",
               "x": 0,
-              "y": 0.6,
+              "y": 0.5,
               "uniqueID": "id-135507",
               "name": "Seat Offset",
               "type": "number",
@@ -36261,6 +36317,10 @@
                               "uniqueID": "id-21815",
                               "ioValues": [
                                 {
+                                  "name": "smooth",
+                                  "ioValue": false
+                                },
+                                {
                                   "name": "Shape 1",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
@@ -36271,6 +36331,10 @@
                                 {
                                   "name": "Shape 3",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "smooth",
+                                  "ioValue": false
                                 },
                                 {
                                   "name": "Shape 1",
@@ -37472,7 +37536,7 @@
                                 },
                                 {
                                   "name": "radius",
-                                  "ioValue": "__GEOMETRY_INPUT__"
+                                  "ioValue": 5
                                 }
                               ],
                               "interpreterVersion": 0,
@@ -38010,6 +38074,10 @@
                               "uniqueID": "id-21892",
                               "ioValues": [
                                 {
+                                  "name": "smooth",
+                                  "ioValue": false
+                                },
+                                {
                                   "name": "Shape 3",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
@@ -38020,6 +38088,10 @@
                                 {
                                   "name": "Shape 2",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "smooth",
+                                  "ioValue": false
                                 },
                                 {
                                   "name": "Shape 3",
@@ -38315,6 +38387,10 @@
                               "uniqueID": "id-21905",
                               "ioValues": [
                                 {
+                                  "name": "smooth",
+                                  "ioValue": false
+                                },
+                                {
                                   "name": "Shape 1",
                                   "ioValue": "__GEOMETRY_INPUT__"
                                 },
@@ -38325,6 +38401,10 @@
                                 {
                                   "name": "Shape 3",
                                   "ioValue": "__GEOMETRY_INPUT__"
+                                },
+                                {
+                                  "name": "smooth",
+                                  "ioValue": false
                                 },
                                 {
                                   "name": "Shape 1",
